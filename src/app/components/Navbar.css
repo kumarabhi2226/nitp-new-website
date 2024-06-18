@@ -1,0 +1,186 @@
+/* styles/navbar.css */
+.navbar-container {
+  background-color: white;
+  z-index: 50;
+  width: 100%;
+  position: relative;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-blur: lg;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-top .left-content {
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 40px;
+}
+
+.header-top img {
+  height: 70px;
+}
+
+.header-top .right-content {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 40px;
+}
+
+.header-top .right-content .font-bold {
+  font-size: 1.25rem;
+}
+
+.header-top .right-content .text-sm {
+  font-size: 0.875rem;
+}
+
+.header-top .institute-info {
+  text-align: right;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-blur: lg;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-content .nav-items {
+  display: flex;
+  gap: 16px;
+}
+
+.navbar-content .nav-items a {
+  color: #4b5563;
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+
+.navbar-content .nav-items a:hover {
+  color: #111827;
+}
+
+.navbar-content .auth-buttons button {
+  color: #4b5563;
+  border: 2px solid #4b5563;
+  padding: 8px 16px;
+  border-radius: 0.5rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.navbar-content .auth-buttons button:hover {
+  color: #111827;
+  border-color: #111827;
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .header-top img {
+    height: 30px;
+  }
+
+  .header-top .right-content {
+    order: 1;
+  }
+
+  .header-top .left-content {
+    order: 0;
+  }
+
+  .header-top .institute-info {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .max-w-7xl {
+    max-width: fit-content !important; /* Change max-width property for mobile screens */
+    margin: auto;
+  }
+  .header-top .right-content {
+    text-align: center;
+    margin: auto;
+    margin-left: 0;
+  }
+  .header-top {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+@media (max-width: 768px) {
+  .header-top .right-content .font-bold {
+    font-size: 0.75rem;
+  }
+
+  .header-top .right-content .text-sm {
+    font-size: 0.575rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* or some other mobile breakpoint */
+  .mobiletest {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 80rem /* 1280px */;
+    padding-left: 1rem /* 16px */;
+    padding-right: 1rem /* 16px */;
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.25rem /* 20px */;
+  }
+}
+/* styles/navbar.css */
+/* styles/navbar.css */
+
+.mobile-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100; /* Ensure it is above other elements */
+}
+
+.mobile-nav-content {
+  height: 100%;
+  width: 65%;
+  background-color: white;
+  padding: 1rem;
+  overflow-y: auto; /* Allows scrolling if content overflows */
+  position: relative;
+}
+
+.mobile-nav-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 101; /* Ensure it is above the side menu content */
+}

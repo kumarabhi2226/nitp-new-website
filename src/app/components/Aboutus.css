@@ -1,0 +1,19 @@
+.aboutdiv {
+  position: relative;
+  top: 43%;
+  /* background-color: rgb(255, 159, 159); */
+}
+@media (max-width: 768px) {
+  .aboutdiv {
+    position: relative;
+    top: 25%;
+    /* background-color: rgb(255, 159, 159); */
+  }
+  .intdiv {
+    padding: 10px;
+  }
+  .mainimg {
+    width: 70%;
+    height: 70%;
+  }
+}

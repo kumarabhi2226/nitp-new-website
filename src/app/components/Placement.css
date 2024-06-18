@@ -1,0 +1,14 @@
+.Placementdiv {
+  position: relative;
+  top: 43%;
+  background-color: rgba(231, 246, 255, 0.616);
+}
+@media (max-width: 768px) {
+  .Placementdiv {
+    position: relative;
+    top: 25%;
+  }
+  .nums {
+    font-size: small;
+  }
+}
