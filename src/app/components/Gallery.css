@@ -1,0 +1,18 @@
+.gdiv {
+  position: relative;
+  top: 20%;
+  background-color: rgba(231, 246, 255, 0.616);
+}
+.image-gallery {
+  overflow: hidden; /* Ensure images do not overflow */
+}
+
+.image-gallery img {
+  max-height: 200px; /* Adjust this as needed to control the image height */
+}
+@media (max-width: 768px) {
+  .gdiv {
+    position: relative;
+    top: 25%;
+  }
+}

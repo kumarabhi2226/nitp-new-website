@@ -3,7 +3,7 @@ import "./Aboutus.css";
 
 export default function Aboutus() {
   return (
-    <div className="aboutdiv">
+    <div className="aboutdiv p-20">
       <div className=" p-4 sm:flex sm:justify-center sm:items-start sm:space-x-8">
       <div className="sm:w-1/3 intdiv">
         <div className="p-4 bg-white shadow rounded-lg">
