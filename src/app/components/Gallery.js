@@ -71,13 +71,13 @@ export function Gallery() {
           <CameraIcon className="inline-block h-6 w-6" /> Glimpse of NIT Patna{' '}
           <CameraIcon className="inline-block h-6 w-6" />
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 ">
           {Array.from({ length: 9 }).map((_, index) => (
             <img
               key={index}
               src="/placeholder.svg"
               alt={`Gallery Image ${index + 1}`}
-              className="w-full h-auto rounded-md block object-cover"
+              className="w-full h-auto rounded-md block object-cover imgbox"
             />
           ))}
         </div>
