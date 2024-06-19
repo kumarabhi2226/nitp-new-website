@@ -1,6 +1,5 @@
-/* styles/navbar.css */
 .navbar-container {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   z-index: 50;
   width: 100%;
   position: relative;
@@ -18,6 +17,7 @@
 
 .header-top .left-content {
   align-items: center;
+  justify-content: space-between;
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 40px;
@@ -60,30 +60,20 @@
 
 .navbar-content .nav-items {
   display: flex;
-  gap: 16px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .navbar-content .nav-items a {
-  color: #4b5563;
-  padding: 8px 0;
+  color: #000102;
+  padding: 8px 16px;
   transition: color 0.2s;
+  text-align: center;
+  flex: 1;
 }
 
 .navbar-content .nav-items a:hover {
   color: #111827;
-}
-
-.navbar-content .auth-buttons button {
-  color: #4b5563;
-  border: 2px solid #4b5563;
-  padding: 8px 16px;
-  border-radius: 0.5rem;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-.navbar-content .auth-buttons button:hover {
-  color: #111827;
-  border-color: #111827;
 }
 
 @media (max-width: 768px) {
@@ -153,8 +143,6 @@
     line-height: 1.25rem /* 20px */;
   }
 }
-/* styles/navbar.css */
-/* styles/navbar.css */
 
 .mobile-nav {
   position: fixed;

@@ -9,8 +9,7 @@ export function Gallery() {
   const [linkedInPosts, setLinkedInPosts] = useState([]);
 
   useEffect(() => {
-    // Fetch LinkedIn posts using API or library (here, we simulate with a sample data)
-    // Replace with actual API call using LinkedIn API or library methods
+    
     const mockPosts = [
       {
         author: {
