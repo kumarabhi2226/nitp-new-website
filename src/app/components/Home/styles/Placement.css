@@ -2,7 +2,7 @@
   position: relative;
   top: 25%;
   background-color: rgba(231, 246, 255, 0.616);
-  padding-top: 0px;
+
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -14,6 +14,8 @@
   .Placementdiv {
     position: relative;
     top: 25%;
+    padding-left: 2px;
+    padding-right: 2px;
   }
   .nums {
     font-size: small;

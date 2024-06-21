@@ -32,7 +32,7 @@ const Slider = () => {
             className="mySwiper"
           >
                    
-            <SwiperSlide><img src="https://i.postimg.cc/bwy2BtkJ/nit-patna-001.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="https://i.postimg.cc/CxSr9DWB/88237103-146090899894886-7045265194396125726-n.jpg" /></SwiperSlide>
             <SwiperSlide><img src="https://i.postimg.cc/02dwnf6F/nit-patna-002.jpg" /></SwiperSlide>
             <SwiperSlide><img src="https://i.postimg.cc/zX1hTMfT/nit-patna-003.jpg" /></SwiperSlide>
             <SwiperSlide><img src="https://i.postimg.cc/h4mxzgKS/nit-patna-004.jpg" /></SwiperSlide>
