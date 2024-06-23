@@ -1,6 +1,7 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import './Footer.css';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import "./Footer.css";
 const Footer = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [pollutionData, setPollutionData] = useState(null);
@@ -14,7 +15,7 @@ const Footer = () => {
       const data = await response.json();
       setWeatherData(data);
     } catch (error) {
-      console.error('Error fetching weather data:', error);
+      console.error("Error fetching weather data:", error);
     }
   };
 
@@ -26,7 +27,7 @@ const Footer = () => {
       const data = await response.json();
       setPollutionData(data);
     } catch (error) {
-      console.error('Error fetching air pollution data:', error);
+      console.error("Error fetching air pollution data:", error);
     }
   };
 
@@ -45,22 +46,22 @@ const Footer = () => {
     return () => clearInterval(interval);
   }, []);
 
-// Helper function to format date and time
-const formatDate = (date) => {
-  return date.toLocaleString('en-US', {
-    weekday: 'long',
-    hour: 'numeric',
-    minute: 'numeric',
-    hour12: true,
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
-};
+  // Helper function to format date and time
+  const formatDate = (date) => {
+    return date.toLocaleString("en-US", {
+      weekday: "long",
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  };
   return (
     <footer className="fdiv bg-[#2e1a1a] text-white py-8">
       <div className="container3 mx-auto px-4 flex justify-between items-start flex-wrap">
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start ">
           <img
             src="/placeholder.svg"
             alt="NIT Patna Logo"
@@ -81,10 +82,18 @@ const formatDate = (date) => {
             <TwitterIcon className="w-6 h-6" />
             <LinkedinIcon className="w-6 h-6" />
             <FacebookIcon className="w-6 h-6" />
+            <span>
+              <a href="https://goo.gl/maps/srZ6whpfDGqg85sp6" target="_blank">
+                <img src="\location.png" alt="location" className="w-6 h-6" />
+              </a>
+            </span>
           </div>
         </div>
+
         <div className="flex flex-col items-start">
-          <h3 className="font-bold mb-4">Quick Links</h3>
+          <h3 className="font-bold mb-4 leading-relaxed tracking-wide">
+            Quick Links
+          </h3>
           <ul className="space-y-2">
             <li>
               <a href="#" className="hover:underline">
@@ -92,28 +101,48 @@ const formatDate = (date) => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Centres & CoEs
+              <a
+                href="https://www.nirfindia.org"
+                className="hover:underline"
+                target="_blank"
+              >
+                NIRF
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://alumini-nitp.vercel.app/bihtacampus"
+                className="hover:underline"
+                target="_blank"
+              >
+                New Campus
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.nitp.ac.in/RTI/"
+                className="hover:underline"
+                target="_blank"
+              >
+                RTI
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Schools
+              <a
+                href="https://www.nitp.ac.in/webteam/"
+                className="hover:underline"
+              >
+                Web Team
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Anti-Sexual Harassment Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Right to Information
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Office of Career Services
+              <a
+                href="https://www.nitp.ac.in/magazine/"
+                className="hover:underline"
+              >
+                Magazine(Vol.4)
               </a>
             </li>
             <li>
@@ -124,31 +153,49 @@ const formatDate = (date) => {
           </ul>
         </div>
         <div className="flex flex-col items-start">
-          <h3 className="font-bold mb-4">Explore</h3>
+          <h3 className="font-bold mb-4 leading-relaxed tracking-wide">
+            Explore
+          </h3>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="hover:underline">
-                Rules
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
+              <a
+                href="https://web.nitp.ac.in/alumni/html/photogallery.html"
+                className="hover:underline"
+                target="_blank"
+              >
                 Campus Life
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Institute Newsletter
+              <a
+                href="https://www.nitp.ac.in/bwcminutes/"
+                className="hover:underline"
+              >
+                BOG/FC/BWC Minutes
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Educational Programmes
+              <a
+                href="https://www.nitp.ac.in/convocation/"
+                className="hover:underline"
+              >
+                Convocation 2023
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                PhD Seminar
+              <a
+                href="https://www.nitp.ac.in/senateminutes/"
+                className="hover:underline"
+              >
+                Senate Minutes
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.nitp.ac.in/grievance/"
+                className="hover:underline"
+              >
+                SC/ST Grievance Cell
               </a>
             </li>
             <li>
@@ -157,12 +204,84 @@ const formatDate = (date) => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Contact Us
+              <a
+                href="https://drive.google.com/file/d/1EdgaqKGB0zlB1LUmypjpnV9QAkXmpjBu/view"
+                className="hover:underline"
+                target="_blank"
+              >
+                Anti-Sexual Harassment Policy
               </a>
             </li>
           </ul>
         </div>
+
+        <div className="flex flex-col items-start">
+          <h3 className="font-bold mb-4 leading-relaxed tracking-wide">
+            Useful Links
+          </h3>
+          <ul className="space-y-2">
+            <li>
+              <a
+                href="https://www.google.com/maps/place/National+Institute+of+Technology+Patna/@25.6207241,85.170702,17z/data=!3m1!4b1!4m5!3m4!1s0x39ed58dce6732867:0x4059f39a1ac82f06!8m2!3d25.6207241!4d85.1728907"
+                className="hover:underline"
+                target="_blank"
+              >
+                How to Reach
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.nitp.ac.in/annualreports/"
+                className="hover:underline"
+              >
+                Annual Reports
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://web.nitp.ac.in/ict/"
+                className="hover:underline"
+                target="_blank"
+              >
+                ICT Academy
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.nitp.ac.in/students/?tab=nss"
+                className="hover:underline"
+              >
+                National Service Scheme
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.nitp.ac.in/tenders/"
+                className="hover:underline"
+              >
+                Tenders
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1tVgQSygS8GRTZIglbVWVClasegdd6BCi/view"
+                className="hover:underline"
+                target="_blank"
+              >
+                Academic Calendar
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.nitp.ac.in/terms/"
+                className="hover:underline"
+              >
+                Terms of Use
+              </a>
+            </li>
+          </ul>
+        </div>
+
         <div className="flex flex-col items-start">
           <h3 className="font-bold mb-4">
             <CloudIcon className="inline-block mr-2" /> Patna
@@ -171,20 +290,28 @@ const formatDate = (date) => {
             <>
               <p>{formatDate(currentDateTime)}</p>
               <p className="flex items-center mt-2">
-                <CloudIcon className="inline-block mr-2" /> {weatherData.list[0].weather[0].description}
+                <CloudIcon className="inline-block mr-2" />{" "}
+                {weatherData.list[0].weather[0].description}
               </p>
-              <p>Temp: {(weatherData.list[0].main.temp - 273.15).toFixed(2)}°C</p>
-              <p>Humidity: {weatherData.list[0].main.humidity}% Wind: {weatherData.list[0].wind.speed} km/h</p>
+              <p>
+                Temp: {(weatherData.list[0].main.temp - 273.15).toFixed(2)}°C
+              </p>
+              <p>
+                Humidity: {weatherData.list[0].main.humidity}% Wind:{" "}
+                {weatherData.list[0].wind.speed} km/h
+              </p>
             </>
           ) : (
             <p>Loading...</p>
           )}
-          {pollutionData && pollutionData.list && pollutionData.list.length > 0 ? (
+          {pollutionData &&
+          pollutionData.list &&
+          pollutionData.list.length > 0 ? (
             <div className="mt-2 p-2 border rounded">
               <p>
-                Air Pollution (PM2.5):{' '}
+                Air Pollution (PM2.5):{" "}
                 <span className="text-green-500">
-                  {pollutionData.list[0].components.pm2_5}{' '}
+                  {pollutionData.list[0].components.pm2_5}{" "}
                   <HeartIcon className="inline-block" />
                 </span>
               </p>
@@ -206,7 +333,8 @@ const formatDate = (date) => {
       </div>
       <div className="container3 mx-auto px-4 mt-8 border-t pt-4 flex justify-between items-center text-sm">
         <p>
-          Copyright © 2024 National Institute of Technology Patna. All Rights Reserved.{' '}
+          Copyright © 2024 National Institute of Technology Patna. All Rights
+          Reserved.{" "}
           <a href="#" className="underline">
             Credits & Attributions
           </a>
@@ -221,13 +349,6 @@ const formatDate = (date) => {
     </footer>
   );
 };
-
-
-
-
-
-
-
 
 function CloudIcon(props) {
   return (
@@ -245,7 +366,7 @@ function CloudIcon(props) {
     >
       <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
     </svg>
-  )
+  );
 }
 
 function FacebookIcon(props) {
@@ -264,7 +385,7 @@ function FacebookIcon(props) {
     >
       <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
     </svg>
-  )
+  );
 }
 
 function GlobeIcon(props) {
@@ -285,7 +406,7 @@ function GlobeIcon(props) {
       <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
       <path d="M2 12h20" />
     </svg>
-  )
+  );
 }
 
 function HeartIcon(props) {
@@ -304,7 +425,7 @@ function HeartIcon(props) {
     >
       <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
     </svg>
-  )
+  );
 }
 
 function LinkedinIcon(props) {
@@ -325,7 +446,7 @@ function LinkedinIcon(props) {
       <rect width="4" height="12" x="2" y="9" />
       <circle cx="4" cy="4" r="2" />
     </svg>
-  )
+  );
 }
 
 function MailIcon(props) {
@@ -345,7 +466,7 @@ function MailIcon(props) {
       <rect width="20" height="16" x="2" y="4" rx="2" />
       <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
     </svg>
-  )
+  );
 }
 
 function PhoneIcon(props) {
@@ -364,7 +485,7 @@ function PhoneIcon(props) {
     >
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
     </svg>
-  )
+  );
 }
 
 function TwitterIcon(props) {
@@ -383,7 +504,7 @@ function TwitterIcon(props) {
     >
       <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
     </svg>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
