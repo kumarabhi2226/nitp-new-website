@@ -8,37 +8,149 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import "./navbar.css";
 import logo from "../assets/images/logo.svg";
-import todoImage from "../assets/images/icon-todo.svg";
 import calendarImage from "../assets/images/icon-calendar.svg";
 import remindersImage from "../assets/images/icon-reminders.svg";
 import planningImage from "../assets/images/icon-planning.svg";
+import About from "../assets/images/about.svg";
+import Value from "../assets/images/value.svg";
+import Mission from "../assets/images/mission.svg";
+import { TbHome } from "react-icons/tb";
+
 
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 
 const navItems = [
+  
   {
-    label: "Features",
+    label: <TbHome />,
+    link: "/",
+  },
+  {
+    label: "Institue",
     link: "#",
     children: [
-      { label: "Todo list", link: "#", iconImage: todoImage },
-      { label: "Calendar", link: "#", iconImage: calendarImage },
-      { label: "Reminders", link: "#", iconImage: remindersImage },
-      { label: "Planning", link: "#", iconImage: planningImage },
+      
+      { 
+        label: "About", 
+        link: "#", 
+        iconImage: About,
+       
+      },
+      { 
+        label: "Mission and Vision", 
+        link: "#", 
+        iconImage: Mission,
+      },
+      { 
+        label: "Values", 
+        link: "#", 
+        iconImage: Value,
+       
+      },
+      { 
+        label: "Campus", 
+        link: "#", 
+        iconImage: planningImage,
+      },
+      { 
+        label: "Resources", 
+        link: "#", 
+        iconImage: planningImage,
+        
+      },
     ],
   },
   {
-    label: "Company",
+    label: "Adminstration",
     link: "#",
     children: [
-      { label: "History", link: "#" },
-      { label: "Our Team", link: "#" },
-      { label: "Blog", link: "#" },
+      { 
+        label: "History", 
+        link: "#" 
+      },
+      { 
+        label: "Our Team", 
+        link: "#" 
+      },
+      { 
+        label: "Blog", 
+        link: "#" 
+      },
     ],
   },
-  { label: "Careers", link: "#" },
-  { label: "About", link: "#" },
+  { label: "Academics", link: "#" ,
+    children: [
+      { 
+        label: "History", 
+        link: "#",
+        children: [
+          { label: "Sub Feature 3", link: "#" },
+          { label: "Sub Feature 3", link: "#" },
+          { label: "Sub Feature 3", link: "#" },
+          
+        ], 
+      },
+      { 
+        label: "Our Team", 
+        link: "#" 
+      },
+      { 
+        label: "Blog", 
+        link: "#" 
+      },
+    ],
+  },
+  { label: "Faculty & Staff", link: "#" ,
+    children: [
+      { 
+        label: "History", 
+        link: "#" 
+      },
+      { 
+        label: "Our Team", 
+        link: "#" 
+      },
+      { 
+        label: "Blog", 
+        link: "#" 
+      },
+    ],
+  },
+  { label: "Facilities", link: "#",
+    children: [
+      { 
+        label: "History", 
+        link: "#" 
+      },
+      { 
+        label: "Our Team", 
+        link: "#" 
+      },
+      { 
+        label: "Blog", 
+        link: "#" 
+      },
+    ],
+   },
+  { label: "Students", link: "#" ,
+    children: [
+      { 
+        label: "History", 
+        link: "#" 
+      },
+      { 
+        label: "Our Team", 
+        link: "#" 
+      },
+      { 
+        label: "Blog", 
+        link: "#" 
+      },
+    ],
+  },
 ];
+
 
 export default function Navbar() {
   const [isSideMenuOpen, setSideMenuOpen] = useState(false);
@@ -69,13 +181,13 @@ export default function Navbar() {
         <div className="left-content flex">
           <Image src={logo} alt="NIT PATNA" height={70} />
         </div>
-        <div className="institute-info hidden md:block">
+        <div className="institute-info pt-4 hidden md:block">
           <div>An Institute of National Importance under Ministry of Education</div>
           <div>(Shiksha Mantralaya), Government of India</div>
         </div>
       </div>
 
-      <div className="desktopnav mx-auto flex w-full max-w-7xl justify-center px-4 py-1 text-sm bg-white/40 backdrop-blur-lg md:rounded-xl shadow-lg">
+      <div className="desktopnav mx-auto flex w-full max-w-7xl justify-center px-4 py-1 text-sm bg-white/40 md:bg-[#811919] backdrop-blur-lg md:rounded-xl shadow-lg">
         <section className="nav-items hidden md:flex">
           {navItems.map((item, index) => (
             <NavItem key={index} item={item} />
@@ -89,26 +201,7 @@ export default function Navbar() {
   );
 }
 
-function NavItem({ item }) {
-  return (
-    <Link href={item.link ?? "#"} className="relative group px-2 py-3 transition-all">
-      <p className="flex cursor-pointer items-center gap-2 text-neutral-400 group-hover:text-black">
-        <span>{item.label}</span>
-        {item.children && <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />}
-      </p>
-      {item.children && (
-        <div className="absolute right-0 top-10 hidden w-auto flex-col gap-1 rounded-lg bg-white py-3 shadow-md transition-all group-hover:flex">
-          {item.children.map((child, index) => (
-            <Link key={index} href={child.link ?? "#"} className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-neutral-400 hover:text-black">
-              {child.iconImage && <Image src={child.iconImage} alt="item-icon" />}
-              <span className="whitespace-nowrap pl-3">{child.label}</span>
-            </Link>
-          ))}
-        </div>
-      )}
-    </Link>
-  );
-}
+
 
 function MobileNav({ closeSideMenu }) {
   return (
@@ -125,6 +218,47 @@ function MobileNav({ closeSideMenu }) {
   );
 }
 
+function NavItem({ item }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div
+      className="relative group"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <Link href={item.link ?? "#"} className="flex cursor-pointer items-center gap-2 px-10 py-3 text-white	 transition-all group-hover:text-red-200">
+        <span>{item.label}</span>
+        {item.children && <IoIosArrowDown className={`transition-all ${isOpen ? "rotate-180" : ""}`} />}
+      </Link>
+      {item.children && (
+        <div className={`absolute right-0 top-10 w-auto flex-col gap-1 rounded-lg bg-white py-3 shadow-md transition-all ${isOpen ? "flex" : "hidden"}`}>
+          {item.children.map((child, index) => (
+            <div key={index} className="relative group">
+              <Link href={child.link ?? "#"} className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-neutral-500 hover:text-red-600">
+                {child.iconImage && <Image src={child.iconImage} alt="item-icon" />}
+                <span className="whitespace-nowrap pl-3">{child.label}</span>
+                {child.children && <IoIosArrowDown className="ml-auto transition-all group-hover:rotate-180" />}
+              </Link>
+              {child.children && (
+                <div className="absolute left-full top-0 hidden w-auto flex-col gap-1 rounded-lg bg-white py-3 shadow-md transition-all group-hover:flex">
+                  {child.children.map((subChild, subIndex) => (
+                    <Link key={subIndex} href={subChild.link ?? "#"} className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-orange-400	 hover:text-red-600">
+                      <span className="whitespace-nowrap pl-3">{subChild.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+
 function SingleNavItem({ item }) {
   const [animationParent] = useAutoAnimate();
   const [isItemOpen, setItemOpen] = useState(false);
@@ -138,10 +272,22 @@ function SingleNavItem({ item }) {
       {isItemOpen && item.children && (
         <div className="w-auto flex-col gap-1  bg-white py-3 transition-all flex">
           {item.children.map((child, index) => (
-            <Link key={index} href={child.link ?? "#"} className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-neutral-400 hover:text-black">
-              {child.iconImage && <Image src={child.iconImage} alt="item-icon" />}
-              <span className="whitespace-nowrap pl-3">{child.label}</span>
-            </Link>
+            <div key={index}>
+              <Link href={child.link ?? "#"} className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-neutral-400 hover:text-black">
+                {child.iconImage && <Image src={child.iconImage} alt="item-icon" />}
+                <span className="whitespace-nowrap pl-3">{child.label}</span>
+                {child.children && <IoIosArrowDown className="ml-auto transition-all group-hover:rotate-180" />}
+              </Link>
+              {isItemOpen && child.children && (
+                <div className="flex flex-col gap-1 bg-white py-3 transition-all pl-8">
+                  {child.children.map((subChild, subIndex) => (
+                    <Link key={subIndex} href={subChild.link ?? "#"} className="flex cursor-pointer items-center py-1 text-neutral-400 hover:text-black">
+                      <span className="whitespace-nowrap">{subChild.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       )}
