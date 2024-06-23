@@ -14,7 +14,10 @@
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
+.desktopnav {
+  align-items: center;
+  justify-content: space-between;
+}
 .header-top .left-content {
   align-items: center;
   justify-content: space-between;
@@ -72,10 +75,15 @@
   flex: 1;
 }
 
-.navbar-content .nav-items a:hover {
+.navbar-content .nav-items a {
   color: #111827;
 }
-
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
 @media (max-width: 768px) {
   .header-top {
     display: flex;
@@ -105,11 +113,15 @@
     max-width: fit-content !important; /* Change max-width property for mobile screens */
     margin: auto;
   }
-  .header-top .right-content {
-    text-align: center;
-    margin: auto;
-    margin-left: 0;
+  .navbar-content {
+    border-radius: 0rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+  .header-top {
+    border-radius: 0rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
   .header-top {
     padding-left: 0;
     padding-right: 0;
@@ -119,28 +131,23 @@
   }
 }
 @media (max-width: 768px) {
-  .header-top .right-content .font-bold {
-    font-size: 0.75rem;
-  }
-
   .header-top .right-content .text-sm {
     font-size: 0.575rem;
   }
 }
 
 @media (max-width: 768px) {
-  /* or some other mobile breakpoint */
   .mobiletest {
     display: flex;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     justify-content: space-between;
-    max-width: 80rem /* 1280px */;
-    padding-left: 1rem /* 16px */;
-    padding-right: 1rem /* 16px */;
-    font-size: 0.875rem /* 14px */;
-    line-height: 1.25rem /* 20px */;
+    max-width: 80rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -171,4 +178,39 @@
   right: 1rem;
   cursor: pointer;
   z-index: 101; /* Ensure it is above the side menu content */
+}
+@media (max-width: 768px) {
+  .header-top .right-content .textmob {
+    font-size: 0.575rem;
+    line-height: 0.75rem;
+  }
+  .header-top .right-content .font-bold {
+    font-size: 0.575rem;
+    font-weight: 700;
+  }
+}
+@media (max-width: 768px) {
+  .header-top {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-top img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .header-top .left-content {
+    flex: 0 0 auto; /* Make sure it only takes the space needed by its content */
+    margin-right: 0px;
+  }
+
+  .header-top .right-content {
+    flex: 1 1 auto; /* Allow the right content to take the remaining space /
+  margin-left: 10px; / Optional: add some space between logo and text */
+  }
+
+  .header-top .institute-info {
+    display: none;
+  }
 }

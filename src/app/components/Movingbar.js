@@ -11,16 +11,16 @@ const Movingbar = () => {
         const fetchNotices = async () => {
             try {
                 const noticesUrl = `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/notice/active`;
-                const academicsUrl = `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/notice/academics`;
+              
 
                 const [noticesResponse, academicsResponse] = await Promise.all([
                     axios.get(noticesUrl),
-                    axios.get(academicsUrl)
+                    
                 ]);
 
                 const allNotices = [
                     ...noticesResponse.data.filter(notice => notice.isVisible === 1 && notice.important),
-                    ...academicsResponse.data.filter(notice => notice.isVisible === 1 && notice.important)
+                    
                 ];
 
                 setImportantNotices(allNotices);
@@ -43,6 +43,45 @@ const Movingbar = () => {
                             <a
                                 href={notice.notice_link && JSON.parse(notice.notice_link).url ? JSON.parse(notice.notice_link).url : "#"}
                                 key={index}
+                                className="notice-item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span className="text-red-500 font-bold">Important Notice: </span>
+                                {notice.title}
+                            </a>
+                        ))}
+                        {/* Duplicate the notices to create a seamless loop */}
+                        {importantNotices.map((notice, index) => (
+                            <a
+                                href={notice.notice_link && JSON.parse(notice.notice_link).url ? JSON.parse(notice.notice_link).url : "#"}
+                                key={index + importantNotices.length}
+                                className="notice-item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span className="text-red-500 font-bold">Important Notice: </span>
+                                {notice.title}
+                            </a>
+                        ))}
+                        {/* Duplicate the notices to create a seamless loop */}
+                        {importantNotices.map((notice, index) => (
+                            <a
+                                href={notice.notice_link && JSON.parse(notice.notice_link).url ? JSON.parse(notice.notice_link).url : "#"}
+                                key={index + importantNotices.length}
+                                className="notice-item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span className="text-red-500 font-bold">Important Notice: </span>
+                                {notice.title}
+                            </a>
+                        ))}
+                        {/* Duplicate the notices to create a seamless loop */}
+                        {importantNotices.map((notice, index) => (
+                            <a
+                                href={notice.notice_link && JSON.parse(notice.notice_link).url ? JSON.parse(notice.notice_link).url : "#"}
+                                key={index + importantNotices.length}
                                 className="notice-item"
                                 target="_blank"
                                 rel="noopener noreferrer"

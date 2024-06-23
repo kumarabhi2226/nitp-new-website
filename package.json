@@ -29,6 +29,7 @@
     "react-dom": "^18",
     "react-icons": "^5.2.1",
     "react-linkedin-sdk": "^1.0.12",
+    "react-responsive-masonry": "^2.2.0",
     "react-wrap-balancer": "^1.1.1",
     "swiper": "^11.1.4",
     "tailwind-merge": "^2.3.0",

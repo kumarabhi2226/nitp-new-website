@@ -1,100 +1,119 @@
-"use client"
+"use client";
 import { useEffect, useState } from 'react';
-import { LinkedInProfile } from 'react-linkedin-sdk'; // Import LinkedInProfile from react-linkedin-sdk
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 import './Gallery.css';
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import Link from 'next/link';
+
+const images = [
+  'https://cdn.pixabay.com/photo/2016/11/29/12/13/fence-1869401_960_720.jpg',
+  'https://cdn.pixabay.com/photo/2024/03/24/17/10/background-8653526_1280.jpg',
+  'https://cdn.pixabay.com/photo/2023/08/08/10/50/hot-wheels-8177051_1280.jpg',
+  'https://cdn.pixabay.com/photo/2024/06/06/13/25/black-tailed-skimmer-8812720_1280.jpg',
+  'https://cdn.pixabay.com/photo/2016/05/18/17/59/leaf-1401140_1280.jpg',
+  'https://cdn.pixabay.com/photo/2024/03/24/17/10/background-8653526_1280.jpg',
+  'https://cdn.pixabay.com/photo/2023/08/08/10/50/hot-wheels-8177051_1280.jpg',
+  'https://cdn.pixabay.com/photo/2024/06/06/13/25/black-tailed-skimmer-8812720_1280.jpg',
+  'https://cdn.pixabay.com/photo/2016/05/18/17/59/leaf-1401140_1280.jpg',
+];
 
 export function Gallery() {
-  const [linkedInPosts, setLinkedInPosts] = useState([]);
+  const [popupImage, setPopupImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  const openPopup = (index) => {
+    setPopupImage(images[index]);
+    setCurrentIndex(index);
+  };
+
+  const closePopup = () => {
+    setPopupImage(null);
+    setCurrentIndex(null);
+  };
+
+  const showNextImage = () => {
+    if (currentIndex !== null) {
+      const nextIndex = (currentIndex + 1) % images.length;
+      setPopupImage(images[nextIndex]);
+      setCurrentIndex(nextIndex);
+    }
+  };
+
+  const showPreviousImage = () => {
+    if (currentIndex !== null) {
+      const prevIndex = (currentIndex - 1 + images.length) % images.length;
+      setPopupImage(images[prevIndex]);
+      setCurrentIndex(prevIndex);
+    }
+  };
 
   useEffect(() => {
-    
-    const mockPosts = [
-      {
-        author: {
-          name: 'NIT Patna',
-          profileImageUrl: 'https://www.nitp.ac.in/static/logo512-b2c623bcaf7f23d5455ed1609e8bdb01.png', // Replace with actual image URL
-        },
-        text: "5mo • We're #hiring a new Walk-in-Interview for Temporary Faculty at NIT Patna in Patna, Bihar. Apply ... see more",
-        likes: 84,
-        reposts: 1,
-      },
-      {
-        author: {
-          name: 'NIT Patna',
-          profileImageUrl: 'https://www.nitp.ac.in/static/logo512-b2c623bcaf7f23d5455ed1609e8bdb01.png', // Replace with actual image URL
-        },
-        text: "5mo • Another post from Ashish Kumar on LinkedIn...",
-        likes: 56,
-        reposts: 3,
-      },
-      // Add more posts as needed
-    ];
-
-    setLinkedInPosts(mockPosts); // Set the fetched posts to state
+    // Load Twitter widget script
+    const script = document.createElement('script');
+    script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+    script.setAttribute('async', 'true');
+    script.setAttribute('charset', 'utf-8');
+    document.body.appendChild(script);
   }, []);
 
   return (
     <div className="flex flex-col md:flex-row gap-6 p-20 h-full gdiv">
       <div className="w-full md:w-2/5 bg-white p-4 border border-gray-200 rounded-md h-full dark:border-gray-800 social-media">
         <h2 className="text-xl font-bold mb-4 text-center">View our Social Media</h2>
-        <div className="space-y-4 overflow-y-auto max-h-[400px]">
-          {linkedInPosts.map((post, index) => (
-            <div key={index} className="bg-gray-800 text-white p-4 rounded-md">
-              <div className="flex items-start space-x-2">
-                <Avatar>
-                  <AvatarImage src={post.author.profileImageUrl} />
-                  <AvatarFallback>{post.author.name.charAt(0)}</AvatarFallback>
-                </Avatar>
-                <div className="flex-1">
-                  <p className="font-bold">{post.author.name}</p>
-                  <p className="text-sm">{post.text}</p>
-                  <div className="flex items-center mt-2 space-x-4">
-                    <FacebookIcon className="h-5 w-5" />
-                    <ReplyIcon className="h-5 w-5" />
-                    <RepeatIcon className="h-5 w-5" />
-                    <SendIcon className="h-5 w-5" />
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-center justify-between mt-2">
-                <span>{post.likes}</span>
-                <span>{post.reposts} reposts</span>
+        <a className="twitter-timeline" data-lang="en" data-height="350" href="https://twitter.com/NITPatna1?ref_src=twsrc%5Etfw">Tweets by NIT Patna</a>
+        <a className="twitter-timeline" data-lang="en" data-height="350" href="https://twitter.com/EduMinOfIndia?ref_src=twsrc%5Etfw">Tweets by Education Ministry Of India</a>
+      </div>
+      <div className="imagediv1">
+        <h2 className="text-xl font-bold mb-4 text-center">Glimpse of NIT Patna</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-4 md:p-6">
+          {images.map((image, index) => (
+            <div key={index} className="relative overflow-hidden rounded-lg group aspect-[4/3]">
+              <img
+                src={image}
+                alt={`Gallery Image ${index + 1}`}
+                width={400}
+                height="auto"
+                className="object-cover w-full h-auto transition-all duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button onClick={() => openPopup(index)} className="text-white font-medium">
+                  View Image
+                </button>
               </div>
             </div>
           ))}
+          <div className="col-span-full flex justify-center mt-6">
+            <Link
+              href="/Gallery"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              prefetch={false}
+            >
+              <GalleryThumbnailsIcon className="w-5 h-5" />
+              View All
+            </Link>
+          </div>
         </div>
       </div>
-      <div className="w-full md:w-3/5 bg-white p-4 border border-gray-200 rounded-md h-full dark:border-gray-800 image-gallery">
-        <h2 className="text-xl font-bold mb-4 text-center">
-          <CameraIcon className="inline-block h-6 w-6" /> Glimpse of NIT Patna{' '}
-          <CameraIcon className="inline-block h-6 w-6" />
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 ">
-          {Array.from({ length: 9 }).map((_, index) => (
-            <img
-              key={index}
-              src="/placeholder.svg"
-              alt={`Gallery Image ${index + 1}`}
-              className="w-full h-auto rounded-md block object-cover imgbox"
-            />
-          ))}
-        </div>
-        <div className="text-center mt-4">
-          <Button variant="outline" className="bg-white" href="/gallery">
-            Explore more beauty of NIT Patna
-          </Button>
-        </div>
-      </div>
-   
+      {popupImage && (
+        <>
+          <div className="overlay-background" onClick={closePopup}></div>
+          <div className="popup">
+            <button className="close-button" onClick={closePopup}>✖</button>
+            <img src={popupImage} alt="Popup Image" />
+            <div className="navigation-buttons">
+              <button className="prev-button" onClick={showPreviousImage}>←</button>
+              <button className="next-button" onClick={showNextImage}>→</button>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
 
 export default Gallery;
 
-function CameraIcon(props) {
+function GalleryThumbnailsIcon(props) {
   return (
     <svg
       {...props}
@@ -108,90 +127,11 @@ function CameraIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-      <circle cx="12" cy="13" r="3" />
+      <rect width="18" height="14" x="3" y="3" rx="2" />
+      <path d="M4 21h1" />
+      <path d="M9 21h1" />
+      <path d="M14 21h1" />
+      <path d="M19 21h1" />
     </svg>
-  );
-}
-
-function FacebookIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </svg>
-  );
-}
-
-function RepeatIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m17 2 4 4-4 4" />
-      <path d="M3 11v-1a4 4 0 0 1 4-4h14" />
-      <path d="m7 22-4-4 4-4" />
-      <path d="M21 13v1a4 4 0 0 1-4 4H3" />
-    </svg>
-  );
-}
-
-function ReplyIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="9 17 4 12 9 7" />
-      <path d="M20 18v-2a4 4 0 0 0-4-4H4" />
-    </svg>
-  );
-}
-
-function SendIcon(props) {
-  return (
-    <
-    svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m22 2-7 20-4-9-9-4Z" />
-    <path d="M22 2 11 13" />
-  </svg>
-);
+  )
 }
