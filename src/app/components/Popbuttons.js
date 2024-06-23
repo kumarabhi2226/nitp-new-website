@@ -7,37 +7,37 @@ const Popbuttons = () => {
   return (
     <div className='maindiv'>
       <div className='container'>
-      <div className="card">
-        <FontAwesomeIcon icon={faUserGraduate} size="2x" />
+      <div className="card card1">
+        <FontAwesomeIcon icon={faUserGraduate} size="2x" color='#f7cece'/>
         <p className="heading">STUDENT</p>
       </div>
       <div className="card">
-        <FontAwesomeIcon icon={faGraduationCap} size="2x" />
-        <p className="heading">ALUMNI</p>
+        <FontAwesomeIcon icon={faGraduationCap} size="2x" color='#BA210E' />
+        <p className="heading heading1">ALUMNI</p>
       </div>
-      <div className="card">
-        <FontAwesomeIcon icon={faSchool} size="2x" />
+      <div className="card card1">
+        <FontAwesomeIcon icon={faSchool} size="2x" color='#f7cece' />
         <p className="heading">ADMISSIONS</p>
       </div>
       <div className="card">
-        <FontAwesomeIcon icon={faBookOpen} size="2x" />
+        <FontAwesomeIcon icon={faBookOpen} size="2x" color='#d62a39' />
         <p className="heading">MAGAZINE</p>
       </div>
       <div className="card">
-        <FontAwesomeIcon icon={faBolt} size="2x" />
+        <FontAwesomeIcon icon={faBolt} size="2x" color='#d62a39' />
         <p className="heading">RECRUITMENT</p>
       </div>
-      <div className="card">
-        <FontAwesomeIcon icon={faUsers} size="2x" />
+      <div className="card card1">
+        <FontAwesomeIcon icon={faUsers} size="2x" color='#f7cece' />
         <p className="heading">FACULTY & STAFF</p>
       </div>
       <div className="card">
-        <FontAwesomeIcon icon={faCalendarAlt} size="2x" />
+        <FontAwesomeIcon icon={faCalendarAlt} size="2x" color='#d62a39' />
         <p className="heading">EVENTS</p>
       </div>
-      <div className="card">
-        <FontAwesomeIcon icon={faBuilding} size="2x" />
-        <p className="heading">TRAINING AND PLACEMENT</p>
+      <div className="card card1">
+        <FontAwesomeIcon icon={faBuilding} size="2x" color='#f7cece'/>
+        <p className="heading heading1">TRAINING AND PLACEMENT</p>
       </div>
     </div>
     </div>
