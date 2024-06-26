@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ResponsiveBar } from "@nivo/bar";
-import "./Placement.css";
+import "./styles/Placement.css";
 
 export default function Placement() {
   return (<div className="Placementdiv">

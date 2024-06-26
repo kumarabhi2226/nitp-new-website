@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './Movingbar.css';
+import './styles/Movingbar.css';
 
 const Movingbar = () => {
     const [importantNotices, setImportantNotices] = useState([]);

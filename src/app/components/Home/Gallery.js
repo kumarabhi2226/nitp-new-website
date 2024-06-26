@@ -1,28 +1,20 @@
 "use client";
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import { useEffect, useState } from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import './styles/Gallery.css';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import './Gpage.css';
+import Link from 'next/link';
 
 const images = [
   'https://i.postimg.cc/bwy2BtkJ/nit-patna-001.jpg',
-  'https://i.postimg.cc/02dwnf6F/nit-patna-002.jpg',
-  'https://i.postimg.cc/zX1hTMfT/nit-patna-003.jpg',
-  'https://i.postimg.cc/h4mxzgKS/nit-patna-004.jpg',
-  'https://i.postimg.cc/fyY06783/nit-patna-005.jpg',
-  'https://i.postimg.cc/HLP55kJL/nit-patna-006.jpg',
-  'https://i.postimg.cc/TwLbcvmJ/nit-patna-007.jpg',
-  'https://i.postimg.cc/pTwFGcJb/nit-patna-008.jpg',
-  'https://i.postimg.cc/LssLn187/nit-patna-009.jpg',
-  'https://i.postimg.cc/bwy2BtkJ/nit-patna-001.jpg',
-  'https://i.postimg.cc/02dwnf6F/nit-patna-002.jpg',
-  'https://i.postimg.cc/zX1hTMfT/nit-patna-003.jpg',
-  'https://i.postimg.cc/h4mxzgKS/nit-patna-004.jpg',
-  'https://i.postimg.cc/fyY06783/nit-patna-005.jpg',
-  'https://i.postimg.cc/HLP55kJL/nit-patna-006.jpg',
-  'https://i.postimg.cc/TwLbcvmJ/nit-patna-007.jpg',
-  'https://i.postimg.cc/pTwFGcJb/nit-patna-008.jpg',
-  'https://i.postimg.cc/LssLn187/nit-patna-009.jpg',
+'https://i.postimg.cc/02dwnf6F/nit-patna-002.jpg',
+'https://i.postimg.cc/zX1hTMfT/nit-patna-003.jpg',
+'https://i.postimg.cc/h4mxzgKS/nit-patna-004.jpg',
+'https://i.postimg.cc/fyY06783/nit-patna-005.jpg',
+'https://i.postimg.cc/HLP55kJL/nit-patna-006.jpg',
+'https://i.postimg.cc/TwLbcvmJ/nit-patna-007.jpg',
+'https://i.postimg.cc/pTwFGcJb/nit-patna-008.jpg',
+'https://i.postimg.cc/LssLn187/nit-patna-009.jpg',
 ];
 
 export function Gallery() {
@@ -56,27 +48,30 @@ export function Gallery() {
   };
 
   useEffect(() => {
-    const script = document.createElement("script");
-    script.setAttribute("src", "https://platform.twitter.com/widgets.js");
-    script.setAttribute("async", "true");
-    script.setAttribute("charset", "utf-8");
+    // Load Twitter widget script
+    const script = document.createElement('script');
+    script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+    script.setAttribute('async', 'true');
+    script.setAttribute('charset', 'utf-8');
     document.body.appendChild(script);
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row h-full gdiv grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-6">
-      
-      <div >
-        <h2 className="text-xl font-bold mb-4 text-center text-black">Glimpse of NIT Patna</h2>
+    <div className="flex flex-col md:flex-row gap-6 p-20 h-full gdiv">
+      <div className="w-full md:w-2/5 bg-white p-4 border border-gray-200 rounded-md h-full dark:border-gray-800 social-media">
+        <h2 className="text-xl font-bold mb-4 text-center">View our Social Media</h2>
+        <a className="twitter-timeline" data-lang="en" data-height="350" href="https://twitter.com/NITPatna1?ref_src=twsrc%5Etfw">Tweets by NIT Patna</a>
+        <a className="twitter-timeline" data-lang="en" data-height="350" href="https://twitter.com/EduMinOfIndia?ref_src=twsrc%5Etfw">Tweets by Education Ministry Of India</a>
+      </div>
+      <div className="imagediv1">
+        <h2 className="text-xl font-bold mb-4 text-center">Glimpse of NIT Patna</h2>
         <div className="image-grid grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-4 md:p-6">
           {images.map((image, index) => (
-            <div
-              key={index}
-              className="relative overflow-hidden rounded-lg group aspect-[4/3] image-item"
-            >
+            <div key={index}className={` relative overflow-hidden rounded-lg group aspect-[4/3] image-item ${index >= 4 ? 'hidden-on-mobile' : ''}`}>
               <img
                 src={image}
                 alt={`Gallery Image ${index + 1}`}
+                
                 className="object-cover w-full h-full transition-all duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -86,24 +81,31 @@ export function Gallery() {
               </div>
             </div>
           ))}
-          
+          <div className="col-span-full flex justify-center mt-6">
+            <Link
+              href="/Gallery"
+              className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-black focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800" prefetch={false}>
+<span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-white rounded-md group-hover:bg-opacity-0">
+<GalleryThumbnailsIcon className="w-10 h-10" />
+              View All
+</span>
+
+              
+            
+              
+            </Link>
+          </div>
         </div>
       </div>
       {popupImage && (
         <>
           <div className="overlay-background" onClick={closePopup}></div>
           <div className="popup">
-            <button className="close-button text-black"  onClick={closePopup}>
-              ✖
-            </button>
+            <button className="close-button" onClick={closePopup}>✖</button>
             <img src={popupImage} alt="Popup Image" />
-            <div className="navigation-buttons text-black">
-              <button className="prev-button" onClick={showPreviousImage}>
-                ←
-              </button>
-              <button className="next-button" onClick={showNextImage}>
-                →
-              </button>
+            <div className="navigation-buttons">
+              <button className="prev-button" onClick={showPreviousImage}>←</button>
+              <button className="next-button" onClick={showNextImage}>→</button>
             </div>
           </div>
         </>

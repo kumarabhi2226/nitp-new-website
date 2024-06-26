@@ -1,6 +1,4 @@
 "use client"
-
-
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import './Slider.css';
+import './styles/Slider.css';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -18,6 +16,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 const Slider = () => {
     return (
         <>
+        
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
@@ -32,14 +31,12 @@ const Slider = () => {
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
           >
-            <SwiperSlide>
-                <img src="https://www.nitp.ac.in/static/237cf5dbd8ce2ad31af6b9af77b078e8/d8255/2020-07-03_4_1920x1080.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            
+                   
+            <SwiperSlide><img src="https://i.postimg.cc/bwy2BtkJ/nit-patna-001.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="https://i.postimg.cc/02dwnf6F/nit-patna-002.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="https://i.postimg.cc/zX1hTMfT/nit-patna-003.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="https://i.postimg.cc/h4mxzgKS/nit-patna-004.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="https://i.postimg.cc/fyY06783/nit-patna-005.jpg" /></SwiperSlide>
           </Swiper>
         </>
       );

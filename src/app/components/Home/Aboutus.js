@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import "./Aboutus.css";
+import "./styles/Aboutus.css";
 
 export default function Aboutus() {
   return (

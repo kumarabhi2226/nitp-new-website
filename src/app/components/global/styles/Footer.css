@@ -7,6 +7,12 @@
 @media (max-width: 768px) {
   .fdiv {
     position: relative;
-    top: 85%;
+    top: 95%;
   }
+}
+.ndivf {
+  align-items: center;
+}
+.wfdiv {
+  align-items: center;
 }

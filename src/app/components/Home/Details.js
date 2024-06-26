@@ -3,7 +3,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import "./Details.css";
+import "./styles/Details.css";
 
 // Noticecard Component
 const Noticecard = ({ detail, time, attachments, imp, link }) => (

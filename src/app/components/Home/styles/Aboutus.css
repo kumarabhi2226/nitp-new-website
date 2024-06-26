@@ -7,6 +7,7 @@
   .aboutdiv {
     position: relative;
     top: 25%;
+    padding: 3px;
     /* background-color: rgb(255, 159, 159); */
   }
   .intdiv {

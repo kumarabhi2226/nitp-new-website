@@ -1,0 +1,41 @@
+.h1w {
+  text-align: center;
+}
+
+.h2w {
+  text-align: center;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.yearButtons {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.buttonGroup button,
+.yearButtons button {
+  background-color: #03bfcb;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.buttonGroup button.btnActive,
+.yearButtons button.btnActive {
+  background-color: #02899c;
+}
+
+.cardContainerw {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
