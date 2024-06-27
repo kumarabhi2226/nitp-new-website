@@ -58,7 +58,7 @@ const FacultyList = ({ department }) => {
               researchInterests={faculty.research_interest}
               email={faculty.email}
               phone={faculty.ext_no}
-              profileLink={`/${faculty.email}`}
+              profileLink={`/profile/${faculty.email}`}
             />
           ))}
         </div>

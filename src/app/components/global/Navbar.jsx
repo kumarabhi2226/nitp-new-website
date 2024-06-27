@@ -29,30 +29,30 @@ const navItems = [
   },
   
   {
-    label: "Institue",
-    link: "#",
+    label: "Institute",
+    link: "/Institute",
     children: [
       
       { 
         label: "About", 
-        link: "#", 
+        link: "/Institute/?tab=about", 
         iconImage: About,
        
       },
       { 
         label: "Mission and Vision", 
-        link: "#", 
+        link: "/Institute/?tab=mission", 
         iconImage: Mission,
       },
       { 
         label: "Values", 
-        link: "#", 
+        link: "/Institute/?tab=values", 
         iconImage: Value,
        
       },
       { 
         label: "Campus", 
-        link: "#", 
+        link: "/Institute/?tab=campus", 
         iconImage: Campus,
       },
       { 
