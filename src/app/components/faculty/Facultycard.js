@@ -35,7 +35,7 @@ function FacultyCard({
     <>
       <a href={profileLink} target="_parent">
         <div
-          className={`bg-(blur-xl)	 static flex flex-col overflow-hidden md:flex-row shadow-md border rounded p-4 m-5 transition-all duration-500 ${
+          className={`backdrop-blur-sm	 static flex flex-col overflow-hidden md:flex-row shadow-md border rounded p-4 m-5 transition-all duration-500 ${
             isHovered
               ? remainingInterests
                 ? "h-[52rem] md:h-[17rem]"

@@ -188,7 +188,7 @@
 
   .mobile-nav-content {
     height: 100%;
-    width: 65%;
+    width: 85%;
     background-color: white;
     padding: 1rem;
     overflow-y: auto;
@@ -244,4 +244,13 @@
     position: relative;
     left: 0;
   }
+}
+
+.relative1 .absolute1 {
+  display: none;
+}
+
+.relative1:hover .absolute1,
+.group1:hover .absolute1 {
+  display: flex;
 }

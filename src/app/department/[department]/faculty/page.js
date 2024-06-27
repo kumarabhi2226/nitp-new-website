@@ -1,4 +1,4 @@
-"use client"; // Ensure this is a client component
+"use client";
 import React, { useEffect } from 'react';
 import FacultyList from '../../../components/faculty/FacultyList';
 import Loading from '@/app/Loading';
