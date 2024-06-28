@@ -123,13 +123,13 @@ function BarChart(props) {
     <div {...props}>
       <ResponsiveBar
         data={[
-          { name: "CSE", count: 111 },
-          { name: "ECE", count: 157 },
-          { name: "EE", count: 129 },
-          { name: "ME", count: 150 },
-          { name: "Others", count: 119 },
+          { name: "CSE", No_of_Students: 111 },
+          { name: "ECE", No_of_Students: 157 },
+          { name: "EE", No_of_Students: 129 },
+          { name: "ME", No_of_Students: 150 },
+          { name: "Others", No_of_Students: 119 },
         ]}
-        keys={["count"]}
+        keys={["No_of_Students"]}
         indexBy="name"
         margin={{ top: 0, right: 0, bottom: 40, left: 40 }}
         padding={0.3}
@@ -166,7 +166,7 @@ function BarChart(props) {
         tooltipLabel={({ id }) => `${id}`}
         enableLabel={false}
         role="application"
-        ariaLabel="A bar chart showing data"
+        ariaLabel="A bar chart showing placement stats"
       />
     </div>
   );

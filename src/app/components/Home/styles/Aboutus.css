@@ -1,6 +1,6 @@
 .aboutdiv {
   position: relative;
-  top: 35%;
+  top: 30%;
   /* background-color: rgb(255, 159, 159); */
 }
 @media (max-width: 768px) {
