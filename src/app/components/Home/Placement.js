@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ResponsiveBar } from "@nivo/bar";
+import { useState } from 'react';
 import "./styles/Placement.css";
 
 export default function Placement() {
@@ -14,72 +15,74 @@ export default function Placement() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-4">
           <h2 className="text-xl font-semibold text-center">Department-wise BTech Offers</h2>
-          <BarChart className="w-full h-[300px]" />
+          <div className="bg-white p-7 border-2 border-blue-200 rounded-lg"><BarChart className="w-full h-[300px]" /></div>
+          
           <div className="grid grid-cols-5 gap-4">
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-3xl font-bold nums">486</p>
+                <p className="text-2xl font-bold nums">486</p>
                 <p className="text-sm nums">CSE</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-3xl font-bold nums">558</p>
+                <p className="text-2xl font-bold nums">558</p>
                 <p className="text-sm nums">ECE</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-3xl font-bold nums">626</p>
+                <p className="text-2xl font-bold nums">626</p>
                 <p className="text-sm nums">EE</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-3xl font-bold nums">860</p>
+                <p className="text-2xl font-bold nums">860</p>
                 <p className="text-sm nums">ME</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-3xl font-bold nums">876</p>
+                <p className="text-2xl font-bold nums">876</p>
                 <p className="text-sm nums">Others</p>
               </CardContent>
             </Card>
           </div>
-          <Button className="w-full bg-[#E0F2FE] border-solid border-2 border-sky-500">View Branch-Wise Stats</Button>
+          <Button className="w-full bg-[#000000] border-double border-4 border-sky-500 ">View Branch-Wise Stats</Button>
         </div>
         <div className="space-y-4">
           <h2 className="text-xl font-semibold text-center">BTech Highest Package in LPA</h2>
-          <BarChart className="w-full h-[300px]" />
-          <div className="grid grid-cols-5 gap-4">
+          <div className="bg-white p-7 border-2 border-blue-200 rounded-lg"><BarChart className="w-full h-[300px]" /></div>
+          
+          <div className="grid grid-cols-5 gap-4 ">
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-3xl font-bold nums">844</p>
+                <p className="text-2xl font-bold nums">844</p>
                 <p className="text-sm nums">CSE</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-3xl font-bold nums">876</p>
+                <p className="text-2xl font-bold nums">876</p>
                 <p className="text-sm nums">ECE</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-3xl font-bold nums">860</p>
+                <p className="text-2xl font-bold nums">860</p>
                 <p className="text-sm nums">EE</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-3xl font-bold nums">626</p>
+                <p className="text-2xl font-bold nums">626</p>
                 <p className="text-sm nums">ME</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-3xl font-bold nums">558</p>
+                <p className="text-2xl font-bold nums">558</p>
                 <p className="text-sm nums">Others</p>
               </CardContent>
             </Card>
@@ -132,8 +135,9 @@ function BarChart(props) {
         keys={["No_of_Students"]}
         indexBy="name"
         margin={{ top: 0, right: 0, bottom: 40, left: 40 }}
-        padding={0.3}
-        colors={["#FFA5A5"]}
+        padding={0.35}
+        borderRadius={10}
+        colors={["#FEC0CB"]}
         borderColor={['#C55656']}
         borderWidth={1}
         axisBottom={{
@@ -168,9 +172,11 @@ function BarChart(props) {
         role="application"
         ariaLabel="A bar chart showing placement stats"
       />
+      
     </div>
   );
 }
+
 
 function BriefcaseIcon(props) {
   return (
