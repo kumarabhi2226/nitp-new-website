@@ -13,6 +13,11 @@ import Mission from "../../assets/images/mission.svg";
 import Home from "../../assets/images/home.svg";
 import Campus from "../../assets/images/campus.svg";
 import Resource from "../../assets/images/resource.svg"
+import Director from "../../assets/images/director.svg"
+import Person from "../../assets/images/person.svg"
+import President from "../../assets/images/president.svg"
+import Sperson from "../../assets/images/sperson.svg"
+
 import { useRouter } from 'next/navigation';
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -47,6 +52,11 @@ const navItems = [
        
       },
       { 
+        label: "Director", 
+        link: "/Institute/Director", 
+        iconImage: Director,
+      },
+      { 
         label: "Campus", 
         link: "/Institute/?tab=campus", 
         iconImage: Campus,
@@ -67,48 +77,59 @@ const navItems = [
       {
         label: "Visitor",
         link: "#",
+        iconImage:President,
       },
       {
         label: "Council of NITs",
         link: "#",
+        iconImage:Person,
       },
       {
         label: "Board of Governors",
         link: "#",
+        iconImage:Person,
       },
       {
         label: "Senate",
         link: "#",
+        iconImage:Person,
       },
 
       {
         label: "Director",
-        link: "#",
+        link: "/Institute/Director",
+        iconImage:Director,
       },
       {
         label: "Registrar",
         link: "#",
+        iconImage:Sperson,
       },
       {
         label: "Deans",
         link: "#",
+        iconImage:Person,
       },
 
       {
         label: "Building Work Committee ",
         link: "#",
+        iconImage:Person,
       },
       {
         label: "Institute Disciplinary Committee",
         link: "#",
+        iconImage:Person,
       },
       {
         label: "Finance committee",
         link: "#",
+        iconImage:Person,
       },
       {
         label: "Service Unit Heads Organisation Chart",
         link: "#",
+        iconImage:Person,
       },
     ],
   },
@@ -513,6 +534,7 @@ function SingleNavItem({ item ,closeSideMenu}) {
   return (
     <div ref={animationParent} className="relative px-1 py-3 transition-all">
       <p onClick={() => setItemOpen(!isItemOpen)} className="flex cursor-pointer items-center gap-2 text-neutral-900 group-hover:text-black">
+      {item.iconImage && <Image src={item.iconImage} alt="item-icon" />}
       <Link href={item.link ?? "#"} onClick={closeSideMenu} >
                 {item.label}
               </Link>
@@ -538,7 +560,7 @@ function SubSidemenu({ item,closeSideMenu }) {
   return (
     <div className="relative px-1 py-1 transition-all">
       <p onClick={handleSubToggle} className="flex cursor-pointer items-center gap-1 text-neutral-600 group-hover:text-black">
-        
+      {item.iconImage && <Image src={item.iconImage} alt="item-icon" />}
         <Link href={item.link ?? "#"} onClick={closeSideMenu}>
         <span>{item.label}</span>
               </Link>
@@ -548,6 +570,7 @@ function SubSidemenu({ item,closeSideMenu }) {
         <div className="w-auto flex-col gap-1 bg-white py-1 transition-all">
           {item.children.map((subChild, index) => (
             <div key={index} className="pl-4">
+              {item.iconImage && <Image src={item.iconImage} alt="item-icon" />}
               <Link href={subChild.link ?? "#"} className="flex cursor-pointer items-center py-1 text-neutral-400 hover:text-black">
                 <span>{subChild.label}</span>
               </Link>
