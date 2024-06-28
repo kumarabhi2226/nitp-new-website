@@ -10,7 +10,7 @@ const page = () => {
               </div>
               <div className="space-y-1 text-center md:text-left">
                 <h1 className="text-xl font-bold text-[#a01d0c]">Prof. Pradip K. Jain</h1>
-                <p className="text-muted-foreground">Director</p>
+                <p className="text-muted-foreground text-black">Director</p>
               </div>
               <div className="flex flex-col items-center md:items-start gap-2">
                 <div className="flex items-center gap-2">
@@ -28,7 +28,7 @@ const page = () => {
                       d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
                     />
                   </svg>
-                  <a href="mailto:director@nitp.ac.in"><span>director@nitp.ac.in</span></a>
+                  <a href="mailto:director@nitp.ac.in" className="text-neutral-600"><span>director@nitp.ac.in</span></a>
                 </div>
                 {/* <div className="flex items-center gap-2">
                   <svg
@@ -63,7 +63,7 @@ const page = () => {
                       d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                     />
                   </svg>
-                  <span>NIT Patna</span>
+                  <span className="text-neutral-600">NIT Patna</span>
                 </div>
               </div>
              
