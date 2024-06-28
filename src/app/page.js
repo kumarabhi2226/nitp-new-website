@@ -1,11 +1,12 @@
 import Image from "next/image";
-import Slider from "./components/home/Slider";
-import Gallery from "./components/home/Gallery"
-import Popbuttons from "./components/home/Popbuttons";
-import Details from "./components/home/Details";
-import Aboutus from "./components/home/Aboutus";
-import Placement from "./components/home/Placement";
-import Movingbar from "./components/home/Movingbar";
+import Slider from "./components/Home/Slider";
+import Gallery from "./components/Home/Gallery"
+import Popbuttons from "./components/Home/Popbuttons";
+import Details from "./components/Home/Details";
+import Aboutus from "./components/Home/Aboutus";
+import Placement from "./components/Home/Placement";
+import Movingbar from "./components/Home/Movingbar";
+import Research from "./components/Home/Research";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
     <Details/>
     <Aboutus/>
     <Placement/>
+    <Research/>
     <Gallery/>
     
     </>
