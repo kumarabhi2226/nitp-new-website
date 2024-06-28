@@ -129,7 +129,7 @@ function BarChart(props) {
           { name: "ME", No_of_Students: 150 },
           { name: "Others", No_of_Students: 119 },
         ]}
-        keys={["No of_Students"]}
+        keys={["No_of_Students"]}
         indexBy="name"
         margin={{ top: 0, right: 0, bottom: 40, left: 40 }}
         padding={0.3}
