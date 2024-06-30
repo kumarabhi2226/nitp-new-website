@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect } from 'react';
 import FacultyList from '../../../components/faculty/FacultyList';
-import Loading from '@/app/Loading';
 
 const FacultyPage = ({ params }) => {
   const { department } = params;
