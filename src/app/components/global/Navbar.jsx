@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoIosArrowDown, IoIosArrowDropright } from "react-icons/io";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-import "./styles/navbar.css";
+import "./styles/Navbar.css";
 import logo from "../../assets/images/logo.png";
 import About from "../../assets/images/about.svg";
 import Value from "../../assets/images/value.svg";
