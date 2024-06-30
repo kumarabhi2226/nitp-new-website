@@ -1,13 +1,24 @@
-import React from 'react';
+"use client"
+import React,{useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserGraduate, faGraduationCap, faSchool, faBookOpen, faBolt, faUsers, faCalendarAlt, faBuilding } from '@fortawesome/free-solid-svg-icons';
 import './styles/Popbutton.css';
 import Link from 'next/link';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Popbuttons = () => {
+  useEffect(() => {
+    AOS.init({
+         duration: 800,
+         once: false,
+         offset: 50,
+       })
+ }, [])
   return (
-    <div className='maindiv'>
+    
+    <div className='maindiv flex'>
+      <div className='h-auto text-white containersideleft' data-aos="zoom-out-up"></div>
       <div className='container'>
       <div className="card card1" >
       <Link href="/student" className="card card1">
@@ -45,6 +56,7 @@ const Popbuttons = () => {
       </a>
 
     </div>
+    <div className='h-auto text-white containersideright' data-aos="zoom-out-up"></div>
     </div>
     
   );

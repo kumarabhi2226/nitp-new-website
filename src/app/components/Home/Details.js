@@ -3,7 +3,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import "./styles/Details.css";
+import "./styles/Details.css"
+import AOS from 'aos';
+import 'aos/dist/aos.css';;
 
 // Noticecard Component
 const Noticecard = ({ detail, time, attachments, imp, link }) => (
@@ -33,7 +35,7 @@ const Noticecard = ({ detail, time, attachments, imp, link }) => (
 
 // Eventcard Component
 const Eventcard = ({ detail, time, attachments, location, event_link, link }) => (
-  <div className="eventcard">
+  <div className="eventcard" >
     <h3>{detail}</h3>
     <p>{time}</p>
     <p>{location}</p>
@@ -60,6 +62,13 @@ const Eventcard = ({ detail, time, attachments, location, event_link, link }) =>
 );
 
 const Details = () => {
+  useEffect(() => {
+    AOS.init({
+         duration: 800,
+         once: false,
+         offset: 50,
+       })
+ }, [])
   const [events, setEvents] = useState([]);
   const [notices, setNotices] = useState([]);
   const [academics, setAcademics] = useState([]);
@@ -124,7 +133,7 @@ const Details = () => {
           )}
         </div>
       </div>
-      <div className="section1">
+      <div className="section1" data-aos="zoom-in-up">
       <div >
         <div className="section-header">
           <h2>Events</h2>
@@ -133,7 +142,7 @@ const Details = () => {
         
       
       
-        <div className="section-content">
+        <div className="section-content" >
           {events.length === 0 ? (
             <p>No events available.</p>
           ) : (
@@ -155,7 +164,7 @@ const Details = () => {
                   attachments={event.attachments}
                   location={event.venue.substring(0, 60)}
                   event_link={event.event_link && JSON.parse(event.event_link).url || ""}
-                  link={event.attachments.length !== 0 ? event.attachments[0].url : ""}
+                  link={event.attachments.length !== 0 ? event.attachments[0].url : ""} 
                 />
               );
             })

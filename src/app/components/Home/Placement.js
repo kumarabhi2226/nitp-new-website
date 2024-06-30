@@ -1,50 +1,76 @@
 "use client"
-
+import React,{ useState ,useEffect} from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ResponsiveBar } from "@nivo/bar";
-import { useState } from 'react';
 import "./styles/Placement.css";
+import CountUp from "react-countup";
+import ScrollTrigger from "react-scroll-trigger";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Placement() {
-  return (<div className="Placementdiv">
+  const[counterOn,setCounterOn]=useState(false);
+  useEffect(() => {
+    AOS.init({
+         duration: 800,
+         once: false,
+         offset: 50,
+       })
+ }, [])
+  return (
+    <ScrollTrigger onEnter={()=>setCounterOn(true)} onExit={()=>setCounterOn(false)} className="Placementdiv">
+  <div>
      <div className="p-8">
-      <div className="mb-10 text-center">
-        <h1 className="text-4xl font-bold">Our Placements Stats</h1>
+      <div className="flex text-center items-center justify-center mb-8">
+      <div className="w-full h-1 mr-4 bg-[#a51818]" />
+        <h1 className="text-4xl font-bold w-full">Our Placements Stats</h1>
+        <div className="w-full h-1 mr-4 bg-[#a51818]" />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-4">
           <h2 className="text-xl font-semibold text-center">Department-wise BTech Offers</h2>
-          <div className="bg-white p-7 border-2 border-blue-200 rounded-lg"><BarChart className="w-full h-[300px]" /></div>
+          <div className="bg-white p-7 border-2 border-blue-200 rounded-lg" data-aos="zoom-in"><BarChart className="w-full h-[300px]" /></div>
           
           <div className="grid grid-cols-5 gap-4">
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-2xl font-bold nums">486</p>
+                <p className="text-2xl font-bold nums">
+                {counterOn && <CountUp start={0} end={344} duration={5} delay={1}/>}
+                  </p>
                 <p className="text-sm nums">CSE</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-2xl font-bold nums">558</p>
+                <p className="text-2xl font-bold nums">
+                {counterOn && <CountUp start={0} end={548} duration={5} delay={1}/>}
+                  </p>
                 <p className="text-sm nums">ECE</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-2xl font-bold nums">626</p>
+                <p className="text-2xl font-bold nums">
+                {counterOn && <CountUp start={0} end={626} duration={5} delay={1}/>}
+                </p>
                 <p className="text-sm nums">EE</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-2xl font-bold nums">860</p>
+                <p className="text-2xl font-bold nums">
+                {counterOn && <CountUp start={0} end={860} duration={5} delay={1}/>}
+                </p>
                 <p className="text-sm nums">ME</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-2xl font-bold nums">876</p>
+                <p className="text-2xl font-bold nums">
+                {counterOn && <CountUp start={0} end={748} duration={5} delay={1}/>}
+
+                </p>
                 <p className="text-sm nums">Others</p>
               </CardContent>
             </Card>
@@ -53,36 +79,45 @@ export default function Placement() {
         </div>
         <div className="space-y-4">
           <h2 className="text-xl font-semibold text-center">BTech Highest Package in LPA</h2>
-          <div className="bg-white p-7 border-2 border-blue-200 rounded-lg"><BarChart className="w-full h-[300px]" /></div>
+          <div className="bg-white p-7 border-2 border-blue-200 rounded-lg " data-aos="zoom-in"><BarChart className="w-full h-[300px]" /></div>
           
           <div className="grid grid-cols-5 gap-4 ">
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-2xl font-bold nums">844</p>
+                <p className="text-2xl font-bold nums">
+                {counterOn && <CountUp start={0} end={844} duration={5} delay={1}/>}</p>
                 <p className="text-sm nums">CSE</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-2xl font-bold nums">876</p>
+                <p className="text-2xl font-bold nums">
+                {counterOn && <CountUp start={0} end={876} duration={5} delay={1}/>}
+                </p>
                 <p className="text-sm nums">ECE</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-2xl font-bold nums">860</p>
+                <p className="text-2xl font-bold nums">
+                {counterOn && <CountUp start={0} end={320} duration={5} delay={1}/>}
+                </p>
                 <p className="text-sm nums">EE</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-2xl font-bold nums">626</p>
+                <p className="text-2xl font-bold nums">
+                {counterOn && <CountUp start={0} end={980} duration={5} delay={1}/>}
+                </p>
                 <p className="text-sm nums">ME</p>
               </CardContent>
             </Card>
             <Card className="bg-[#E0F2FE]">
               <CardContent className="text-center">
-                <p className="text-2xl font-bold nums">558</p>
+                <p className="text-2xl font-bold nums">
+                {counterOn && <CountUp start={0} end={587} duration={5} delay={1}/>}
+                </p>
                 <p className="text-sm nums">Others</p>
               </CardContent>
             </Card>
@@ -91,33 +126,38 @@ export default function Placement() {
         </div>
       </div>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Card className="bg-[#E0F2FE] flex flex-col items-center p-4 space-y-4">
+        <Card className="bg-[#E0F2FE] flex flex-col items-center p-4 space-y-4" data-aos="zoom-out">
           <BriefcaseIcon className="text-[#172554] h-8 w-8" />
           <h3 className="text-lg font-semibold">Top Recruiters</h3>
           <p>Google, Amazon, Microsoft</p>
         </Card>
-        <Card className="bg-[#E0F2FE] flex flex-col items-center p-4 space-y-4">
+        <Card className="bg-[#E0F2FE] flex flex-col items-center p-4 space-y-4" data-aos="zoom-out">
           <h3 className="text-lg font-semibold">Average Package</h3>
-          <p className="text-3xl font-bold">Rs. 13.5 Lakh</p>
+          <p className="text-3xl font-bold">Rs. {counterOn && <CountUp start={0} end={13.5} duration={7} delay={2}/>} Lakh</p>
         </Card>
-        <Card className="bg-[#E0F2FE] flex flex-col items-center p-4 space-y-4">
+        <Card className="bg-[#E0F2FE] flex flex-col items-center p-4 space-y-4" data-aos="zoom-out">
           <h3 className="text-lg font-semibold">Placement Rate</h3>
-          <p className="text-3xl font-bold">94%</p>
+          <p className="text-3xl font-bold">{counterOn && <CountUp start={0} end={96} duration={7} delay={2}/>}%</p>
         </Card>
-        <Card className="bg-[#E0F2FE] flex flex-col items-center p-4 space-y-4">
+        <Card className="bg-[#E0F2FE] flex flex-col items-center p-4 space-y-4" data-aos="zoom-out">
           <GlobeIcon className="text-[#172554] h-8 w-8" />
           <h3 className="text-lg font-semibold">International Offers</h3>
-          <p>15+ offers</p>
+          <p>{counterOn && <CountUp start={0} end={16} duration={7} delay={2}/>}+ offers</p>
         </Card>
-        <Card className="bg-[#E0F2FE] flex flex-col items-center p-4 space-y-4">
+        <Card className="bg-[#E0F2FE] flex flex-col items-center p-4 space-y-4" data-aos="zoom-out">
           <GlobeIcon className="text-[#172554] h-8 w-8" />
-          <h3 className="text-lg font-semibold">International Offers</h3>
-          <p>15+ offers</p>
+          <h3 className="text-lg font-semibold">MnC Offers</h3>
+          <p>{counterOn && <CountUp start={0} end={26} duration={7} delay={2}/>}+ offers</p>
+        </Card>
+        <Card className="bg-[#E0F2FE] flex flex-col items-center p-4 space-y-4" data-aos="zoom-out">
+          <GlobeIcon className="text-[#172554] h-8 w-8" />
+          <h3 className="text-lg font-semibold">PSU Offers</h3>
+          <p>{counterOn && <CountUp start={0} end={44} duration={7} delay={2}/>}+ offers</p>
         </Card>
       </div>
     </div>
   </div>
-   
+  </ScrollTrigger>
   );
 }
 

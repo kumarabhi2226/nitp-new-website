@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Navbar from "./components/global/Navbar";
 import Footer from "./components/global/Footer";
+import Imagefooter from "./components/global/Imagefooter";
 import { Suspense } from "react";
 import Loading from "./Loading";
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       <Suspense fallback={<Loading/>}>
       {children}
       </Suspense>
+      <Imagefooter/>
       <Footer/>
       </body>
     </html>

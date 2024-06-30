@@ -4,6 +4,8 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import './styles/Gallery.css';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Link from 'next/link';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const images = [
   'https://i.postimg.cc/bwy2BtkJ/nit-patna-001.jpg',
@@ -20,7 +22,13 @@ const images = [
 export function Gallery() {
   const [popupImage, setPopupImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
-
+  useEffect(() => {
+    AOS.init({
+         duration: 800,
+         once: false,
+         offset: 50,
+       })
+ }, [])
   const openPopup = (index) => {
     setPopupImage(images[index]);
     setCurrentIndex(index);
@@ -67,7 +75,7 @@ export function Gallery() {
         <h2 className="text-xl font-bold mb-4 text-center">Glimpse of NIT Patna</h2>
         <div className="image-grid grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-4 md:p-6">
           {images.map((image, index) => (
-            <div key={index}className={` relative overflow-hidden rounded-lg group aspect-[4/3] image-item ${index >= 4 ? 'hidden-on-mobile' : ''}`}>
+            <div key={index}className={` relative overflow-hidden rounded-lg group aspect-[4/3] image-item ${index >= 4 ? 'hidden-on-mobile' : ''}`} data-aos="zoom-out-up">
               <img
                 src={image}
                 alt={`Gallery Image ${index + 1}`}

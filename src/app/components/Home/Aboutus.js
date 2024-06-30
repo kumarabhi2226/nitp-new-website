@@ -1,12 +1,23 @@
+"use client"
+import { React, useEffect } from 'react'
 import { Button } from "@/components/ui/button";
 import "./styles/Aboutus.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Aboutus() {
+  useEffect(() => {
+    AOS.init({
+         duration: 800,
+         once: false,
+         offset: 50,
+       })
+ }, [])
   return (
-    <div className="aboutdiv p-20">
-      <div className=" p-4 sm:flex sm:justify-center sm:items-start sm:space-x-8">
-      <div className="sm:w-1/3 intdiv">
-        <div className="p-4 bg-white shadow rounded-lg">
+    <div className="aboutdiv">
+      <div className=" p-4 sm:flex sm:justify-center sm:items-start " >
+      <div className="sm:w-1/3 intdiv" data-aos="zoom-in-up">
+        <div className="p-4 bg-white shadow rounded-lg " >
           <h2 className="text-2xl font-bold text-center mb-4">ABOUT US</h2>
           <p className="text-sm mb-4">
             National Institute of Technology Patna is the 18th National Institute of Technology created by the Ministry
@@ -29,9 +40,9 @@ export default function Aboutus() {
           </p>
         </div>
       </div>
-      <div className="sm:w-1/4 mt-4 sm:mt-0 intdiv"> {/* Reduced the width */}
+      <div className="sm:w-1/4 mt-4 sm:mt-0 intdiv" data-aos="zoom-in-up">
         <div className="p-4 bg-white shadow rounded-lg text-center">
-          <img src="https://drive.google.com/thumbnail?authuser=0&sz=w320&id=1uHLAWL2-T5vA-QeUJyISAqSlRp7kyOeW" alt="P.K Jain" className="mx-auto mb-2 w-70% h-70% mainimg" /> {/* Reduced the size */}
+          <img src="https://i.postimg.cc/6pWBW8Dg/PKJ-Desk-Photo-1.jpg" alt="P.K Jain" className="mx-auto mb-2 w-70% h-70% mainimg" />
           <h3 className="text-2xl font-bold mb-2">P.K Jain</h3>
           <p className="text-sm mb-2">Director, NIT PATNA</p>
           <p className="text-sm mb-4">pkjain@nitp.ac.in</p>
@@ -47,7 +58,7 @@ export default function Aboutus() {
         </div>
       </div>
       
-      <div className="sm:w-1/3 mt-4 sm:mt-0 intdiv">
+      <div className="sm:w-1/3 mt-4 sm:mt-0 intdiv" data-aos="zoom-in-up">
         <div className="p-4 bg-white shadow rounded-lg">
           <h2 className="text-2xl font-bold text-center mb-4">KNOW US</h2>
           <h3 className="text-lg font-semibold mb-2">About</h3>

@@ -60,7 +60,9 @@ const Footer = () => {
     });
   };
   return (
-    <footer className="fdiv bg-[#2e1a1a] text-white py-8">
+  <>
+
+  <footer className="fdiv bg-[#2e1a1a] text-white py-8">
       <div className="container3 mx-auto px-4 flex justify-between items-start flex-wrap">
         <div className="flex flex-col ndivf ">
           <img
@@ -96,10 +98,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-start">
-          <h3 className="font-bold mb-4 leading-relaxed tracking-wide">
+        <div className="flex flex-col items-start w-full md:w-auto">
+          <h3 className="font-bold mb-1 mt-5  leading-relaxed tracking-wide">
             Quick Links
           </h3>
+          <div className="w-full h-0.5 bg-[#a51818] mb-3" />
           <ul className="space-y-2">
             <li>
               <a href="#" className="hover:underline">
@@ -158,10 +161,11 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col items-start">
-          <h3 className="font-bold mb-4 leading-relaxed tracking-wide">
+        <div className="flex flex-col items-start  w-full md:w-auto">
+          <h3 className="font-bold mb-1 mt-5 leading-relaxed tracking-wide">
             Explore
           </h3>
+          <div className="w-full h-0.5 bg-[#a51818] mb-3" />
           <ul className="space-y-2">
             <li>
               <a
@@ -221,10 +225,11 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="flex flex-col items-start">
-          <h3 className="font-bold mb-4 leading-relaxed tracking-wide">
+        <div className="flex flex-col items-start  w-full md:w-auto">
+          <h3 className="font-bold mb-1 mt-5 leading-relaxed tracking-wide">
             Useful Links
           </h3>
+          <div className="w-full h-0.5 bg-[#a51818] mb-3" />
           <ul className="space-y-2">
             <li>
               <a
@@ -288,7 +293,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="flex flex-col wfdiv">
+        <div className="flex flex-col wfdiv  w-full md:w-auto">
           <h3 className="font-bold mb-4">
             <MapIcon className="inline mr-1" /> Patna
           </h3>
@@ -350,6 +355,8 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+  </>
+    
   );
 };
 function LocationIcon(props){

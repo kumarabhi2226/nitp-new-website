@@ -18,10 +18,10 @@ const Slider = () => {
         <>
         
           <Swiper
-            spaceBetween={30}
+            spaceBetween={0}
             centeredSlides={true}
             autoplay={{
-              delay: 2500,
+              delay: 3500,
               disableOnInteraction: true,
             }}
             pagination={{
@@ -32,7 +32,7 @@ const Slider = () => {
             className="mySwiper"
           >
                    
-            <SwiperSlide><img src="https://i.postimg.cc/CxSr9DWB/88237103-146090899894886-7045265194396125726-n.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="https://i.postimg.cc/0jDVqSGQ/Image-1-00001.jpg" /></SwiperSlide>
             <SwiperSlide><img src="https://i.postimg.cc/02dwnf6F/nit-patna-002.jpg" /></SwiperSlide>
             <SwiperSlide><img src="https://i.postimg.cc/zX1hTMfT/nit-patna-003.jpg" /></SwiperSlide>
             <SwiperSlide><img src="https://i.postimg.cc/h4mxzgKS/nit-patna-004.jpg" /></SwiperSlide>

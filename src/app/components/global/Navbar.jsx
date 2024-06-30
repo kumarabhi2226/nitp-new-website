@@ -417,8 +417,8 @@ export default function Navbar() {
 
 
   return (
-    <div className={`mobiletest navbar-container ${isSticky ? "sticky-nav" : ""}`}>
-      <div className="header-top mx-auto flex w-full max-w-9xl justify-between px-4 py-1 bg-white/40 backdrop-blur-lg shadow-lg">
+    <div className={`mobiletest navbar-container  ${isSticky ? "sticky-nav md:py-0 stickdiv" : ""}`}>
+      <div className="header-top mx-auto flex w-full max-w-9xl justify-between px-4 py-2 bg-white/40 backdrop-blur-lg shadow-lg">
         <div className="right-content">
           <div className="font-bold textmob text-black">राष्ट्रीय प्रौद्योगिकी संस्थान पटना</div>
           <div className="text-sm textmob text-black">NATIONAL INSTITUTE OF TECHNOLOGY PATNA</div>
@@ -427,20 +427,21 @@ export default function Navbar() {
           <Link href="/">  <Image src={logo} alt="NIT PATNA" height={70} /></Link>
         
         </div>
-        <div className="institute-info pt-4 hidden md:block text-black">
+        <div className="institute-info pt-4 hidden text-center items-center justify-center md:block text-black">
           <div>An Institute of National Importance under Ministry of Education</div>
           <div>(Shiksha Mantralaya), Government of India</div>
         </div>
       </div>
 
-      <div className="desktopnav mx-auto flex w-full max-w-7xl justify-center px-4 py-1 text-sm bg-white/40 md:bg-[#811919] backdrop-blur-lg md:rounded-xl shadow-lg">
+      <div className="desktopnav mx-auto flex w-full max-w-7xl justify-center px-4 py-3 text-sm bg-white/40 md:py-1 md:bg-[#811919] backdrop-blur-lg md:rounded-xl shadow-lg">
+        
         <section className="nav-items hidden md:flex">
         
-          {navItems.map((item, index) => (
-            
-            <NavItem key={index} item={item} />
-          ))}
-        </section>
+        {navItems.map((item, index) => (
+          
+          <NavItem key={index} item={item} />
+        ))}
+      </section>
         <FiMenu onClick={() => setSideMenuOpen(true)} className="cursor-pointer text-4xl md:hidden text-black" />
       </div>
 
@@ -455,7 +456,7 @@ function NavItem({ item }) {
 
   return (
     <div
-      className="relative group"
+      className="relative  "
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
@@ -465,10 +466,11 @@ function NavItem({ item }) {
         {item.children && <IoIosArrowDown className={`transition-all ${isOpen ? "rotate-180" : ""}`} />}
       </Link>
       {item.children && (
-        <div className={`absolute right-0 top-10 w-auto flex-col gap-1 rounded-lg bg-white py-3 shadow-md transition-all ${isOpen ? "flex" : "hidden"}`}>
+        <div className={`absolute right-0 top-10 w-auto flex-col gap-1 rounded-lg bg-white shadow-md transition-all ${isOpen ? "flex" : "hidden"} group`}>
+          <div className="border-solid border-2 border-red-800 m-4 p-2 rounded-lg	">
           {item.children.map((child, index) => (
             <DropdownItem key={index} item={child} parentLabel={item.mlabel} />
-          ))}
+          ))}</div>
         </div>
       )}
     </div>
@@ -498,7 +500,7 @@ function DropdownItem({ item, parentLabel }) {
 
   return (
     <div
-      className="relative group"
+      className="relative"
       onMouseEnter={() => setIsSOpen(true)}
       onMouseLeave={() => setIsSOpen(false)}
     >
@@ -511,12 +513,13 @@ function DropdownItem({ item, parentLabel }) {
       
       {item.children && (
         
-        <div className={`absolute left-full top-0 mt-0 w-auto flex-col gap-1 rounded-lg bg-white py-3 shadow-md transition-all ${isSOpen ? "flex" : "hidden"}`}>
+        <div className={`absolute left-full top-0  w-auto flex-col gap-1 rounded-lg bg-white  shadow-md transition-all ${isSOpen ? "flex" : "hidden"}`}>
+          <div className="border-solid border-2 border-red-800 m-4 p-2 rounded-lg	">
           {item.children.map((subChild, subIndex) => (
             <Link key={subIndex} href={subChild.link ?? "#"} className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-neutral-600 hover:text-red-600">
               <span className="whitespace-nowrap pl-3">{subChild.label}</span>
             </Link>
-          ))}
+          ))}</div>
         </div>
       )}
     </div>

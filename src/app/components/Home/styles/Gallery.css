@@ -1,7 +1,7 @@
 .gdiv {
   display: flex;
   position: relative;
-  top: 25%;
+  top: 18%;
   flex-wrap: nowrap;
   justify-content: space-between; /* Ensures space between the divs */
   height: 800px;

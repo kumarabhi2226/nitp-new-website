@@ -1,10 +1,10 @@
 "use client"
 import { useEffect, useState } from "react";
 import axios from "axios";
-import WebCard from "../components/WebCard";
+import WebCard from "../components/Webteam/Webcard";
 import "./wpage.css";
 
-const years = [2021, 2022, 2023, 2024];
+const years = [2024];
 
 const Webteam = () => {
   const [webteam, setWebteam] = useState([]);
@@ -34,12 +34,6 @@ const Webteam = () => {
 
       <div className="buttonGroupw">
         <button
-          onClick={() => setView("maintainers")}
-          className={view === "maintainers" ? "btnActive" : ""}
-        >
-          Maintainers
-        </button>
-        <button
           onClick={() => {
             setView("developers");
             setYear(2021);
@@ -50,7 +44,7 @@ const Webteam = () => {
         </button>
       </div>
 
-      {view === "maintainers" && (
+      {view === "developers" && (
         <div className="yearButtons">
           {years.map(item => (
             <button
