@@ -16,7 +16,7 @@ export default function Aboutus() {
   return (
     <div className="aboutdiv">
       <div className=" p-4 sm:flex sm:justify-center sm:items-start " >
-      <div className="sm:w-1/3 intdiv" data-aos="zoom-in-up">
+      <div className="sm:w-1/3 intdiv md:mr-7" data-aos="zoom-in-up">
         <div className="p-4 bg-white shadow rounded-lg " >
           <h2 className="text-2xl font-bold text-center mb-4">ABOUT US</h2>
           <p className="text-sm mb-4">
@@ -58,7 +58,7 @@ export default function Aboutus() {
         </div>
       </div>
       
-      <div className="sm:w-1/3 mt-4 sm:mt-0 intdiv" data-aos="zoom-in-up">
+      <div className="sm:w-1/3 mt-4 sm:mt-0 md:ml-7 intdiv" data-aos="zoom-in-up">
         <div className="p-4 bg-white shadow rounded-lg">
           <h2 className="text-2xl font-bold text-center mb-4">KNOW US</h2>
           <h3 className="text-lg font-semibold mb-2">About</h3>
