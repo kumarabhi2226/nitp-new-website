@@ -25,7 +25,7 @@ const images = [
   'https://i.postimg.cc/LssLn187/nit-patna-009.jpg',
 ];
 
-export function Gallery() {
+const Gallery = () => {
   const [popupImage, setPopupImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
 
@@ -64,7 +64,7 @@ export function Gallery() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row h-full gdiv grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-6">
+    <div className=" flex-col md:flex-row h-full gdiv grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 md:p-6">
       
       <div >
         <h2 className="text-xl font-bold mb-4 text-center text-black">Glimpse of NIT Patna</h2>
