@@ -1,6 +1,6 @@
 import React from "react";
 import Admincard from "../Admincard";
-import Admin from "../Admin"; 
+import Admin from "../admin"; 
 import "../style.css"
 const DeansPage = () => {
   const deansData = Admin.find((item) => item.data === "deans").content;
