@@ -48,20 +48,22 @@
   transition: filter 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.heading {
-  font-size: 10px;
+.headingp {
+  font-size: 10x;
   text-transform: capitalize;
-  font-weight: 800;
+  font-weight: 900;
 }
-.heading1 {
-  font-size: 9px;
+.headingp1 {
+  font-size: 10px;
   text-transform: capitalize;
   font-weight: 900;
   color: #a01d0c;
 }
-
-.card p:not(.heading) {
+.headingp12 {
   font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 900;
+  color: #a01d0c;
 }
 
 .card p:last-child {
@@ -147,8 +149,8 @@
     border-radius: 6px;
     cursor: pointer;
   }
-  .heading {
-    font-size: 9px;
+  .headingp {
+    font-size: 5px;
     text-transform: capitalize;
     font-weight: 700;
   }
@@ -172,8 +174,8 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  .heading {
-    font-size: 9px;
+  .headingp {
+    font-size: 5px;
     text-transform: capitalize;
     font-weight: 700;
   }
@@ -196,10 +198,21 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  .heading {
-    font-size: 9px;
+  .headingp {
+    font-size: 8px;
     text-transform: capitalize;
     font-weight: 700;
+  }
+  .headingp12 {
+    font-size: 8px;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+  .mobileicondiv {
+    font-size: 1.5rem;
+  }
+  .headingp1t {
+    font-size: 7px;
   }
 }
 @media (min-width: 420px) and (max-width: 480px) {
@@ -220,8 +233,8 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  .heading {
-    font-size: 9px;
+  .headingp {
+    font-size: 5px;
     text-transform: capitalize;
     font-weight: 700;
   }

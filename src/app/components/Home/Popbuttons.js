@@ -22,37 +22,37 @@ const Popbuttons = () => {
       <div className='container'>
       <div className="card card1" >
       <Link href="/student" className="card card1">
-          <FontAwesomeIcon icon={faUserGraduate} size="2x" color='#f7cece'/>
-          <p className="heading">STUDENT</p>
+          <FontAwesomeIcon icon={faUserGraduate} size="4x" className="mobileicondiv"color='#f7cece'/>
+          <p className="headingp">STUDENT</p>
         </Link>
       </div>
       <a href="https://alumini-nitp.vercel.app/" className="card" target="_blank" >
-          <FontAwesomeIcon icon={faGraduationCap} size="2x" color='#BA210E' />
-          <p className="heading heading1">ALUMNI</p>
+          <FontAwesomeIcon icon={faGraduationCap} size="4x" className="mobileicondiv" color='#BA210E' />
+          <p className="headingp12 headingp1">ALUMNI</p>
         </a>
       <div className="card card1">
-        <FontAwesomeIcon icon={faSchool} size="2x" color='#f7cece' />
-        <p className="heading">ADMISSIONS</p>
+        <FontAwesomeIcon icon={faSchool} size="4x" className="mobileicondiv" color='#f7cece' />
+        <p className="headingp">ADMISSIONS</p>
       </div>
       <div className="card">
-        <FontAwesomeIcon icon={faBookOpen} size="2x" color='#d62a39' />
-        <p className="heading">MAGAZINE</p>
+        <FontAwesomeIcon icon={faBookOpen} size="4x" className="mobileicondiv" color='#d62a39' />
+        <p className="headingp">MAGAZINE</p>
       </div>
       <div className="card">
-        <FontAwesomeIcon icon={faBolt} size="2x" color='#d62a39' />
-        <p className="heading">RECRUITMENT</p>
+        <FontAwesomeIcon icon={faBolt} size="4x" className="mobileicondiv" color='#d62a39' />
+        <p className="headingp">RECRUITMENT</p>
       </div>
       <div className="card card1">
-        <FontAwesomeIcon icon={faUsers} size="2x" color='#f7cece' />
-        <p className="heading">FACULTY & STAFF</p>
+        <FontAwesomeIcon icon={faUsers} size="3x" className="mobileicondiv" color='#f7cece' />
+        <p className="headingp">FACULTY & STAFF</p>
       </div>
       <div className="card">
-        <FontAwesomeIcon icon={faCalendarAlt} size="2x" color='#d62a39' />
-        <p className="heading">EVENTS</p>
+        <FontAwesomeIcon icon={faCalendarAlt} size="4x" className="mobileicondiv" color='#d62a39' />
+        <p className="headingp">EVENTS</p>
       </div>
       <a href="https://tpc.nitp.ac.in/" className="card card1" target="_blank" >
-        <FontAwesomeIcon icon={faBuilding} size="2x" color='#f7cece'/>
-        <p className="heading heading1">TRAINING AND PLACEMENT</p>
+        <FontAwesomeIcon icon={faBuilding} size="3x" className="mobileicondiv" color='#f7cece'/>
+        <p className="headingp headingp1 headingp1t">TRAINING AND PLACEMENT</p>
       </a>
 
     </div>

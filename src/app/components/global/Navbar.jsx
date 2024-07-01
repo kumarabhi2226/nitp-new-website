@@ -17,7 +17,7 @@ import Director from "../../assets/images/director.svg"
 import Person from "../../assets/images/person.svg"
 import President from "../../assets/images/president.svg"
 import Sperson from "../../assets/images/sperson.svg"
-
+import useNavigationEvent from "./useNavigationEvent"
 import { useRouter } from 'next/navigation';
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -70,28 +70,28 @@ const navItems = [
     ],
   },
   {
-    label: "Adminstration",
+    label: "Administration",
     link: "#",
-    mlabel:"Adminstration",
+    mlabel:"Administration",
     children: [
       {
         label: "Visitor",
-        link: "#",
+        link: "/Administration/Visitor",
         iconImage:President,
       },
       {
         label: "Council of NITs",
-        link: "#",
+        link: "/Administration/CON",
         iconImage:Person,
       },
       {
         label: "Board of Governors",
-        link: "#",
+        link: "/Administration/BOG",
         iconImage:Person,
       },
       {
         label: "Senate",
-        link: "#",
+        link: "/Administration/Senate",
         iconImage:Person,
       },
 
@@ -102,33 +102,33 @@ const navItems = [
       },
       {
         label: "Registrar",
-        link: "#",
+        link: "/Administration/Registrar",
         iconImage:Sperson,
       },
       {
         label: "Deans",
-        link: "#",
+        link: "/Administration/Deans",
         iconImage:Person,
       },
 
       {
         label: "Building Work Committee ",
-        link: "#",
+        link: "/Administration/BWC",
         iconImage:Person,
       },
       {
         label: "Institute Disciplinary Committee",
-        link: "#",
+        link: "/Administration/IDC",
         iconImage:Person,
       },
       {
         label: "Finance committee",
-        link: "#",
+        link: "/Administration/FinanceCommittee",
         iconImage:Person,
       },
       {
         label: "Service Unit Heads Organisation Chart",
-        link: "#",
+        link: "/Administration/SUH",
         iconImage:Person,
       },
     ],
@@ -398,6 +398,7 @@ const navItems = [
 export default function Navbar() {
   const [isSideMenuOpen, setSideMenuOpen] = useState(false);
   const [isSticky, setSticky] = useState(false);
+  useNavigationEvent(() => setSideMenuOpen(false));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -466,8 +467,8 @@ function NavItem({ item }) {
         {item.children && <IoIosArrowDown className={`transition-all ${isOpen ? "rotate-180" : ""}`} />}
       </Link>
       {item.children && (
-        <div className={`absolute right-0 top-10 w-auto flex-col gap-1 rounded-lg bg-white shadow-md transition-all ${isOpen ? "flex" : "hidden"} group`}>
-          <div className="border-solid border-2 border-red-800 m-4 p-2 rounded-lg	">
+        <div className={`absolute right-0 top-10 w-auto flex-col gap-1 rounded-lg bg-white  shadow-md transition-all ${isOpen ? "flex" : "hidden"} group`}>
+          <div className="border-solid border-2 border-red-800 m-4 p-2 rounded-lg	bg-white shadow-red-500/30 shadow-md">
           {item.children.map((child, index) => (
             <DropdownItem key={index} item={child} parentLabel={item.mlabel} />
           ))}</div>
@@ -476,23 +477,7 @@ function NavItem({ item }) {
     </div>
   );
 }
-function MobileNav({ closeSideMenu }) {
 
-
-
-  return (
-    <div className="mobile-nav text-black">
-      <div className="mobile-nav-content text-black">
-        <AiOutlineClose onClick={closeSideMenu} className="mobile-nav-close text-4xl text-black" />
-        <div className="flex flex-col text-base gap-2 transition-all">
-          {navItems.map((item, index) => (
-            <SingleNavItem key={index} item={item}  />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 
 function DropdownItem({ item, parentLabel }) {
@@ -525,7 +510,24 @@ function DropdownItem({ item, parentLabel }) {
     </div>
   );
 }
+function MobileNav({ closeSideMenu }) {
 
+
+
+  return (
+    <div className="mobile-nav text-black">
+      <div className="mobile-nav-content text-black">
+        <AiOutlineClose onClick={closeSideMenu} className="mobile-nav-close text-4xl text-black" />
+        <div className="flex flex-col text-base gap-2 transition-all ">
+          {navItems.map((item, index) => (
+            
+            <SingleNavItem key={index} item={item} onClick={closeSideMenu} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 
 
@@ -555,7 +557,7 @@ function SingleNavItem({ item ,closeSideMenu}) {
 }
 function SubSidemenu({ item,closeSideMenu }) {
   const [isSubItemOpen, setSubItemOpen] = useState(false);
-
+  const [isItemOpen, setItemOpen] = useState(true);
   const handleSubToggle = () => {
     setSubItemOpen(!isSubItemOpen);
   };

@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from 'react';
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 import './styles/Gallery.css';
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+
 import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

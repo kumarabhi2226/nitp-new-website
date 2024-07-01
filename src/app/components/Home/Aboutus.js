@@ -1,6 +1,6 @@
 "use client"
 import { React, useEffect } from 'react'
-import { Button } from "@/components/ui/button";
+import { Button } from "../../../components/ui/button";
 import "./styles/Aboutus.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
