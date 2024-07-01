@@ -1,5 +1,5 @@
 import React from "react";
-import "./adcard.css";
+import "./Adcard.css";
 const Adcard = ({ name, designation, type }) => {
   return (
     
