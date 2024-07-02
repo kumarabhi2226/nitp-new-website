@@ -5,6 +5,7 @@
   flex-wrap: nowrap;
   justify-content: space-between; /* Ensures space between the divs */
   height: 800px;
+  margin-bottom: 160px;
 }
 
 .social-media {
@@ -126,6 +127,7 @@
 @media (max-width: 768px) {
   .gdiv {
     padding: 5px;
+    margin-bottom: 550px;
   }
   .social-media {
     width: 100%; /* Fixed width */

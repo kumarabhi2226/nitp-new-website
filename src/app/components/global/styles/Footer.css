@@ -1,13 +1,13 @@
-.fdiv {
-  position: relative;
-  top: 38%;
-  background-color: rgba(231, 246, 255, 0.616);
+.fsdiv {
+  /* position: relative;
+  top: 38%; */
+
 }
 
 @media (max-width: 768px) {
-  .fdiv {
-    position: relative;
-    top: 101%;
+  .fsdiv {
+    /* position: relative;
+    top: 101%; */
     align-items: center;
   }
 }

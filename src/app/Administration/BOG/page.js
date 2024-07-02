@@ -8,7 +8,7 @@ const BOGPage = () => {
   const bogData = Admin.find((item) => item.data === "bog").content;
 
   return (
-    <div className="md:p-4">
+    <div className="md:p-4 h-auto w-auto">
       <h1 className="text-2xl text-center pt-5 pb-7 md:pb-0 md:pt-10 text-red-900 font-bold">Board of Governors</h1>
       <div className="admincarddiv items-center justify-center">
         {bogData.map((item, idx) => (

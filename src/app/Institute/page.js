@@ -38,7 +38,7 @@ export default function InstitutePage() {
         <div className="maindivi">
           <div className="containerip">
             <div
-              className={`card card1 ${activeSection === 'about' ? 'active' : ''}`}
+              className={`cardins cardins1 ${activeSection === 'about' ? 'active' : ''}`}
               onClick={() => handleNavigation('about')}
               style={{ backgroundColor: activeSection === 'about' ? 'white' : 'initial' }}
             >
@@ -46,7 +46,7 @@ export default function InstitutePage() {
               <p className="heading">About</p>
             </div>
             <div
-              className={`card card1 ${activeSection === 'mission' ? 'active' : ''}`}
+              className={`cardins cardins1 ${activeSection === 'mission' ? 'active' : ''}`}
               onClick={() => handleNavigation('mission')}
               style={{ backgroundColor: activeSection === 'mission' ? 'white' : 'initial' }}
             >
@@ -54,7 +54,7 @@ export default function InstitutePage() {
               <p className="heading">Mission</p>
             </div>
             <div
-              className={`card card1 ${activeSection === 'values' ? 'active' : ''}`}
+              className={`cardins cardins1 ${activeSection === 'values' ? 'active' : ''}`}
               onClick={() => handleNavigation('values')}
               style={{ backgroundColor: activeSection === 'values' ? 'white' : 'initial' }}
             >
@@ -62,7 +62,7 @@ export default function InstitutePage() {
               <p className="heading">Values</p>
             </div>
             <div
-              className={`card ${activeSection === 'campus' ? 'active' : ''}`}
+              className={`cardins ${activeSection === 'campus' ? 'active' : ''}`}
               onClick={() => handleNavigation('campus')}
               style={{ backgroundColor: activeSection === 'campus' ? 'white' : 'initial' }}
             >

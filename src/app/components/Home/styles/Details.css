@@ -141,3 +141,12 @@
     width: 90%;
   }
 }
+
+.download-icon {
+  width: 16px; /* Adjust the size as needed */
+  height: 16px;
+  background-image: url(https://i.postimg.cc/1tWzRB6z/downloadicon.png);
+  margin-top: 2px;
+  margin-right: 8px;
+  /* Add some spacing */
+}

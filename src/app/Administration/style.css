@@ -1,11 +1,8 @@
 .admincarddiv {
   display: flex;
-
   padding: 5rem;
   row-gap: 50px;
-
   height: auto;
-
   align-items: flex-start;
   justify-content: space-evenly;
   flex-direction: row;

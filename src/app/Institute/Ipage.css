@@ -1,4 +1,4 @@
-.card {
+.cardins {
   position: relative;
   width: 80px; /* Adjusted width */
   height: 80px; /* Adjusted height */
@@ -12,7 +12,7 @@
   border-radius: 8px;
   cursor: pointer;
 }
-.card1 {
+.cardins1 {
   background-color: #e9b0b0;
 }
 
@@ -23,13 +23,13 @@
 
   width: 100%;
 }
-.card::before {
+.cardins::before {
   content: "";
   position: absolute;
   inset: 0;
   margin: auto;
-  width: 105%; /* Ensure the background covers the entire card */
-  height: 105%; /* Ensure the background covers the entire card */
+  width: 105%; /* Ensure the background covers the entire cardins */
+  height: 105%; /* Ensure the background covers the entire cardins */
   border-radius: 10px;
   background: linear-gradient(-45deg, #e9b0b0 0%, #e9b0b0 100%);
   z-index: -10;
@@ -37,7 +37,7 @@
   transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card::after {
+.cardins::after {
   content: "";
   z-index: -1;
   position: absolute;
@@ -60,33 +60,33 @@
   color: #d62a39;
 }
 
-.card p:not(.heading) {
+.cardins p:not(.heading) {
   font-size: 14px;
 }
 
-.card p:last-child {
+.cardins p:last-child {
   color: #d62a39;
   font-weight: 600;
   text-align: center;
 }
-.card1 p:last-child {
+.cardins1 p:last-child {
   color: #d62a39;
 }
 
-.card:hover::after {
+.cardins:hover::after {
   filter: blur(30px);
 }
 
-.card:hover::before {
+.cardins:hover::before {
   transform: rotate(180deg); /* Keep the scale uniform */
 }
 
 .containerip {
-  width: 40%; /* Adjusted width to fit four cards per row */
+  width: 40%; /* Adjusted width to fit four cardinss per row */
   display: flex;
-  flex-wrap: wrap; /* Enable wrapping of cards to the next line */
+  flex-wrap: wrap; /* Enable wrapping of cardinss to the next line */
   justify-content: center; /* Center content horizontally */
-  gap: 21px; /* Gap between cards */
+  gap: 21px; /* Gap between cardinss */
   margin: 0 auto; /* Center the container itself */
   margin-top: 50px;
   margin-bottom: 50px;
@@ -99,10 +99,10 @@
     width: 95%;
   }
   .containerip {
-    width: 50%; /* Adjusted width to fit four cards per row */
+    width: 50%; /* Adjusted width to fit four cardinss per row */
     gap: 10px;
   }
-  .card {
+  .cardins {
     position: relative;
     width: 70px; /* Adjusted width */
     height: 70px; /* Adjusted height */
@@ -129,9 +129,9 @@
     top: 5%;
   }
   .containerip {
-    width: 90%; /* Adjusted width to fit four cards per row */
+    width: 90%; /* Adjusted width to fit four cardinss per row */
   }
-  .card {
+  .cardins {
     position: relative;
     width: 50px; /* Adjusted width */
     height: 50px; /* Adjusted height */
@@ -157,9 +157,9 @@
     top: 4%;
   }
   .containerip {
-    width: 80%; /* Adjusted width to fit four cards per row */
+    width: 80%; /* Adjusted width to fit four cardinss per row */
   }
-  .card {
+  .cardins {
     position: relative;
     width: 60px; /* Adjusted width */
     height: 60px; /* Adjusted height */
@@ -185,9 +185,9 @@
     top: 3%;
   }
   .containerip {
-    width: 80%; /* Adjusted width to fit four cards per row */
+    width: 80%; /* Adjusted width to fit four cardinss per row */
   }
-  .card {
+  .cardins {
     position: relative;
     width: 70px; /* Adjusted width */
     height: 70px; /* Adjusted height */

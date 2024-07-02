@@ -21,7 +21,7 @@ const Popbuttons = () => {
       <div className='h-auto text-white containersideleft' data-aos="zoom-out-up"></div>
       <div className='container'>
       <div className="card card1" >
-      <Link href="/student" className="card card1">
+      <Link href="/Student" className="card card1">
           <FontAwesomeIcon icon={faUserGraduate} size="4x" className="mobileicondiv"color='#f7cece'/>
           <p className="headingp">STUDENT</p>
         </Link>
@@ -30,18 +30,18 @@ const Popbuttons = () => {
           <FontAwesomeIcon icon={faGraduationCap} size="4x" className="mobileicondiv" color='#BA210E' />
           <p className="headingp12 headingp1">ALUMNI</p>
         </a>
-      <div className="card card1">
+      <Link href ="/Academic/Admission?tab=SII" className="card card1">
         <FontAwesomeIcon icon={faSchool} size="4x" className="mobileicondiv" color='#f7cece' />
         <p className="headingp">ADMISSIONS</p>
-      </div>
+      </Link>
       <div className="card">
         <FontAwesomeIcon icon={faBookOpen} size="4x" className="mobileicondiv" color='#d62a39' />
         <p className="headingp">MAGAZINE</p>
       </div>
-      <div className="card">
+      <Link href="/Notices/JobsNITP" className="card">
         <FontAwesomeIcon icon={faBolt} size="4x" className="mobileicondiv" color='#d62a39' />
         <p className="headingp">RECRUITMENT</p>
-      </div>
+      </Link>
       <div className="card card1">
         <FontAwesomeIcon icon={faUsers} size="3x" className="mobileicondiv" color='#f7cece' />
         <p className="headingp">FACULTY & STAFF</p>

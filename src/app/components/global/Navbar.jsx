@@ -76,12 +76,12 @@ const navItems = [
     children: [
       {
         label: "Visitor",
-        link: "/Administration/Visitor",
+        link: '/Administration/Visitor',
         iconImage:President,
       },
       {
         label: "Council of NITs",
-        link: "/Administration/CON",
+        link: "/Administration/CONIT",
         iconImage:Person,
       },
       {
@@ -173,49 +173,53 @@ const navItems = [
       },
       {
         label: "Admission",
-        link: "#",
+        link: "/Academic/Admission?tab=JoSAA",
         children: [
-          { label: "Study in India (SII)", link: ""},
-          { label: "CMCT/JoSSA/CSAB", link: ""},
-          { label: "Relaxation Criteria", link: ""},
+          { label: "Study in India (SII)", link: "/Academic/Admission?tab=SII"},
+          { label: "CMCT/JoSSA/CSAB", link: "/Academic/Admission?tab=JoSAA"},
+          { label: "Relaxation Criteria", link: "/Academic/Admission?tab=Relaxation"},
         ]
       },
       {
         label: "Academic Notices",
-        link: "#",
+        link: "/Notices/Academic",
       },
       {
         label: "Academic Calendar",
-        link: "#",
+        link: "https://drive.google.com/file/d/1tVgQSygS8GRTZIglbVWVClasegdd6BCi/view",
       },
       {
         label: "Fee Structure",
-        link: "#",
+        link: "/Academic/Fee",
       },
       {
         label: "Format of Official Documents",
-        link: "#",
+        link: "/Academic/Format",
       },
     
       {
         label: "Centre of Excellence",
         link: "#",
         children: [
-          { label: "TSSC", link: ""},
-          { label: "ISRO RACS", link: ""},
+          { label: "TSSC", link: "/Academic/ISRO"},
+          { label: "ISRO RACS", link: "/Academic/TSSC"},
         ]
       },
+      // {
+      //   label: "ICT Academy",
+      //   link: "#",
+      // },
       {
-        label: "ICT Academy",
-        link: "#",
+        label: "BIS Dashboard",
+        link: "/Academic/BIS",
       },
       {
         label: "Digital Intiatives",
-        link: "#",
+        link: "/Academic/DI",
       },
       {
         label: "Regulation & Curricula",
-        link: "#",
+        link: "/Academic/Curriculam",
       },
     ],
   },
@@ -225,19 +229,19 @@ const navItems = [
     children: [
       {
         label: "Web Mail",
-        link: "#",
+        link: "http://mail.google.com/a/nitp.ac.in",
       },
       {
         label: "Academic Portal",
-        link: "#",
+        link: "http://exam.nitp.ac.in:9001/",
       },
       {
         label: "Recruitments",
-        link: "#",
+        link: "/Notices/JobsNITP",
       },
       {
         label: "Employee I-Card",
-        link: "#",
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSedy0aZLXXj709zQjAejWvLQOs4_6ESIciPe0IV199kMr_D1g/viewform?usp=sf_link",
       },
       {
         label: "Staff Claim Form",
@@ -245,7 +249,7 @@ const navItems = [
       },
       {
         label: "Admin Login",
-        link: "#",
+        link: "https://admin.nitp.ac.in/",
       },
       {
         label: "International Affairs",
@@ -262,6 +266,77 @@ const navItems = [
       {
         label: "Other Employee",
         link: "#",
+      },
+    ],
+  },
+ 
+  {
+    label: "Student",
+    link: "#",
+    children: [
+      {
+        label: "Admissions",
+        link: "/Academic/Admission",
+      },
+      {
+        label: "Student I-Card",
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSc5_x34TMtQdMaW2Ad9Nvsmz1N8YXdAGJHtAM5kn3a850Ekyw/viewform",
+      },
+      {
+        label: "Fee Payment",
+        link: "https://paydirect.eduqfix.com/app/mnYv9Q6+C+3lIMqghRCwdaqVZusPrJtq2RGJrJFnKnmtz3KBqtsEFPVrZFvoPubG/3466",
+      },
+      {
+        label: "Clubs/Socities",
+        link: "#",
+      },
+      {
+        label: "1st Year Student",
+        link: "#",
+      },
+      {
+        label: "Student Activity Center",
+        link: "#",
+      },
+      {
+        label: "Fellowship Opportunities",
+        link: "#",
+      },
+      {
+        label: "Scholarship",
+        link: "#",
+      },
+      {
+        label: "Student I-Card",
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSc5_x34TMtQdMaW2Ad9Nvsmz1N8YXdAGJHtAM5kn3a850Ekyw/viewform",
+      },
+      {
+        label: " Tech Fest",
+        link: "#",
+      },
+      {
+        label: "Sports",
+        link: "#",
+      },
+      {
+        label: "Student Exchange",
+        link: "#",
+      },
+      {
+        label: "NSS@NITP",
+        link: "#",
+      },
+      {
+        label: "E-Cell",
+        link: "#",
+      },
+      {
+        label: "Unnat Bharat",
+        link: "#",
+      },
+      {
+        label: "Chanakya Portal",
+        link: "http://exam.nitp.ac.in:9001/default.aspx?ReturnUrl=%2f",
       },
     ],
   },
@@ -295,7 +370,7 @@ const navItems = [
       },
       {
         label: "Incubation Center",
-        link: "#",
+        link: "https://web.nitp.ac.in/incubation_center/index.html",
       },
       {
         label: "Hostel & Mess",
@@ -328,68 +403,6 @@ const navItems = [
       {
         label: "ESU",
         link: "#",
-      },
-    ],
-  },
-  {
-    label: "Student",
-    link: "#",
-    children: [
-      {
-        label: "Clubs/Socities",
-        link: "#",
-      },
-      {
-        label: "Admissions",
-        link: "#",
-      },
-      {
-        label: "1st Year Student",
-        link: "#",
-      },
-      {
-        label: "Student Activity Center",
-        link: "#",
-      },
-      {
-        label: "Fellowship Opportunities",
-        link: "#",
-      },
-      {
-        label: "Scholarship",
-        link: "#",
-      },
-      {
-        label: "Student I-Card",
-        link: "#",
-      },
-      {
-        label: " Tech Fest",
-        link: "#",
-      },
-      {
-        label: "Sports",
-        link: "#",
-      },
-      {
-        label: "Student Exchange",
-        link: "#",
-      },
-      {
-        label: "NSS@NITP",
-        link: "#",
-      },
-      {
-        label: "E-Cell",
-        link: "#",
-      },
-      {
-        label: "Unnat Bharat",
-        link: "#",
-      },
-      {
-        label: "Chanakya Portal",
-        link: "http://exam.nitp.ac.in:9001/default.aspx?ReturnUrl=%2f",
       },
     ],
   },
@@ -540,7 +553,7 @@ function SingleNavItem({ item ,closeSideMenu}) {
     <div ref={animationParent} className="relative px-1 py-3 transition-all">
       <p onClick={() => setItemOpen(!isItemOpen)} className="flex cursor-pointer items-center gap-2 text-neutral-900 group-hover:text-black">
       {item.iconImage && <Image src={item.iconImage} alt="item-icon" />}
-      <Link href={item.link ?? "#"} onClick={closeSideMenu} >
+      <Link href={ "#"} onClick={closeSideMenu} >
                 {item.label}
               </Link>
         {item.children && <IoIosArrowDown className={`text-xs transition-all ${isItemOpen && "rotate-180"}`} />}

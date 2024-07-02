@@ -8,7 +8,10 @@ import Placement from "./components/Home/Placement";
 import Movingbar from "./components/Home/Movingbar";
 import Research from "./components/Home/Research";
 
-
+export const metadata = {
+  title: "NIT PATNA | National Institute of Technology Patna",
+  description: "Official website of National Institute of Technology Patna",
+};
 export default function Home() {
   return (
     <>
