@@ -10,7 +10,7 @@ const studentResources = [
     {
         "title": "Admissions",
         "image": "https://i.postimg.cc/2qRn3s0R/admission.png", 
-        "link": "/student-resources/admission",
+        "link": "/Academic/Admission",
     },
     {
         "title": "ID-Card",
@@ -25,57 +25,57 @@ const studentResources = [
     {
         "title": "Clubs/Socities",
         "image": "https://i.postimg.cc/18Npmmcr/clubs64.png", 
-        "link": "https://www.updatethis.com/",
+        "link": "/Student/Clubs",
     },
     {
         title: '1st Year Student',
         image: 'https://i.postimg.cc/MpSSVPCX/student64.png', // Placeholder for image URL
-        link: 'https://www.updatethis.com/',
+        link: '/Student/StudentFirstYear',
       },
     {
         "title": "Student Activity Center",
         "image": "https://i.postimg.cc/ykGmCg9N/SAC64.png",
-        "link": "https://www.updatethis.com/",
+        "link": "/Student/SAC",
     },
     {
         "title": "Fellowship Opportunities",
         "image": "https://i.postimg.cc/GHtFfJ4N/fellowship64.png", 
-        "link": "https://www.updatethis.com/",
+        "link": "/Student/FellowshipOpportunities",
     },
     {
         "title": "Scholarship",
         "image": "https://i.postimg.cc/2yX8wQf3/scholarship64.png",
-        "link": "https://www.updatethis.com/",
+        "link": "/Student/Scholarship",
     },
     {
         "title": "Tech Fest",
         "image": "https://i.postimg.cc/0rcGZHyD/Fest64.png", 
-        "link": "https://www.updatethis.com/",
+        "link": "/Student/TechFest",
     },
     {
         "title": "Sports",
         "image": "https://i.postimg.cc/4nJb6TsX/sports64.png", 
-        "link": "https://www.updatethis.com/",
+        "link": "/Students/Sports",
     },
     {
         "title": "Student Exchange",
         "image": "https://i.postimg.cc/y3Yms0vD/exchange64.png", 
-        "link": "https://www.updatethis.com/",
+        "link": "/Student/StudentExchange",
     },
     {
         "title": "NSS@NITP",
         "image": "https://i.postimg.cc/Kk5P60rX/NSS64.png", 
-        "link": "https://www.updatethis.com/",
+        "link": "/Student/NSS",
     },
     {
         "title": "E-Cell",
         "image": "https://i.postimg.cc/r0TGZB4C/Ecell64.png", 
-        "link": "https://www.updatethis.com/",
+        "link": "/Student/E-Cell",
     },
     {
         "title": "Unnat Bharat",
         "image": "https://i.postimg.cc/NF0jmNSW/unnant64.png",
-        "link": "https://www.updatethis.com/",
+        "link": "/Student/UnnatBharat",
     },
     {
         "title": "Chanakya Portal",

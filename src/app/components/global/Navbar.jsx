@@ -245,7 +245,7 @@ const navItems = [
       },
       {
         label: "Staff Claim Form",
-        link: "#",
+        link: "/Institute/Forms-",
       },
       {
         label: "Admin Login",
@@ -272,7 +272,7 @@ const navItems = [
  
   {
     label: "Student",
-    link: "#",
+    link: "/Student",
     children: [
       {
         label: "Admissions",
@@ -288,23 +288,23 @@ const navItems = [
       },
       {
         label: "Clubs/Socities",
-        link: "#",
+        link: "/Student/Clubs",
       },
       {
         label: "1st Year Student",
-        link: "#",
+        link: "/Student/StudentFirstYear",
       },
       {
         label: "Student Activity Center",
-        link: "#",
+        link: "/Student/SAC",
       },
       {
         label: "Fellowship Opportunities",
-        link: "#",
+        link: "/Student/FellowshipOpportunites",
       },
       {
         label: "Scholarship",
-        link: "#",
+        link: "/Student/Scholarship",
       },
       {
         label: "Student I-Card",
@@ -312,7 +312,7 @@ const navItems = [
       },
       {
         label: " Tech Fest",
-        link: "#",
+        link: "/Student/TechFest",
       },
       {
         label: "Sports",
@@ -320,19 +320,19 @@ const navItems = [
       },
       {
         label: "Student Exchange",
-        link: "#",
+        link: "/Student/StudentExchange",
       },
       {
         label: "NSS@NITP",
-        link: "#",
+        link: "/Student/NSS",
       },
       {
         label: "E-Cell",
-        link: "#",
+        link: "/Student/E-Cell",
       },
       {
         label: "Unnat Bharat",
-        link: "#",
+        link: "/Student/UnnatBharat",
       },
       {
         label: "Chanakya Portal",
@@ -342,31 +342,31 @@ const navItems = [
   },
   {
     label: "Facilities",
-    link: "#",
+    link: "/Facilities",
     children: [
       {
         label: "Computer Center",
-        link: "#",
+        link: "/Facilities/ComputerCenter",
       },
       {
         label: "IT Service Unit",
-        link: "#",
+        link: "/Facilities/ITServiceUnit",
       },
       {
         label: "TEQUIP",
-        link: "#",
+        link: "/Facilities/TEQUIP",
       },
       {
         label: "Library",
-        link: "#",
+        link: "/Facilities/Library",
       },
       {
         label: "Medical Facilities",
-        link: "#",
+        link: "/Facilities/MedicalFacilities",
       },
       {
         label: "Sports Facilities",
-        link: "#",
+        link: "/Facilities/SportsFacilities",
       },
       {
         label: "Incubation Center",
@@ -374,35 +374,35 @@ const navItems = [
       },
       {
         label: "Hostel & Mess",
-        link: "#",
+        link: "/Facilities/Hostel",
       },
       {
         label: "Laboratories",
-        link: "#",
+        link: "/Facilities/Laboratories",
       },
       {
         label: "Bank",
-        link: "#",
+        link: "/Facilities/Bank",
       },
       {
         label: "Security",
-        link: "#",
+        link: "/Facilities/Security",
       },
       {
         label: "Women Cell",
-        link: "#",
+        link: "/Facilities/WomenCell",
       },
       {
         label: "SC/ST Cell",
-        link: "#",
+        link: "/Facilities/SC_ST_Cell",
       },
       {
         label: "EMU",
-        link: "#",
+        link: "/Facilities/EMU",
       },
       {
         label: "ESU",
-        link: "#",
+        link: "/Facilities/ESU",
       },
     ],
   },

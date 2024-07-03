@@ -16,9 +16,9 @@
   background-color: #e9b0b0;
 }
 
-.maindivi {
-  position: absolute;
-  top: 15%;
+.maindivins {
+  position: relative;
+  top: 45%;
   /* background-image: url("../assets/images/maindiv.png"); */
 
   width: 100%;
@@ -93,7 +93,7 @@
 }
 /* Media query for tablet and phone view */
 @media (max-width: 768px) {
-  .maindivi {
+  .maindivins {
     position: absolute;
     top: 5%;
     width: 95%;
@@ -124,7 +124,7 @@
 }
 /* Media query for tablet and phone view */
 @media (max-width: 550px) {
-  .maindivi {
+  .maindivins {
     position: absolute;
     top: 5%;
   }
@@ -152,7 +152,7 @@
   }
 }
 @media (min-width: 320px) and (max-width: 420px) {
-  .maindivi {
+  .maindivins {
     position: absolute;
     top: 4%;
   }
@@ -180,7 +180,7 @@
   }
 }
 @media (min-width: 420px) and (max-width: 480px) {
-  .maindivi {
+  .maindivins {
     position: absolute;
     top: 3%;
   }
