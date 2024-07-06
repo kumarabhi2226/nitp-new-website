@@ -236,7 +236,6 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
- 
 }
 .section-title1 {
   font-size: 20px;
@@ -291,4 +290,8 @@
   .requirement {
     width: 100%;
   }
+}
+
+.admission-info1 {
+  margin-top: 80px;
 }

@@ -6,19 +6,74 @@ import Link from "next/link";
 import { IoIosArrowDown, IoIosArrowDropright } from "react-icons/io";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import "./styles/Navbar.css";
-import logo from "../../assets/images/logo.png";
-import About from "../../assets/images/about.svg";
-import Value from "../../assets/images/value.svg";
-import Mission from "../../assets/images/mission.svg";
-import Home from "../../assets/images/home.svg";
-import Campus from "../../assets/images/campus.svg";
-import Resource from "../../assets/images/resource.svg"
-import Director from "../../assets/images/director.svg"
-import Person from "../../assets/images/person.svg"
-import President from "../../assets/images/president.svg"
-import Sperson from "../../assets/images/sperson.svg"
+import {
+  logo,
+  About,
+  Value,
+  Mission,
+  Home,
+  Campus,
+  Resource,
+  Director,
+  Person,
+  President,
+  Sperson,
+  FirstYear,
+  Admin,
+  Admission,
+  Bis,
+  Bharat,
+  Calendar,
+  Chankaya,
+  ClientAudiophile,
+  ClientDatabiz,
+  ClientMaker,
+  ClientMeet,
+  Clubs,
+  ComingSoon,
+  Department,
+  Digital,
+  Document,
+  DownloadFile,
+  Ecell,
+  Excellence,
+  Faculty,
+  Fee,
+  Fest,
+  FooterImage,
+  Forms,
+  IconArrowDown,
+  IconArrowUp,
+  IconCalendar,
+  IconCloseMenu,
+  IconMenu,
+  IconPlanning,
+  IconReminders,
+  IconTodo,
+  Idcard,
+  International,
+  Jobs,
+  Location,
+  Mail,
+  Maindiv,
+  Next,
+  Notice,
+ 
+  NssNew,
+  Officers,
+  Portal,
+  Prev,
+  Programs,
+  Researchm,
+  Rules,
+  Sac,
+  Schlorship,
+  Sports,
+  Staffs,
+  Structure,
+  Studentexchange,
+} from "./icon"
 import useNavigationEvent from "./useNavigationEvent"
-import { useRouter } from 'next/navigation';
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -140,13 +195,15 @@ const navItems = [
     children: [
       {
         label: "Programmes",
-        link: "#"
+        link: "#",
+        iconImage:Programs,
         
       },
       {
         label: "Departments",
         link: "#",
         mlabel:"Departments",
+        iconImage:Department,
         children: [
           { label: "Architecture & Planning", link: "/department/arch/faculty"},
           { label: "Chemistry", link: "/department/chem/faculty" },
@@ -163,6 +220,7 @@ const navItems = [
       {
         label: "Course Structure",
         link: "#",
+        iconImage:Structure,
         children: [
           { label: "UG", link: ""},
           { label: "PG(M. tech / MURP)", link: ""},
@@ -174,6 +232,7 @@ const navItems = [
       {
         label: "Admission",
         link: "/Academic/Admission?tab=JoSAA",
+        iconImage:Admission,
         children: [
           { label: "Study in India (SII)", link: "/Academic/Admission?tab=SII"},
           { label: "CMCT/JoSSA/CSAB", link: "/Academic/Admission?tab=JoSAA"},
@@ -183,18 +242,22 @@ const navItems = [
       {
         label: "Academic Notices",
         link: "/Notices/Academic",
+        iconImage:Notice,
       },
       {
         label: "Academic Calendar",
         link: "https://drive.google.com/file/d/1tVgQSygS8GRTZIglbVWVClasegdd6BCi/view",
-      },
+        iconImage:Calendar,
+    },
       {
         label: "Fee Structure",
         link: "/Academic/Fee",
+        iconImage:Fee,
       },
       {
         label: "Format of Official Documents",
         link: "/Academic/Format",
+        iconImage:Document,
       },
     
       {
@@ -204,6 +267,8 @@ const navItems = [
           { label: "TSSC", link: "/Academic/ISRO"},
           { label: "ISRO RACS", link: "/Academic/TSSC"},
         ]
+        ,
+        iconImage:Excellence,
       },
       // {
       //   label: "ICT Academy",
@@ -212,14 +277,17 @@ const navItems = [
       {
         label: "BIS Dashboard",
         link: "/Academic/BIS",
+        iconImage:Bis,
       },
       {
         label: "Digital Intiatives",
         link: "/Academic/DI",
+        iconImage:Digital,
       },
       {
         label: "Regulation & Curricula",
         link: "/Academic/Curriculam",
+        iconImage:Rules,
       },
     ],
   },
@@ -230,42 +298,52 @@ const navItems = [
       {
         label: "Web Mail",
         link: "http://mail.google.com/a/nitp.ac.in",
+        iconImage:Mail,
       },
       {
         label: "Academic Portal",
         link: "http://exam.nitp.ac.in:9001/",
+        iconImage:Portal,
       },
       {
         label: "Recruitments",
         link: "/Notices/JobsNITP",
+        iconImage:Jobs,
       },
       {
         label: "Employee I-Card",
         link: "https://docs.google.com/forms/d/e/1FAIpQLSedy0aZLXXj709zQjAejWvLQOs4_6ESIciPe0IV199kMr_D1g/viewform?usp=sf_link",
+        iconImage:Idcard,
       },
       {
         label: "Staff Claim Form",
         link: "/Institute/Forms-",
+        iconImage:Forms,
       },
       {
         label: "Admin Login",
         link: "https://admin.nitp.ac.in/",
+        iconImage:Admin,
       },
       {
         label: "International Affairs",
         link: "#",
+        iconImage:International,
       },
       {
         label: "All Faculty Profile",
         link: "#",
+        iconImage:Faculty,
       },
       {
         label: "Officers",
         link: "#",
+        iconImage:Officers,
       },
       {
         label: "Other Employee",
         link: "#",
+        iconImage:Staffs,
       },
     ],
   },
@@ -277,66 +355,78 @@ const navItems = [
       {
         label: "Admissions",
         link: "/Academic/Admission",
+        iconImage:Admission,
       },
       {
         label: "Student I-Card",
         link: "https://docs.google.com/forms/d/e/1FAIpQLSc5_x34TMtQdMaW2Ad9Nvsmz1N8YXdAGJHtAM5kn3a850Ekyw/viewform",
+        iconImage:Idcard,
       },
       {
         label: "Fee Payment",
         link: "https://paydirect.eduqfix.com/app/mnYv9Q6+C+3lIMqghRCwdaqVZusPrJtq2RGJrJFnKnmtz3KBqtsEFPVrZFvoPubG/3466",
+        iconImage:Fee,
       },
       {
         label: "Clubs/Socities",
         link: "/Student/Clubs",
+        iconImage:Clubs,
       },
       {
         label: "1st Year Student",
         link: "/Student/StudentFirstYear",
+        iconImage:FirstYear,
       },
       {
         label: "Student Activity Center",
         link: "/Student/SAC",
+        iconImage:Sac,
       },
       {
         label: "Fellowship Opportunities",
         link: "/Student/FellowshipOpportunites",
+        iconImage:Excellence,
       },
       {
         label: "Scholarship",
         link: "/Student/Scholarship",
+        iconImage:Schlorship,
       },
-      {
-        label: "Student I-Card",
-        link: "https://docs.google.com/forms/d/e/1FAIpQLSc5_x34TMtQdMaW2Ad9Nvsmz1N8YXdAGJHtAM5kn3a850Ekyw/viewform",
-      },
+      
       {
         label: " Tech Fest",
         link: "/Student/TechFest",
+        iconImage:Fest,
       },
       {
         label: "Sports",
         link: "#",
+        iconImage:Sports,
       },
       {
         label: "Student Exchange",
         link: "/Student/StudentExchange",
+        iconImage:Studentexchange,
       },
       {
         label: "NSS@NITP",
         link: "/Student/NSS",
+        iconImage:NssNew,
       },
       {
         label: "E-Cell",
         link: "/Student/E-Cell",
+        iconImage:Ecell,
       },
       {
         label: "Unnat Bharat",
         link: "/Student/UnnatBharat",
+        iconImage:Bharat,
       },
       {
         label: "Chanakya Portal",
         link: "http://exam.nitp.ac.in:9001/default.aspx?ReturnUrl=%2f",
+        iconImage:Chankaya,
       },
     ],
   },
@@ -503,7 +593,7 @@ function DropdownItem({ item, parentLabel }) {
       onMouseLeave={() => setIsSOpen(false)}
     >
       
-      <Link href={item.link ?? "#"} className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-neutral-500 hover:text-red-600">
+      <Link href={item.link ?? "#"} className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-neutral-700 hover:text-red-600">
         {item.iconImage && <Image src={item.iconImage} alt="item-icon" />}
         <span className="whitespace-nowrap pl-3">{item.label}</span>
         {item.children && <IoIosArrowDropright className={`ml-auto transition-all ${isSOpen ? "rotate-180" : ""}`} />}
@@ -514,7 +604,7 @@ function DropdownItem({ item, parentLabel }) {
         <div className={`absolute left-full top-0  w-auto flex-col gap-1 rounded-lg bg-white  shadow-md transition-all ${isSOpen ? "flex" : "hidden"}`}>
           <div className="border-solid border-2 border-red-800 m-4 p-2 rounded-lg	">
           {item.children.map((subChild, subIndex) => (
-            <Link key={subIndex} href={subChild.link ?? "#"} className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-neutral-600 hover:text-red-600">
+            <Link key={subIndex} href={subChild.link ?? "#"} className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-neutral-700 hover:text-red-600">
               <span className="whitespace-nowrap pl-3">{subChild.label}</span>
             </Link>
           ))}</div>
@@ -577,7 +667,7 @@ function SubSidemenu({ item,closeSideMenu }) {
 
   return (
     <div className="relative px-1 py-1 transition-all">
-      <p onClick={handleSubToggle} className="flex cursor-pointer items-center gap-1 text-neutral-600 group-hover:text-black">
+      <p onClick={handleSubToggle} className="flex cursor-pointer items-center gap-1 text-neutral-700 group-hover:text-black">
       {item.iconImage && <Image src={item.iconImage} alt="item-icon" />}
         <Link href={item.link ?? "#"} onClick={closeSideMenu}>
         <span>{item.label}</span>
@@ -589,7 +679,7 @@ function SubSidemenu({ item,closeSideMenu }) {
           {item.children.map((subChild, index) => (
             <div key={index} className="pl-4">
               {item.iconImage && <Image src={item.iconImage} alt="item-icon" />}
-              <Link href={subChild.link ?? "#"} className="flex cursor-pointer items-center py-1 text-neutral-400 hover:text-black">
+              <Link href={subChild.link ?? "#"} className="flex cursor-pointer items-center py-1 text-neutral-700 hover:text-black">
                 <span>{subChild.label}</span>
               </Link>
             </div>

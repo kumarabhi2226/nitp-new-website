@@ -285,7 +285,35 @@ Relaxation in minimum eligibilities:
         )}
         {activeSection === 'Archieve' && (
           <section className=" text-black">
-          <h1>Archieve section</h1>
+          
+          <div className="admission-info1 ml-5 mr-5 md:ml-20 md:mr-20 ">
+          
+       
+          <h1 className="section-title-heading1 text-red-800 " > ------- Archieve Section ------- </h1>
+      
+      <h2 className=" section-title-heading1 section-title1  text-neutral-800">
+      Miscellaneous
+      </h2>
+      
+      <div className=" pt-0 mt-0">
+        <div className="">
+          <h3></h3>
+          <ul>
+            <li className=''>
+              <a href="https://drive.google.com/file/d/1jZjEWDvel7YN5l_zafci7w8uddAHK9fO/view?usp=sharing">Change of Branch for the session 2023-24 [ View Details ] </a>
+                     
+            </li>
+            <li className=''>
+              <a href="https://drive.google.com/file/d/1oCHfZkuNzFvYrp8y3n6HhPyK4UT_FJ8k/view?usp=sharing">Minor Program for B.TECH Students [ View Details ]</a>
+            
+            </li>
+          </ul>
+        </div>
+        </div>
+
+        
+      
+    </div>
         </section>
         )}
         

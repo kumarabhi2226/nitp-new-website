@@ -167,8 +167,8 @@ const BISdashboard = () => {
             </div>
           </div>
       ) : (
-        <div>
-          <table className="w-full border-collapse border border-neutral-600 bg-white rounded-lg p-0 m-0">
+        <div className="table-container">
+          <table className=" styled-table w-full border-collapse border border-neutral-600 bg-white rounded-lg p-0 m-0">
             <thead>
               <tr>
                 <th className="text-left px-4 py-4 bg-gradient-to-r from-blue-200 to-cyan-200 text-black">S.No.</th>
@@ -205,10 +205,75 @@ const BISdashboard = () => {
           </table>
         </div>
       )}
+      <style jsx>{`
+        .bis-dashboard {
+          
+
+        }
+
+        .heading {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        .table-container {
+          overflow-x: auto;
+          max-height: 700px; /* Adjust this height as needed */
+        }
+
+        .styled-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 25px 0;
+          
+          text-align: left;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .styled-table thead th {
+          
+          text-align: left;
+          padding: 12px 15px;
+          position: sticky;
+          top: 0;
+          z-index: 2;
+        }
+
+        .styled-table th,
+        .styled-table td {
+          padding: 12px 15px;
+        }
+
+        
+       
+
+        @media (max-width: 768px) {
+        
+
+          .styled-table th,
+          .styled-table td {
+            padding: 10px;
+          }
+
+          
+        }
+
+        @media (max-width: 480px) {
+         
+
+          .styled-table th,
+          .styled-table td {
+            padding: 8px;
+          }
+
+          
+        }
+      `}</style>
       
     </div>
   );
 };
+
 
 const BISpage = () => (
   

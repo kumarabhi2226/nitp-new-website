@@ -105,60 +105,60 @@ const Footer = () => {
           <div className="w-full h-0.5 bg-[#a51818] mb-3" />
           <ul className="space-y-2">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/Departments" className="hover:underline">
                 Departments
               </a>
             </li>
             <li>
-              <a
-                href="https://www.nirfindia.org"
+              <Link
+                href="/Others/NIRF"
                 className="hover:underline"
-                target="_blank"
+                
               >
                 NIRF
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="https://alumini-nitp.vercel.app/bihtacampus"
+              <Link
+                href="/Others/NewCampus"
                 className="hover:underline"
-                target="_blank"
+               
               >
                 New Campus
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="https://www.nitp.ac.in/RTI/"
+              <Link
+                href="/Others/RTI"
                 className="hover:underline"
-                target="_blank"
+                
               >
                 RTI
-              </a>
+              </Link>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="https://www.nitp.ac.in/webteam/"
                 className="hover:underline"
               >
                 Web Team
               </a>
-            </li>
+            </li> */}
             <li>
-              <a
-                href="https://www.nitp.ac.in/magazine/"
+              <Link
+                href="/Institute/Magazine"
                 className="hover:underline"
               >
                 Magazine(Vol.4)
-              </a>
+              </Link>
             </li>
-            <li>
+            {/* <li>
               <a href="#" className="hover:underline">
                 Switch to Dark Mode
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="flex flex-col items-start  w-full md:w-auto">
@@ -168,45 +168,45 @@ const Footer = () => {
           <div className="w-full h-0.5 bg-[#a51818] mb-3" />
           <ul className="space-y-2">
             <li>
-              <a
-                href="https://web.nitp.ac.in/alumni/html/photogallery.html"
+              <Link
+                href="/Institute?tab=campus"
                 className="hover:underline"
-                target="_blank"
+                
               >
-                Campus Life
-              </a>
+                Campus
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.nitp.ac.in/bwcminutes/"
+              <Link
+                href="/Others/BOG"
                 className="hover:underline"
               >
                 BOG/FC/BWC Minutes
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.nitp.ac.in/convocation/"
+              <Link
+                href="/Others/Convocation/"
                 className="hover:underline"
               >
                 Convocation 2023
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.nitp.ac.in/senateminutes/"
+              <Link
+                href="/Others/Senate"
                 className="hover:underline"
               >
                 Senate Minutes
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.nitp.ac.in/grievance/"
+              <Link
+                href="/Facilities/SCST"
                 className="hover:underline"
               >
                 SC/ST Grievance Cell
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#" className="hover:underline">
@@ -241,37 +241,37 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a
-                href="https://www.nitp.ac.in/annualreports/"
+              <Link
+                href="/Others/Report"
                 className="hover:underline"
               >
                 Annual Reports
-              </a>
+              </Link>
             </li>
-            <li>
+            {/* <li>
               <a
-                href="https://web.nitp.ac.in/ict/"
+                href=""
                 className="hover:underline"
                 target="_blank"
               >
                 ICT Academy
               </a>
-            </li>
+            </li> */}
             <li>
-              <a
-                href="https://www.nitp.ac.in/students/?tab=nss"
+              <Link
+                href="/Student/NSS"
                 className="hover:underline"
               >
                 National Service Scheme
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.nitp.ac.in/tenders/"
+              <Link
+                href="/Others/Tenders"
                 className="hover:underline"
               >
                 Tenders
-              </a>
+              </Link>
             </li>
             <li>
               <a
@@ -283,12 +283,12 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a
-                href="https://www.nitp.ac.in/terms/"
+              <Link
+                href="/Others/Terms"
                 className="hover:underline"
               >
                 Terms of Use
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
