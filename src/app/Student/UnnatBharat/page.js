@@ -43,7 +43,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="container mx-auto md:pl-32 md:pr-32 pt-6 bg-white bg-opacity-50 text-black">
+    <div className=" mx-auto md:pl-32 md:pr-32 pt-6 bg-white bg-opacity-50 text-black">
       <Head>
         <title>Students</title>
       </Head>

@@ -3,14 +3,28 @@ import Head from "next/head";
 export default function Home() {
   const places = [
     {
-      image: "https://i.postimg.cc/h4mxzgKS/nit-patna-004.jpg",
-      subheading: "IT Services Unit",
-      text: "The Student Activity Centre (SAC) was built with the vision to provide support for multiple kinds of student activities. It was initiated by the honorable Director of NIT Patna, Prof. Asok De to encourage participation in extra-curricular activities to promote overall grooming of personality of the students. Various cultural activities and indoor games are conducted in the SAC. This enormous building has numerous rooms each of which is dedicated to activities related to sports and extra-curricular activities. Student offices for the same are also hosted in the SAC. Also, many open spaces have been specifically designed in the SAC to promote community interaction. A huge stadium adjoins the SAC in which football and cricket matches are held. The administration believes that these activities will help the students to provide a dynamic edge to their performances in the professional world and build a truly multi-faceted personality.",
+      image: "https://i.postimg.cc/gJ7F1PGs/prabhat-kumar.png",
+      subheading: "",
+      text: `Prof. Prabhat Kumar : Professor & Head (CCIS)
+Dr. Santosh Kumar : Scientific Officer
+Ritesh Kumar : Technical Assistant
+Paritosh Bhushan : Technical Assistant
+Coomar Kislay : Technical Assistant
+
+The institute IT Service Unit is equipped with most modern and advanced infrastructure to provide services to cater to the computing and networking needs of the of the institute. In addition to providing IT Solution, this units taking care of existing entire campus network (offices as well residential flats), Institute Servers, Web Server and other IT services like Mail, Webserver to meet the academic requirements and research purpose. High speed and uninterrupted Internet access is provide across the campus through 1-Gbps internet connectivity by POWERGRID & 1-Gbps through NKN.
+
+Facilities : 
+1 .	High Speed Wi-Fi & Wired Internet Connectivity
+2 . CCTV surveillance system
+3	. Bio Matric Authentication Devices
+4 . IP Phones through ready Network
+5 . EPBAX
+`,
     },
   ];
 
   return (
-    <div className="container mx-auto md:pl-32 md:pr-32 pt-8 bg-white bg-opacity-50">
+    <div className="mx-auto pl-5 pr-5 md:pl-32 md:pr-32 pt-8 bg-white bg-opacity-50">
       <Head>
         <title>IT Services Unit</title>
       </Head>
@@ -30,12 +44,17 @@ export default function Home() {
                   <h2 className="text-xl font-bold mb-2 text-neutral-800 items-start">
                     {place.subheading}
                   </h2>
-                  <p className="text-gray-600 ">{place.text}</p>
+                  <p className="text-gray-600 "> {place.text.split('\n').map((line, i) => (
+                      <span key={i}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}</p>
                 </div>
                 <img
                   src={place.image}
                   alt={place.subheading}
-                  className="w-3/4 md:w-2/5 rounded-md"
+                  className="w-3/4 md:w-1/4 rounded-md"
                 />
               </>
             ) : (

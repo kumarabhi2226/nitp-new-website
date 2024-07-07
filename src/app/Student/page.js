@@ -1,10 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+
 import "./style.css"
-
-
-
 
 const studentResources = [
     {
@@ -94,6 +91,7 @@ const StudentResourcesPage = () => {
             <div className=" mx-auto my-auto relative bg-white bg-clip-padding p-3 bg-opacity-80 rounded-md border-2 border-red-100 shadow-md transition duration-300 w-11/12 h-32 cardstudent" >
               <div className="relative h-16 w-16 items-center justify-center mx-auto">
                 <img
+                loading='lazy'
                   src={resource.image}
                   alt={resource.title}
                   layout="fill"

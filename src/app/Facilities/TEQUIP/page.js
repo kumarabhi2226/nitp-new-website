@@ -21,7 +21,7 @@ INSTITUTIONAL DEVELOPMENT PROPOSAL`,
   ];
 
   return (
-    <div className="container mx-auto md:pl-32 md:pr-32 pt-8 bg-white bg-opacity-50">
+    <div className="mx-auto md:pl-32 md:pr-32 pt-8 bg-white bg-opacity-50">
       <Head>
         <title>TEQUIP</title>
       </Head>

@@ -5,18 +5,23 @@ export default function Home() {
     {
       image: "https://www.nitp.ac.in/static/af157e2154c79e7db8ab212debc3c769/360e2/cc.png",
       subheading: "Centre for Computing and Information Services(CCIS)",
-      text: "A state-of-the-art Computer Centre started its operation on 27th November 2011. It serves as the central computing facility for the students, research scholars and teachers of the institute. The Centre is well equipped with modern Computers (190 in number), air conditioned labs and stabilized uninterrupted power supply among the other facilities. The Centre has seven labs for all the students and one lab exclusively for PhD scholars of the institute. All labs are equipped with IP cameras to monitor the activities remotely. The Centre has 1 Gbps, 24x7 internet connectivity on optical fiber under National Knowledge Network, Govt. of India.The Centre also has a Virtual Class Room and Desktop VideoConferencing facility. It operates from 8:30 AM to 5:30 PM..",
+      text: `The Institute is committed to maintain a work environment wherein faculty members, staff and students from different communities can work in a coherent environment. It is the Institute's endeavor to ensure that no discrimination takes place at the workplace or inside the Institute campus.
+
+The Institute has appointed a Liaison Officer who can be contacted in the event of any incident of discrimination. Particulars of Liaison Officer are as under:
+
+Liaison Officer
+
+Prof. Fulena Rajak
+
+Professor, Department of Architecture & Planning
+
+Email: sc.st.cell@nitp.ac.in
+
+For reporting any grievance related to SC / ST community of NIT Patna, kindly use this email ID:
+
+sc.st.cell@nitp.ac.in`,
     },
-    {
-      image: "https://i.postimg.cc/gJ7F1PGs/prabhat-kumar.png",
-      subheading: "Head (CCIS)",
-      text: `Prof. PRABHAT KUMAR
-       प्रो. प्रभात कुमार
-Professor (Computer Science and Engineering Dept.) 
-& प्राध्यापक (कंप्यूटर विज्ञान और इंजीनियरिंग विभाग)
-Head, Centre for Computing and Information Services (CCIS)
-विभागाध्यक्ष, कम्प्यूटिंग और सूचना सेवा केंद्र (सीसीआईएस)`
-    },
+    
     
     
   ];

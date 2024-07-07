@@ -10,47 +10,47 @@ const FacilitiesResources = [
   {
     "title": "Computer Centre",
     "image": "https://i.postimg.cc/GtxQLHLj/Computer64.png", 
-    "link": "/Academic/ComputerCentre",
+    "link": "/Facilities/ComputerCenter",
   },
   {
     "title": "IT Service Unit",
     "image": "https://i.postimg.cc/5tHMkF1T/IT64.png", 
-    "link": "https://docs.google.com/forms/d/e/1FAIpQLSc5_x34TMtQdMaW2Ad9Nvsmz1N8YXdAGJHtAM5kn3a850Ekyw/viewform",
+    "link": "/Facilities/ItServices",
   },
   {
     "title": "TEQUIP",
     "image": "https://i.postimg.cc/htZBr0FV/technical-skills64.png", 
-    "link": "https://paydirect.eduqfix.com/app/mnYv9Q6+C+3lIMqghRCwdaqVZusPrJtq2RGJrJFnKnmtz3KBqtsEFPVrZFvoPubG/3466",
+    "link": "/Facilities/TEQUIP",
   },
   {
     "title": "Library",
     "image": "https://i.postimg.cc/YCC7YsPp/library64.png", 
-    "link": "/Facilities/Clubs",
+    "link": "/Facilities/Library",
   },
   {
     "title": 'Medical Facilities',
     "image": 'https://i.postimg.cc/Nf4YycpJ/medical64.png', 
-    "link": '/Facilities/FacilitiesFirstYear',
+    "link": '/Facilities/MedicalFacilities',
   },
   {
     "title": "Sports Facilities",
     "image": "https://i.postimg.cc/4nJb6TsX/sports64.png",
-    "link": "/Facilities/Sports",
+    "link": "/Facilities/SportsFacilities",
   },
   {
     "title": "Incubation Center",
     "image": "https://i.postimg.cc/GtnrD3WN/Incubation64.png", 
-    "link": "/Facilities/FellowshipOpportunities",
+    "link": "/Facilities/IncubationCenter",
   },
   {
     "title": "Hostel & Mess",
     "image": "https://i.postimg.cc/C1qSdnQk/hostel64.png",
-    "link": "/Facilities/Scholarship",
+    "link": "/Facilities/Hostel",
   },
   {
     "title": "Laboratories",
     "image": "https://i.postimg.cc/tgf9XN29/labs64.png", 
-    "link": "/Facilities/TechFest",
+    "link": "/Facilities/Laboratories",
   },
   {
     "title": "Bank",
@@ -60,27 +60,27 @@ const FacilitiesResources = [
   {
     "title": "Security",
     "image": "https://i.postimg.cc/4xWJ0gc7/security64.png", 
-    "link": "/Facilities/FacilitiesExchange",
+    "link": "/Facilities/Security",
   },
   {
     "title": "Women Cell",
     "image": "https://i.postimg.cc/yYzYgnBd/woman64.png", 
-    "link": "/Facilities/NSS",
+    "link": "/Facilities/WomanCell",
   },
   {
     "title": "SC/ST Cell",
     "image": "https://i.postimg.cc/y6R88tMt/scst64.png", 
-    "link": "/Facilities/E-Cell",
+    "link": "/Facilities/SCST",
   },
   {
     "title": "EMU",
     "image": "https://i.postimg.cc/mgLLVDPW/EMU64.png", 
-    "link": "/Facilities/UnnatBharat",
+    "link": "/Facilities/Emu",
   },
   {
     "title": "ESU",
     "image": "https://i.postimg.cc/DzYwSTyk/ESU64.png", 
-    "link": "http://exam.nitp.ac.in:9001/default.aspx?ReturnUrl=%2f",
+    "link": "/Facilities/Esu",
   },
   
   
