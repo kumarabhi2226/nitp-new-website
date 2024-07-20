@@ -70,6 +70,32 @@ import Sports from "../../assets/images/sports.svg";
 import Staffs from "../../assets/images/staffs.svg";
 import Structure from "../../assets/images/structure.svg";
 import Studentexchange from "../../assets/images/studentexchange.svg";
+import women from "../../assets/images/women.svg";
+import Tequip from "../../assets/images/Tequip.svg";
+import scst from "../../assets/images/scst.svg"
+import security from "../../assets/images/security.svg";
+import Library from "../../assets/images/Library.svg";
+import Hostel from "../../assets/images/hostel.svg";
+import Labs from "../../assets/images/Labs.svg";
+import Bank from "../../assets/images/bank.svg";
+import Hospital from "../../assets/images/Hospital.svg";
+import EMU from "../../assets/images/EMU.svg";
+import ESU from "../../assets/images/ESU.svg";
+import ComputerCentre from "../../assets/images/ComputerCentre.svg"
+import itservice from "../../assets/images/itservice.svg"
+import cse from "../../assets/images/cse.svg"
+import ece from "../../assets/images/ECE.svg"
+import ee from "../../assets/images/ee.svg"
+import archi from "../../assets/images/archi.svg"
+import chem from "../../assets/images/chem.svg"
+import civil from "../../assets/images/civil.svg"
+import hss from "../../assets/images/hss.svg"
+import math from "../../assets/images/math.svg"
+import mech from "../../assets/images/mech.svg"
+import physics from "../../assets/images/physics.svg"
+
+
+
 import useNavigationEvent from "./useNavigationEvent"
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -123,7 +149,7 @@ const navItems = [
   },
   {
     label: "Administration",
-    link: "#",
+    link: "/Administration/Visitor",
     mlabel:"Administration",
     children: [
       {
@@ -187,7 +213,7 @@ const navItems = [
   },
   {
     label: "Academics",
-    link: "#",
+    link: "/Academics/Programmes",
     mlabel:"Academics",
     children: [
       {
@@ -202,16 +228,16 @@ const navItems = [
         mlabel:"Departments",
         iconImage:Department,
         children: [
-          { label: "Architecture & Planning", link: "/department/arch/faculty"},
-          { label: "Chemistry", link: "/department/chem/faculty" },
-          { label: "Civil Engineering", link: "/department/ce/faculty" },
-          { label: "Computer Science and Engineering", link: "/department/cse/faculty" },
-          { label: "Electrical Engineering", link: "/department/ee/faculty" },
-          { label: "Electronics and Communication Engineering", link: "/department/ece/faculty" },
-          { label: "Humanities & Social Sciences", link: "/department/hss/faculty" },
-          { label: "Mathematics", link: "/department/math/faculty" },
-          { label: "Mechanical Engineering", link: "/department/me/faculty" },
-          { label: "Physics", link: "/department/physics/faculty" },
+          { label: "Architecture & Planning", link: "/department/arch/faculty",iconImage:archi},
+          { label: "Chemistry", link: "/department/chem/faculty",iconImage:chem },
+          { label: "Civil Engineering", link: "/department/ce/faculty",iconImage:civil },
+          { label: "Computer Science and Engineering", link: "/department/cse/faculty",iconImage:cse },
+          { label: "Electrical Engineering", link: "/department/ee/faculty", iconImage:ee },
+          { label: "Electronics and Communication Engineering", link: "/department/ece/faculty", iconImage:ece },
+          { label: "Humanities & Social Sciences", link: "/department/hss/faculty",iconImage:hss },
+          { label: "Mathematics", link: "/department/math/faculty",iconImage:math },
+          { label: "Mechanical Engineering", link: "/department/me/faculty" ,iconImage:mech},
+          { label: "Physics", link: "/department/physics/faculty",iconImage:physics },
         ],
       },
       {
@@ -219,11 +245,11 @@ const navItems = [
         link: "#",
         iconImage:Structure,
         children: [
-          { label: "UG", link: ""},
-          { label: "PG(M. tech / MURP)", link: ""},
-          { label: "M.tech/MURP-PHD(DD)", link: ""},
-          { label: "Integrated M.Sc", link: ""},
-          { label: "MCA", link: ""}
+          { label: "UG", link: "", iconImage:Structure},
+          { label: "PG(M. tech / MURP)", link: "", iconImage:Structure},
+          { label: "M.tech/MURP-PHD(DD)", link: "", iconImage:Structure},
+          { label: "Integrated M.Sc", link: "", iconImage:Structure},
+          { label: "MCA", link: "", iconImage:Structure}
         ]
       },
       {
@@ -434,62 +460,78 @@ const navItems = [
       {
         label: "Computer Center",
         link: "/Facilities/ComputerCenter",
+        iconImage:ComputerCentre,
       },
       {
         label: "IT Service Unit",
-        link: "/Facilities/ITServiceUnit",
+        link: "/Facilities/ItServices",
+        iconImage:itservice,
       },
       {
         label: "TEQUIP",
         link: "/Facilities/TEQUIP",
+        iconImage:Tequip,
       },
       {
         label: "Library",
         link: "/Facilities/Library",
+        iconImage:Library,
       },
       {
         label: "Medical Facilities",
         link: "/Facilities/MedicalFacilities",
+        iconImage:Hospital,
       },
       {
         label: "Sports Facilities",
         link: "/Facilities/SportsFacilities",
+        iconImage:Sports,
       },
       {
         label: "Incubation Center",
         link: "https://web.nitp.ac.in/incubation_center/index.html",
+        iconImage:Ecell,
       },
       {
         label: "Hostel & Mess",
         link: "/Facilities/Hostel",
+        iconImage:Hostel,
       },
       {
         label: "Laboratories",
         link: "/Facilities/Laboratories",
+        iconImage:Labs,
       },
       {
         label: "Bank",
         link: "/Facilities/Bank",
+        iconImage:Bank,
       },
       {
         label: "Security",
         link: "/Facilities/Security",
+
+        iconImage:security,
       },
       {
         label: "Women Cell",
-        link: "/Facilities/WomenCell",
+        link: "/Facilities/WomanCell",
+        iconImage:women,
       },
       {
         label: "SC/ST Cell",
-        link: "/Facilities/SC_ST_Cell",
+        link: "/Facilities/SCST",
+        iconImage:scst,
       },
       {
         label: "EMU",
-        link: "/Facilities/EMU",
+        link: "/Facilities/Emu",
+        iconImage:EMU,
       },
       {
         label: "ESU",
-        link: "/Facilities/ESU",
+        link: "/Facilities/Esu",
+        iconImage:ESU,
       },
     ],
   },
@@ -602,6 +644,7 @@ function DropdownItem({ item, parentLabel }) {
           <div className="border-solid border-2 border-red-800 m-4 p-2 rounded-lg	">
           {item.children.map((subChild, subIndex) => (
             <Link key={subIndex} href={subChild.link ?? "#"} className="flex cursor-pointer items-center py-1 pl-6 pr-8 text-neutral-700 hover:text-red-600">
+              {subChild.iconImage && <Image src={subChild.iconImage} alt="item-icon" />}
               <span className="whitespace-nowrap pl-3">{subChild.label}</span>
             </Link>
           ))}</div>

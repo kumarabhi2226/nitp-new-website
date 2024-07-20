@@ -3,7 +3,7 @@
 export default function Home() {
   const places = [
     {
-      image: "https://www.nitp.ac.in/static/af157e2154c79e7db8ab212debc3c769/360e2/cc.png",
+      image: "https://i.postimg.cc/43yYpRrp/cc.png",
       subheading: "Centre for Computing and Information Services(CCIS)",
       text: "A state-of-the-art Computer Centre started its operation on 27th November 2011. It serves as the central computing facility for the students, research scholars and teachers of the institute. The Centre is well equipped with modern Computers (190 in number), air conditioned labs and stabilized uninterrupted power supply among the other facilities. The Centre has seven labs for all the students and one lab exclusively for PhD scholars of the institute. All labs are equipped with IP cameras to monitor the activities remotely. The Centre has 1 Gbps, 24x7 internet connectivity on optical fiber under National Knowledge Network, Govt. of India.The Centre also has a Virtual Class Room and Desktop VideoConferencing facility. It operates from 8:30 AM to 5:30 PM..",
     },

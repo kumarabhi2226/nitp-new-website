@@ -5,7 +5,7 @@ export default function Home() {
   const places = [
     {
       image:
-        "https://www.nitp.ac.in/static/2bfbf8ac448cb7569a1ed353d8555c73/a41d1/library.jpg",
+        "https://i.postimg.cc/9FB0Sf2G/library.jpg",
       subheading: "Library ",
       text: `The Central library of the institute owns a vast stock of over 75,000 books catering to the needs of all the relevant fields of engineering. It has a resourceful stock of over 10,000 computer related books and clearly demarcated section for every engineering branch and architecture. In addition to the engineering pertinent books, the central library is self-sufficient in a vivid category of other business and current affairs related magazines, pamphlets and journals which includes TIME and NEWSWEEK.The Central Library is fully automated and all operations are performed with the help of Libsys - Library Automation Software.The students can issue a sufficient no.of books for use throughout the semester and an additional no.of books for special reference.`,
     },

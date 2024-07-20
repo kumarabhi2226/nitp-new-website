@@ -4,7 +4,7 @@ export default function Home() {
   const places = [
     {
       image:
-        "https://www.nitp.ac.in/static/a5e563cff39754204dadca26337dd62c/a41d1/labimg.jpg",
+        "https://i.postimg.cc/VLw5DCxf/labimg.jpg",
       subheading: "Laboratories",
       text: `Technical knowledge is of no worth without practical approach.Every department has laboratories which provide practical experience related to the subjects studied. The students are expected to take the lab courses for better learning. Various instruments, machines and computers are provided in the labs to facilitate the lab work. Lab assistants and Professor in-charge effectively guide the students through their practical work. Every department has an operational computer lab of its own to sharpen programming skills and to get hands - on experience with the use of the softwares required in their respective fields of concern. The labs are equipped with the latest technology and are periodically updated.`,
     },

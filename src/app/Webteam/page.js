@@ -1,81 +1,230 @@
 "use client"
-import { useEffect, useState } from "react";
-import axios from "axios";
-import WebCard from "../components/Webteam/Webcard";
-import "./wpage.css";
+import { useEffect, useState } from "react"
+import axios from "axios"
+import React from "react"
+import Webcard from "../components/Webteam/Webcard"
+import "./wpage.css"
 
-const years = [2024];
+const years = [20241]
+
 
 const Webteam = () => {
-  const [webteam, setWebteam] = useState([]);
-  const [filteredteam, setFilteredteam] = useState([]);
-  const [year, setYear] = useState(2024); // Set initial year to 2024
-  const [view, setView] = useState("maintainers");
+ const [webteam, setWebteam] = useState()
+ const [filteredteam, setFilteredteam] = useState()
+ const [view, setView] = useState("maintainers")
+ const [year, setYear] = useState(20241)
+ let webteamUrl = `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/webteam`
 
-  useEffect(() => {
-    const webteamUrl = `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/webteam`;
+ useEffect(() => {
+  axios
+   .get(webteamUrl)
+   .then(res => {
+    const web = res.data
+    setWebteam(web)
+    let filtered = web.filter(member => {
+     return member.year === year
+    })
+    setFilteredteam(filtered)
+   })
+   .catch(e => {
+    console.log(e)
+   })
+ }, [year])
 
-    axios.get(webteamUrl)
-      .then(res => {
-        const web = res.data;
-        setWebteam(web);
-        let filtered = web.filter(member => member.year === year);
-        setFilteredteam(filtered);
-      })
-      .catch(e => {
-        console.log(e);
-      });
-  }, [year]);
-
-  return (
-    <div className="pageLayout">
-      <h1 className="text-black h1w">Web Team</h1>
-      <h2 className="text-black h2w">The Team behind the website of NIT Patna</h2>
-
-      <div className="buttonGroupw">
-        <button
-          onClick={() => {
-            setView("developers");
-            setYear(2021);
-          }}
-          className={view === "developers" ? "btnActive" : ""}
-        >
-          Developers
-        </button>
-      </div>
-
-      {view === "developers" && (
-        <div className="yearButtons">
-          {years.map(item => (
-            <button
-              key={item}
-              onClick={() => setYear(item)}
-              className={year === item ? "btnActive" : ""}
-            >
-              {item}
-            </button>
-          ))}
+ return (
+  <>
+     <div className="webteam-page text-black pr-5 pl-5 md:pr-28 md:pl-28">
+      <div className="layoutrow layoutrowmain">
+       <div className="col-6" style={{ width: `100%` }}>
+        <div className="row rowmarl3 text-center pt-5 pb-4">
+         <h1 data-aos="zoom-in-right " className="text-4xl text-red-800 font-extrabold">Web Team</h1>
         </div>
-      )}
+        <div className="row rowmarl3 text-center">
+         <h2 data-aos="zoom-in-right" className="text-2xl font-semibold">
+          The Team behind the website of NIT Patna
+         </h2>
+        </div>
+       </div>
+       <div
+        className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-5 gap-5 md:gap-6 items-center justify-center grid-flow-dense	 mx-auto"
+        
+       >
+        {/* <div className="probutton">
+         <button
+          onClick={() => {
+           setView("maintainers")
+          }}
+          className={view === "maintainers" ? "btnactive" : ""}
+         >
+          Maintainers
+         </button>
+         <button
+          onClick={() => {
+           setView("developers")
 
-      <div className="cardContainerw">
-        {filteredteam
-          .filter(member => member.role === (view === "maintainers" ? "volunteer" : "developer"))
-          .map(member => (
-            <WebCard
-              key={member.email}
+           setYear(2024)
+          }}
+          className={view === "developers" ? "btnactive" : ""}
+         >
+          Developers
+         </button>
+        </div> */}
+       </div>
+       {/* {view === "maintainers" && (
+        <div className="row rowmarl3">
+         <div
+          className="probutton "
+          style={{ margin: "10px 0px", width: "100%" }}
+         >
+          {years.map(item => (
+           <button
+            onClick={() => {
+             setYear(item)
+            }}
+            className={year === item ? "btnactive" : ""}
+           >
+            {item}
+           </button>
+          ))}
+         </div>
+        </div>
+       )} */}
+
+       <>
+        <div className="">
+         <div className="">
+          <h2 data-aos="zoom-in-right" className="text-center text-red-900 text-2xl font-bold pt-5" style={{ width: `100%`, marginTop: `0` }}>
+           Student Volunteers
+          </h2>
+
+          {view === "maintainers" && (
+           <a
+            to="/volunteers"
+            style={{
+             textDecorationLine: `none`,
+             color: `tomato`,
+            }}
+           >
+            <h3
+             style={{
+              padding: `0.25rem 0`,
+              borderBottom: `2px red dotted`,
+              width: `fit-content`,
+              margin: `0`,
+             }}
+            >
+             Previous Student Volunteers
+            </h3>
+           </a>
+          )}
+         </div>
+         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 items-center justify-evenly grid-flow-dense mx-auto pt-5 mb-16">
+         {filteredteam &&
+          filteredteam
+           .filter(member => member.role === "volunteer")
+           .map(member => (
+            <Webcard
+             name={member.name}
+             email={member.email}
+             extn={member.ext_no}
+             id={member.email}
+             interests={member.interests}
+             image={member.image}
+             desg={member.desg}
+             url={member.url}
+            />
+           ))}
+         </div>
+         
+        </div>
+       </>
+      </div>
+      {view === "maintainers" && (
+       <>
+        <div className="row rowmarl3">
+         <h2 data-aos="zoom-in-right">Faculties/Officers Involved</h2>
+        </div>
+        <div className="col-6">
+         <div className="row layoutrow">
+          <div className="row rowmarl3">
+           <h2 data-aos="zoom-in-right">PI Website</h2>
+          </div>
+          <div className="row grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 md:gap-6 items-center justify-center grid-flow-dense mx-auto pt-5 mb-16">
+           {filteredteam &&
+            filteredteam
+             .filter(member => member.role === "pi")
+             .map(member => (
+              <Webcard
+               name={member.name}
+               email={member.email}
+               extn={member.ext_no}
+               id={member.email}
+               interests={member.interests}
+               image={member.image}
+               desg={member.desg}
+               url={member.url}
+              />
+             ))}
+          </div>
+         </div>
+        </div>
+        {view === "maintainers" && (
+         <div className="row layoutrow">
+          <div className="row rowmarl3">
+           <h2 data-aos="zoom-in-right">PI IT Services</h2>
+          </div>
+          <div className="row grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 md:gap-6 items-center justify-center grid-flow-dense mx-auto pt-5 mb-16">
+
+          {filteredteam &&
+           filteredteam
+            .filter(member => member.role === "pi-it")
+            .map(member => (
+             <Webcard
               name={member.name}
               email={member.email}
               extn={member.ext_no}
+              id={member.email}
               interests={member.interests}
               image={member.image}
               desg={member.desg}
               url={member.url}
-            />
-          ))}
-      </div>
-    </div>
-  );
-};
+             />
+            ))}
+            </div>
+         </div>
+        )}
 
-export default Webteam;
+        {view === "maintainers" && (
+         <div className="row layoutrow">
+          <div className="row rowmarl3">
+           <h2 data-aos="zoom-in-right">Scientific Officer</h2>
+          </div>
+          <div className="row grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 md:gap-6 items-center justify-center grid-flow-dense mx-auto pt-5 mb-16">
+
+          {filteredteam &&
+           filteredteam
+            .filter(member => member.role === "scientificofficer")
+            .map(member => (
+             <Webcard
+              name={member.name}
+              email={member.email}
+              extn={member.ext_no}
+              id={member.email}
+              interests={member.interests}
+              image={member.image}
+              desg={member.desg}
+              url={member.url}
+             />
+            ))}
+            </div>
+         </div>
+        )}
+       </>
+      )}
+     </div>
+    
+  </>
+ )
+}
+
+export default Webteam

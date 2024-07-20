@@ -4,7 +4,7 @@ export default function Home() {
   const places = [
     {
       image:
-        "https://www.nitp.ac.in/static/60339a282f9592619f88db602951bf5f/a41d1/hostel.jpg",
+        "https://i.postimg.cc/NGm564PC/hostel.jpg",
       subheading: "Hostel & Mess",
       text: `Residential facilities are provided to students in three boys’ hostels and two girls’ hostel. Presently, all the girls and many of the boys are accommodated in these hostels. The hostels are guarded round the clock by able private security staffs.Patrolling is also done by state security personnel during night. There are also separate wardens for each and every hostel in order to maintain discipline. Each hostel provides a central mess facility for breakfast, lunch and dinner. Uninterrupted water and electricity supply are also provided. Hostels have got separate wi fi connections for providing internet facilities to students 24x7. Newspapers and magazines are put up in the common rooms. Cleanliness and hygiene are taken care of and maintained in every aspect.`,
     },

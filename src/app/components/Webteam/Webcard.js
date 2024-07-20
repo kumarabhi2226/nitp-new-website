@@ -1,75 +1,89 @@
 import { useState } from "react";
 import "./Webcard.css";
+import 'remixicon/fonts/remixicon.css';
 
-const WebCard = ({ name, email, extn, desg, image, url }) => {
+// name={member.name}
+//              email={member.email}
+//              extn={member.ext_no}
+//              id={member.email}
+//              interests={member.interests}
+//              image={member.image}
+//              desg={member.desg}
+//              url={member.url}
+
+const Webcard = ({ name, email, extn, desg, image, url, interests}) => {
   const [isHovered, setIsHovered] = useState(false);
+  const pimage=image || "https://www.svgrepo.com/show/274909/programmer.svg";
 
   const urls = url.split(" & ");
   const linkedinUrl = urls[0] || "#";
   const githubUrl = urls[1] || "#";
-  const interestArray = desg.split(" || ");
-  const interestText = interestArray[0];
-  const skills = interestArray.slice(0).map(desg => desg.trim());
+  const emailUrl = urls[2] || "#";
+
+  const desgs = desg.split(" & ");
+  const desg1 = desgs[0] || "Web Developer";
+  const desg2 = desgs[1] || "";
+  const desg3 = desgs[2] || "";
+  // const interestArray = desg.split(" || ");
+  // const interestText = interestArray[0];
+  // const skills = interestArray.slice(0).map(desg => desg.trim());
 
   return (
-    // <div
-    //   classNameName="card-container-w"
-    //   onMouseEnter={() => setIsHovered(true)}
-    //   onMouseLeave={() => setIsHovered(false)} 
-    // >
-    //   <img classNameName="round" src={image} alt={name} />
-    //   <h3 classNameName="h3w">{name}</h3>
-    //   <h6 classNameName="h6w">{desg}</h6>
-    //   <h6 classNameName="email">{email}</h6>
-    //   <br></br>
-    //   <div classNameName="buttons">
-    //     <a href={linkedinUrl} classNameName="primary">LinkedIn</a>
-    //     <a href={githubUrl} classNameName="primary ghost">GitHub</a>
-    //   </div>
-    //   <div classNameName="desg">
-    //     <h6 classNameName="h6w">desg</h6>
-    //     <ul>
-    //       {skills.map((desg, index) => (
-    //         <li key={index}>{desg.trim()}</li>
-    //       ))}
-    //     </ul>
-    //   </div>
-      
-    // </div>
-    <div classNameName="cardw text">
-    <div className="imgw">
-      <img className="imgw" src="https://drive.google.com/thumbnail?id=1EKfLtDVi2k8Ikb66d4kaxhIMDTDAslUK"/>
-    </div>
-    <div className="infos">
-      <div className="namew">
-        <h2>Bradley Steve</h2>
-        <h4>@bradsteve</h4>
+   
+    <div className="containerw webcardnew">
+    <div className="card">
+      <div className="card__border">
+        <div className="card__perfil">
+          <img src={pimage} alt="card image" className="card__img" />
+        </div>
       </div>
-      <p className="textw">
-        I'm a Front End Developer, follow me to be the first 
-        who see my new work.
-      </p>
-      <ul className="stats">
-        <li>
-          <h3>15K</h3>
-          <h4>Views</h4>
-        </li>
-        <li>
-          <h3>82</h3>
-          <h4>Projects</h4>
-        </li>
-        <li>
-          <h3>1.3M</h3>
-          <h4>Followers</h4>
-        </li>
-      </ul>
-      <div className="links">
-        <button className="follow">Follow</button>
-        <button className="view">View profile</button>
+
+      <h3 className="card__name">{name}</h3>
+      <span className="card__profession">{desg1}</span><br/>
+      <span className="card__profession">{desg2}</span><br/>
+      <span className="card__profession">{desg3}</span>
+
+
+      <div className="info ">
+        <div className="info__icon m-auto">
+          <i className="ri-information-line m-auto mb-2 pb-2"></i>
+        </div>
+
+        <div className="info__border">
+          <div className="info__perfil">
+            <img src={pimage} alt="card image" className="info__img" />
+          </div>
+        </div>
+
+        <div className="info__data">
+          <h3 className="info__name">{name}</h3>
+          <span className="info__profession">{interests}</span>
+          {/* <span className="info__location">{intrests}</span> */}
+        </div>
+
+        <div className="info__social">
+          <a href={linkedinUrl} target="_blank" className="info__social-link" rel="noopener noreferrer">
+            <span className="info__social-icon">
+              <i className="ri-linkedin-box-line"></i>
+            </span>
+          </a>
+
+          <a href={emailUrl} target="_blank" className="info__social-link" rel="noopener noreferrer">
+            <span className="info__social-icon">
+            <i class="ri-mail-send-line"></i>
+            </span>
+          </a>
+
+          <a href={githubUrl} target="_blank" className="info__social-link" rel="noopener noreferrer">
+            <span className="info__social-icon">
+              <i className="ri-github-fill"></i>
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
   );
 };
 
-export default WebCard;
+export default Webcard;

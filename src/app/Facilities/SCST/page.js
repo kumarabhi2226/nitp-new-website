@@ -3,8 +3,8 @@
 export default function Home() {
   const places = [
     {
-      image: "https://www.nitp.ac.in/static/af157e2154c79e7db8ab212debc3c769/360e2/cc.png",
-      subheading: "Centre for Computing and Information Services(CCIS)",
+    
+      subheading: "SC/ST Cell",
       text: `The Institute is committed to maintain a work environment wherein faculty members, staff and students from different communities can work in a coherent environment. It is the Institute's endeavor to ensure that no discrimination takes place at the workplace or inside the Institute campus.
 
 The Institute has appointed a Liaison Officer who can be contacted in the event of any incident of discrimination. Particulars of Liaison Officer are as under:
@@ -12,13 +12,10 @@ The Institute has appointed a Liaison Officer who can be contacted in the event 
 Liaison Officer
 
 Prof. Fulena Rajak
-
 Professor, Department of Architecture & Planning
-
 Email: sc.st.cell@nitp.ac.in
 
 For reporting any grievance related to SC / ST community of NIT Patna, kindly use this email ID:
-
 sc.st.cell@nitp.ac.in`,
     },
     
@@ -35,7 +32,7 @@ sc.st.cell@nitp.ac.in`,
             {index % 2 === 0 ? (
               <>
               <div className="md:pl-4 ">
-                  <h2 className="text-xl font-bold mb-2 text-neutral-800 items-start" >{place.subheading}</h2>
+                  <h2 className="text-3xl font-bold mb-2 text-red-800 items-start" >{place.subheading}</h2>
                   <p className="text-gray-600 "> {place.text.split('\n').map((line, i) => (
                       <span key={i}>
                         {line}
@@ -43,21 +40,13 @@ sc.st.cell@nitp.ac.in`,
                       </span>
                     ))}</p>
                 </div>
-                <img
-                  src={place.image}
-                  alt={place.subheading}
-                  className="w-3/4 md:w-2/5 rounded-md"
-                />
+               
                 
               </>
             ) : (
               <>
                 
-                <img
-                  src={place.image}
-                  alt={place.subheading}
-                  className="w-3/4 md:w-1/4 rounded-md "
-                />
+               
                 <div className="md:pr-4">
                   <h2 className="text-xl font-bold mb-2 text-neutral-800">{place.subheading}</h2>
                   <p className="text-gray-600"> {place.text.split('\n').map((line, i) => (

@@ -4,7 +4,7 @@ export default function Home() {
   const places = [
     {
       image:
-        "https://www.nitp.ac.in/static/2f143edd06776883eb40568eeb3c193b/ec6c5/medical.jpg",
+        "https://i.postimg.cc/Jz40WW7S/medical.jpg",
       subheading: "Medical Facilities",
       text: `Two permanent doctor has a fixed chamber within the institute premises. He can be consulted by the students and employees for any health related problems on every working day free of cost.
 

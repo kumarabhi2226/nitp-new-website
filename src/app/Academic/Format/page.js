@@ -6,7 +6,7 @@ const DocumentsTable = () => {
     {
      para: "Guidelines cum checklist to get process of academic document",
      link:
-      "http://web.nitp.ac.in/downloads/Guidelines%20cum%20checklist%20to%20get%20process%20of%20academic%20document.pdf",
+      "https://drive.google.com/file/d/1RWpLyN6uVWrvfQBfbhKstRRXEVsNLejk/view?usp=drive_link",
     },
     {
      para:
