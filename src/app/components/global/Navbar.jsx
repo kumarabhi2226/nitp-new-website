@@ -260,7 +260,7 @@ const navItems = [
           { label: "Mathematics", link: "/department/math/faculty",iconImage:math },
           { label: "Mechanical Engineering", link: "/department/me/faculty" ,iconImage:mech},
           { label: "Physics", link: "/department/physics/faculty",iconImage:physics },
-          {label:"Mechatronics & Automation Engineering",link:"/department/mae/faculty",iconImage:mech},
+          { label:"Mechatronics & Automation Engineering",link:"/department/mae/faculty",iconImage:mech},
           { label: "Chemical Engineering and Technology", link: "/department/chet/faculty",iconImage:chem },
           { label: "Materials Science & Engineering", link: "/department/mse/faculty",iconImage:mech },
         ],
@@ -708,11 +708,11 @@ function SingleNavItem({ item ,closeSideMenu}) {
         {item.children && <IoIosArrowDown className={`text-xs transition-all ${isItemOpen && "rotate-180"}`} />}
       </p>
       {isItemOpen && item.children && (
-        <div className="w-auto flex-col gap-1  bg-white py-3 transition-all flex">
+        <p className="w-auto flex-col gap-1  bg-white py-3 transition-all flex">
           {item.children.map((child, index) => (
             <SubSidemenu key={index} item={child}/>
           ))}
-        </div>
+        </p>
       )}
     </div>
   );
@@ -736,12 +736,12 @@ function SubSidemenu({ item,closeSideMenu }) {
       {isSubItemOpen && item.children && (
         <div className="w-auto flex-col gap-1 bg-white py-1 transition-all">
           {item.children.map((subChild, index) => (
-            <div key={index} className="pl-4">
-              {item.iconImage && <Image src={item.iconImage} alt="item-icon" />}
-              <Link href={subChild.link ?? "#"} className="flex cursor-pointer items-center py-1 text-neutral-700 hover:text-black">
+            <p key={index} className="flex pl-4">
+              {item.iconImage && <Image src={subChild.iconImage} alt="item-icon" />}
+              <Link href={subChild.link ?? "#"} className="flex cursor-pointer items-center py-1 text-neutral-700 hover:text-black pl-1">
                 <span>{subChild.label}</span>
               </Link>
-            </div>
+            </p>
           ))}
         </div>
       )}
