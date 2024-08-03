@@ -36,7 +36,7 @@ export default function InstitutePage() {
   };
 
   return (
-    <div className="flex flex-col  bg-white bg-opacity-50 maincont1">
+    <div className="flex flex-col  bg-white bg-opacity-70 maincont1">
       <header className="bg-primary text-primary-foreground px-4 lg:px-5 h-14 flex items-center justify-between">
         <div className="bottonconatiner">
           <div className="containeripi">
@@ -174,11 +174,13 @@ export default function InstitutePage() {
           <div className="requirements-container">
             {admission.data.map((item, idx) => (
               <div key={idx}>
-                <p className="pb-7 text-xs md:text-sm md:m-20 md:mb-0 md:mt-0">
+                <p className="pb-7 text-xs md:text-sm md:m-20 md:mb-0 md:mt-0 ">
                   <strong>{item.para.split(' : ')[0]}: </strong>
                   {item.para.split(' : ')[1]}
                   {item.link && (
-                    <a href={item.link} target="_blank" className="bg-blue-400 text-white font-bold my-4 px-4 py-2 rounded-md hover:bg-gradient-to-r from-cyan-500 to-blue-500 md:text-xs text-xs"> View Notice</a>
+                    <>
+                    <a href={item.link} target="_blank" className="bg-blue-400 text-white font-bold px-4 py-0 md:py-1 rounded-md hover:bg-gradient-to-r from-cyan-500 to-blue-500 md:text-xs text-xs"> View_Notice</a>
+                    </>
                   )}
                 </p>
               </div>
