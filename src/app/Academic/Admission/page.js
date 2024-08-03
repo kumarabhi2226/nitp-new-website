@@ -38,8 +38,8 @@ export default function InstitutePage() {
   return (
     <div className="flex flex-col maincont1 bg-white bg-opacity-50">
       <header className="bg-primary text-primary-foreground px-4 lg:px-5 h-14 flex items-center justify-between">
-        <div className="maindivi">
-          <div className="containerip">
+        <div className="maindivii">
+          <div className="containeripi">
             <div
               className={`cardacad cardacad1 ${activeSection === 'SII' ? 'active' : ''}`}
               onClick={() => handleNavigation('SII')}

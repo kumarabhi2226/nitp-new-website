@@ -18,7 +18,7 @@
 .maincont1 {
   height: fit-content;
 }
-.maindivi {
+.maindivii {
   position: relative;
   top: 45%;
   /* background-image: url("../assets/images/maindiv.png"); */
@@ -83,7 +83,7 @@
   transform: rotate(180deg); /* Keep the scale uniform */
 }
 
-.containerip {
+.containeripi {
   width: 40%; /* Adjusted width to fit four cardacads per row */
   display: flex;
   flex-wrap: wrap; /* Enable wrapping of cardacads to the next line */
@@ -95,12 +95,12 @@
 }
 /* Media query for tablet and phone view */
 @media (max-width: 768px) {
-  .maindivi {
+  .maindivii {
     position: absolute;
     top: 5%;
     width: 95%;
   }
-  .containerip {
+  .containeripi {
     width: 50%; /* Adjusted width to fit four cardacads per row */
     gap: 10px;
   }
@@ -126,11 +126,11 @@
 }
 /* Media query for tablet and phone view */
 @media (max-width: 550px) {
-  .maindivi {
+  .maindivii {
     position: absolute;
     top: 5%;
   }
-  .containerip {
+  .containeripi {
     width: 90%; /* Adjusted width to fit four cardacads per row */
   }
   .cardacad {
@@ -154,11 +154,11 @@
   }
 }
 @media (min-width: 320px) and (max-width: 420px) {
-  .maindivi {
+  .maindivii {
     position: absolute;
     top: 4%;
   }
-  .containerip {
+  .containeripi {
     width: 80%; /* Adjusted width to fit four cardacads per row */
   }
   .cardacad {
@@ -182,11 +182,11 @@
   }
 }
 @media (min-width: 420px) and (max-width: 480px) {
-  .maindivi {
+  .maindivii {
     position: absolute;
     top: 3%;
   }
-  .containerip {
+  .containeripi {
     width: 80%; /* Adjusted width to fit four cardacads per row */
   }
   .cardacad {
