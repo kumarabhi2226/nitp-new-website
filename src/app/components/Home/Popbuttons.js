@@ -1,7 +1,7 @@
 "use client"
 import React,{useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserGraduate, faGraduationCap, faSchool, faBookOpen, faBolt, faUsers, faCalendarAlt, faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { faUserGraduate, faGraduationCap, faSchool, faBookOpen, faBolt, faUsers, faCalendarAlt, faBuilding,faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
 import './styles/Popbutton.css';
 import Link from 'next/link';
 import AOS from 'aos';
@@ -30,26 +30,30 @@ const Popbuttons = () => {
           <FontAwesomeIcon icon={faGraduationCap} size="4x" className="mobileicondiv" color='#BA210E' />
           <p className="headingp12 headingp1">ALUMNI</p>
         </a>
-      <Link href ="/Academic/Admission?tab=SII" className="card card1">
+      <Link href ="/Academic/Admission?tab=JoSAA" className="card card1">
         <FontAwesomeIcon icon={faSchool} size="4x" className="mobileicondiv" color='#f7cece' />
         <p className="headingp">ADMISSIONS</p>
       </Link>
-      <div className="card">
-        <FontAwesomeIcon icon={faBookOpen} size="4x" className="mobileicondiv" color='#d62a39' />
-        <p className="headingp">MAGAZINE</p>
-      </div>
+      
+      <Link href="/Institute/Magazine" className="card">
+      <FontAwesomeIcon icon={faBookOpen} size="4x" className="mobileicondiv" color='#d62a39' />
+      <p className="headingp">MAGAZINE</p>
+      </Link>
+      
       <Link href="/Notices/JobsNITP" className="card">
         <FontAwesomeIcon icon={faBolt} size="4x" className="mobileicondiv" color='#d62a39' />
         <p className="headingp">RECRUITMENT</p>
       </Link>
-      <div className="card card1">
-        <FontAwesomeIcon icon={faUsers} size="3x" className="mobileicondiv" color='#f7cece' />
-        <p className="headingp">FACULTY & STAFF</p>
-      </div>
-      <div className="card">
-        <FontAwesomeIcon icon={faCalendarAlt} size="4x" className="mobileicondiv" color='#d62a39' />
-        <p className="headingp">EVENTS</p>
-      </div>
+      
+      <Link href ="/Academic/Faculty&Staff" className="card card1">
+      <FontAwesomeIcon icon={faUsers} size="3x" className="mobileicondiv" color='#f7cece' />
+      <p className="headingp">FACULTY & STAFF</p>
+      </Link>
+      
+      <Link href="/Notices/Events" className="card">
+      <FontAwesomeIcon icon={faPlaneDeparture} size="4x" className="mobileicondiv" color='#d62a39' />
+      <p className="headingp">International Affairs</p>
+      </Link>
       <a href="https://tpc.nitp.ac.in/" className="card card1" target="_blank" >
         <FontAwesomeIcon icon={faBuilding} size="3x" className="mobileicondiv" color='#f7cece'/>
         <p className="headingp headingp1 headingp1t">TRAINING AND PLACEMENT</p>

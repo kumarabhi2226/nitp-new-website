@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserGraduate, faGlobe,faBoxArchive,faIndianRupeeSign } from '@fortawesome/free-solid-svg-icons';
-
+import Admissions from "./Admission";
 
 import './style.css';
 
@@ -54,7 +54,7 @@ export default function InstitutePage() {
               style={{ backgroundColor: activeSection === 'JoSAA' ? 'white' : 'initial' }}
             >
               <FontAwesomeIcon icon={faUserGraduate} size="2x" color='#d62a39' />
-              <p className="heading">JoSAA</p>
+              <p className="heading">Admission</p>
             </div>
             <div
               className={`cardacad cardacad1 ${activeSection === 'Relaxation' ? 'active' : ''}`}
@@ -157,68 +157,39 @@ export default function InstitutePage() {
         </section>
         )}
         {activeSection === 'JoSAA' && (
-          <section className=" text-black">
-          
-          <div className="admission-info">
-          
-       
-          <h1 className="section-title-heading text-red-800 " >For Admissions in B.Tech./Dual Degree/B.Arch. [ JoSAA Counselling 2024 ]</h1>
-      
-      <h2 className=" section-title-heading section-title md:m-20 md:mb-0 md:mt-5">Admission Guidelines</h2>
-
-      <div className="requirements-container">
-        <div className="">
-          <h3></h3>
-          <ul>
-            <li className='pt-5 md:m-20 md:mb-0 md:mt-0'>
-              <strong>JoSSA/CSAB website : </strong> 
-              The prospective candidates are advised to visit the JoSSA/CSAB website regularly for updates and other details regarding the online counseling process.
-              <a href='https://josaa.nic.in/' target='_blank' className='text-neutral-500'> JoSSA Website</a>
-
-
-            </li>
-            <li className='pt-5 md:pb-10 md:m-20 md:mt-8 md:mb-1'>
-              <strong>Contact Details : </strong>(Email ID: acad.help@nitp.ac.in Contact: 0612 2372715 Extension no 166) Center In-charge: Prof. Sanjeev Sinha Contact: 0612-2372715 (Ext. 151), Dy. Center In-charge: Prof. M P Singh, 0612-2372715 (Ext-201.) and Dy.Center In-Charge: Prof. Bharat Gupta 0612-2372715 (Ext-301.)
-            </li>
-            
-          </ul>
+  <section className="text-neutral-700">
+    <div className="admission-info">
+      {Admissions.map((admission, index) => (
+        <div key={index}>
+          {admission.heading && (
+            <h1 className="section-title-heading text-sm text-red-800 mt-1">
+              {admission.heading}
+            </h1>
+          )}
+          {admission.title && (
+            <h2 className="section-title text-xs md:m-20 md:mb-0 md:mt-5 text-blue-500 ">
+              {admission.title}
+            </h2>
+          )}
+          <div className="requirements-container">
+            {admission.data.map((item, idx) => (
+              <div key={idx}>
+                <p className="pb-7 text-xs md:text-sm md:m-20 md:mb-0 md:mt-0">
+                  <strong>{item.para.split(' : ')[0]}: </strong>
+                  {item.para.split(' : ')[1]}
+                  {item.link && (
+                    <a href={item.link} target="_blank" className="text-gray-800"> [View Notice]</a>
+                  )}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-        <h1 className="section-title-heading text-red-800 mt-1" >For Admissions in M.Tech./M.Arch./M.Plan. (CCMT-2024),CCMT Counselling 2024</h1>
-      
-      <h2 className=" section-title-heading section-title md:m-20 md:mb-0 md:mt-1">Admission Guidelines</h2>
-
-      <div className="requirements-container">
-        <div className="">
-          <h3></h3>
-          <ul>
-            <li className='pt-5 md:m-20 md:mb-0 md:mt-1'>
-              <strong>CCMT website : </strong> 
-              The prospective candidates are advised to visit the CCMT website regularly for updates and other details regarding the online counseling process.
-              <a href='https://ccmt.admissions.nic.in/' target='_blank' className='text-neutral-500'> CCMT Website</a>
-
-
-            </li>
-            <li className='pt-5 md:pb-10 md:m-20 md:mt-8 md:mb-7'>
-              <strong>Contact Details : </strong>(Email ID: acad.help@nitp.ac.in Contact: 0612 2371715 Extension no 172) PI In-charge: Prof. M. P. Singh Contact: 0612-2372715 (Ext. 172), acad.help@nitp.ac.in PI Co In-charge: Prof. A R Quaff, 0612-2372715 (Ext. 171), arquaff@nitp.ac.in
-              Fee Details: Link-1
-            </li>
-            
-          </ul>
-        </div>
-
-        
-     
-
-      
+      ))}
     </div>
+  </section>
+)}
 
-        
-      </div>
-
-      
-    </div>
-        </section>
-        )}
         {activeSection === 'Relaxation' && (
           <section className=" text-black">
           

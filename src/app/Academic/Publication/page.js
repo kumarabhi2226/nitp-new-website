@@ -95,9 +95,9 @@ const ArticlesTable = () => {
   };
 
   return (
-    <div className=" bg-white bg-opacity-60">
+    <div className=" bg-white bg-opacity-70">
     <div className="articles-dashboard text-neutral-900">
-      <h1 className="heading text-2xl text-center pb-7 md:pb-10 text-red-800 font-bold">Publications</h1>
+      <h1 className="heading text-3xl text-center pb-7 md:pb-10 text-red-800 font-bold">Publications</h1>
       {isLoading ? (
        <div className="flex justify-center items-center ">
        <svg

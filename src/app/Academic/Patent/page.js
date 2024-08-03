@@ -105,8 +105,8 @@ const PatentsTable = () => {
   });
 
   return (
-    <div className="patent-dashboard text-neutral-700">
-      <h1 className="headingpatent text-2xl text-center pb-7 md:pb-10 text-red-800 font-bold">Patents Dashboard</h1>
+    <div className="patent-dashboard text-neutral-700 bg-white/70">
+      <h1 className="headingpatent text-3xl text-center pb-7 md:pb-10 text-red-800 font-bold">Patents Dashboard</h1>
       {isLoading ? (
         <div className="flex justify-center items-center ">
         <svg
@@ -284,7 +284,7 @@ const PatentsTable = () => {
           width: 100%;
           border-collapse: collapse;
           margin: 10px 10px;
-          font-size: 12px;
+          font-size: 14px;
           text-align: left;
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         }

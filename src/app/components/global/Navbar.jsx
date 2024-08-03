@@ -140,8 +140,8 @@ const navItems = [
         iconImage: Campus,
       },
       { 
-        label: "Resources", 
-        link: "#", 
+        label: "Magazine", 
+        link: "/Institute/Magazine", 
         iconImage: Resource,
         
       },
@@ -223,24 +223,6 @@ const navItems = [
         
       },
       {
-        label: "Departments",
-        link: "#",
-        mlabel:"Departments",
-        iconImage:Department,
-        children: [
-          { label: "Architecture & Planning", link: "/department/arch/faculty",iconImage:archi},
-          { label: "Chemistry", link: "/department/chem/faculty",iconImage:chem },
-          { label: "Civil Engineering", link: "/department/ce/faculty",iconImage:civil },
-          { label: "Computer Science and Engineering", link: "/department/cse/faculty",iconImage:cse },
-          { label: "Electrical Engineering", link: "/department/ee/faculty", iconImage:ee },
-          { label: "Electronics and Communication Engineering", link: "/department/ece/faculty", iconImage:ece },
-          { label: "Humanities & Social Sciences", link: "/department/hss/faculty",iconImage:hss },
-          { label: "Mathematics", link: "/department/math/faculty",iconImage:math },
-          { label: "Mechanical Engineering", link: "/department/me/faculty" ,iconImage:mech},
-          { label: "Physics", link: "/department/physics/faculty",iconImage:physics },
-        ],
-      },
-      {
         label: "Course Structure",
         link: "#",
         iconImage:Structure,
@@ -257,26 +239,56 @@ const navItems = [
         link: "/Academic/Admission?tab=JoSAA",
         iconImage:Admission,
         children: [
-          { label: "Study in India (SII)", link: "/Academic/Admission?tab=SII"},
-          { label: "CMCT/JoSSA/CSAB", link: "/Academic/Admission?tab=JoSAA"},
-          { label: "Relaxation Criteria", link: "/Academic/Admission?tab=Relaxation"},
+          { label: "Study in India (SII)", link: "/Academic/Admission?tab=SII" , iconImage:Admission},
+          { label: "CMCT/JoSSA/CSAB/Others", link: "/Academic/Admission?tab=JoSAA" , iconImage:Admission},
+          { label: "Relaxation Criteria", link: "/Academic/Admission?tab=Relaxation" , iconImage:Admission},
         ]
       },
+      {
+        label: "Departments",
+        link: "#",
+        mlabel:"Departments",
+        iconImage:Department,
+        children: [
+          { label: "Architecture & Planning", link: "/department/arch/faculty",iconImage:archi},
+          { label: "Chemistry", link: "/department/chem/faculty",iconImage:chem },
+          { label: "Civil Engineering", link: "/department/ce/faculty",iconImage:civil },
+          { label: "Computer Science and Engineering", link: "/department/cse/faculty",iconImage:cse },
+          { label: "Electrical Engineering", link: "/department/ee/faculty", iconImage:ee },
+          { label: "Electronics and Communication Engineering", link: "/department/ece/faculty", iconImage:ece },
+          { label: "Humanities & Social Sciences", link: "/department/hss/faculty",iconImage:hss },
+          { label: "Mathematics", link: "/department/math/faculty",iconImage:math },
+          { label: "Mechanical Engineering", link: "/department/me/faculty" ,iconImage:mech},
+          { label: "Physics", link: "/department/physics/faculty",iconImage:physics },
+          {label:"Mechatronics & Automation Engineering",link:"/department/mae/faculty",iconImage:mech},
+          { label: "Chemical Engineering and Technology", link: "/department/chet/faculty",iconImage:chem },
+          { label: "Materials Science & Engineering", link: "/department/mse/faculty",iconImage:mech },
+        ],
+      },
+      
       {
         label: "Academic Notices",
         link: "/Notices/Academic",
         iconImage:Notice,
       },
       {
-        label: "Academic Calendar",
-        link: "https://drive.google.com/file/d/1tVgQSygS8GRTZIglbVWVClasegdd6BCi/view",
-        iconImage:Calendar,
-    },
-      {
         label: "Fee Structure",
         link: "/Academic/Fee",
         iconImage:Fee,
       },
+      {
+        label: "Regulation & Curricula",
+        link: "/Academic/Curriculam",
+        iconImage:Rules,
+      },
+      
+      
+      {
+        label: "Academic Calendar",
+        link: "https://drive.google.com/file/d/1tVgQSygS8GRTZIglbVWVClasegdd6BCi/view",
+        iconImage:Calendar,
+    },
+      
       {
         label: "Format of Official Documents",
         link: "/Academic/Format",
@@ -293,25 +305,32 @@ const navItems = [
         ,
         iconImage:Excellence,
       },
-      // {
-      //   label: "ICT Academy",
-      //   link: "#",
-      // },
-      {
-        label: "BIS Dashboard",
-        link: "/Academic/BIS",
-        iconImage:Bis,
-      },
       {
         label: "Digital Intiatives",
         link: "/Academic/DI",
         iconImage:Digital,
       },
+      // {
+      //   label: "ICT Academy",
+      //   link: "#",
+      // },
       {
-        label: "Regulation & Curricula",
-        link: "/Academic/Curriculam",
-        iconImage:Rules,
+        label: "Patents",
+        link: "/Academic/Patent",
+        iconImage:Bis,
       },
+      {
+        label: "Publications",
+        link: "/Academic/Publication",
+        iconImage:Bis,
+      },
+      {
+        label: "BIS Dashboard",
+        link: "/Academic/BIS",
+        iconImage:Bis,
+      },
+      
+      
     ],
   },
   {
@@ -340,7 +359,7 @@ const navItems = [
       },
       {
         label: "Staff Claim Form",
-        link: "/Institute/Forms-",
+        link: "/Academic/Faculty&Staff/forms",
         iconImage:Forms,
       },
       {
