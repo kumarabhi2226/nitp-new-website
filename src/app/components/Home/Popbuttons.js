@@ -30,10 +30,10 @@ const Popbuttons = () => {
           <FontAwesomeIcon icon={faGraduationCap} size="4x" className="mobileicondiv" color='#BA210E' />
           <p className="headingp12 headingp1">ALUMNI</p>
         </a>
-      <Link href ="/Academic/Admission?tab=JoSAA" className="card card1">
+      <a href ="/Academic/Admission?tab=JoSAA" className="card card1">
         <FontAwesomeIcon icon={faSchool} size="4x" className="mobileicondiv" color='#f7cece' />
         <p className="headingp">ADMISSIONS</p>
-      </Link>
+      </a>
       
       <Link href="/Institute/Magazine" className="card">
       <FontAwesomeIcon icon={faBookOpen} size="4x" className="mobileicondiv" color='#d62a39' />
