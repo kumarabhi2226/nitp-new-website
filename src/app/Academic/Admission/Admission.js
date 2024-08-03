@@ -48,7 +48,7 @@ const Admissions = [
       data: [
         {
           para:
-           "Physical reporting notice for admission to UG programme through JoSAA/CSAB/DASA-2024 [View Notice]",
+           "Physical reporting notice for admission to UG programme through JoSAA/CSAB/DASA-2024 ",
           link: "https://drive.google.com/file/d/1wK0KO5Nju8Lo_TaSdivIZDbhWLCfFZMh/view?usp=sharing",
          },
        
@@ -62,7 +62,7 @@ const Admissions = [
       data: [
         {
           para:
-           "Physical reporting notice for admission to MCA programme through NIMCET-2024 [View Notice]",
+           "Physical reporting notice for admission to MCA programme through NIMCET-2024 ",
           link: "https://drive.google.com/file/d/1u9HUY1ftNHRAlsET9_F7pH37SNPugT2H/view?usp=drivesdk",
          },
        
@@ -76,7 +76,7 @@ const Admissions = [
       data: [
         {
           para:
-           "Physical reporting notice for admission to PG programme through CCMT 2024 [View Notice]",
+           "Physical reporting notice for admission to PG programme through CCMT 2024",
           link: "https://drive.google.com/file/d/12EJZ-Hc1bQ2dQKA-qKZCSyCAveuFsID1/view",
          },
        
