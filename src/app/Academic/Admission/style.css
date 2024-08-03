@@ -1,4 +1,4 @@
-.cardstyle {
+.cardacad {
   position: relative;
   width: 80px; /* Adjusted width */
   height: 80px; /* Adjusted height */
@@ -12,26 +12,26 @@
   border-radius: 8px;
   cursor: pointer;
 }
-.cardstyle1 {
+.cardacad1 {
   background-color: #e9b0b0;
 }
-.buttoncontain {
+.maincont1 {
   height: fit-content;
 }
-.internalbuttoncontain{
+.bottonconatiner {
   position: relative;
   top: 45%;
   /* background-image: url("../assets/images/maindiv.png"); */
 
   width: 100%;
 }
-.cardstyle::before {
+.cardacad::before {
   content: "";
   position: absolute;
   inset: 0;
   margin: auto;
-  width: 105%; /* Ensure the background covers the entire cardstyle */
-  height: 105%; /* Ensure the background covers the entire cardstyle */
+  width: 105%; /* Ensure the background covers the entire cardacad */
+  height: 105%; /* Ensure the background covers the entire cardacad */
   border-radius: 10px;
   background: linear-gradient(-45deg, #e9b0b0 0%, #e9b0b0 100%);
   z-index: -10;
@@ -39,7 +39,7 @@
   transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.cardstyle::after {
+.cardacad::after {
   content: "";
   z-index: -1;
   position: absolute;
@@ -62,49 +62,49 @@
   color: #d62a39;
 }
 
-.cardstyle p:not(.heading) {
+.cardacad p:not(.heading) {
   font-size: 14px;
 }
 
-.cardstyle p:last-child {
+.cardacad p:last-child {
   color: #d62a39;
   font-weight: 600;
   text-align: center;
 }
-.cardstyle1 p:last-child {
+.cardacad1 p:last-child {
   color: #d62a39;
 }
 
-.cardstyle:hover::after {
+.cardacad:hover::after {
   filter: blur(30px);
 }
 
-.cardstyle:hover::before {
+.cardacad:hover::before {
   transform: rotate(180deg); /* Keep the scale uniform */
 }
 
 .containeripi {
-  width: 40%; /* Adjusted width to fit four cardstyles per row */
+  width: 40%; /* Adjusted width to fit four cardacads per row */
   display: flex;
-  flex-wrap: wrap; /* Enable wrapping of cardstyles to the next line */
+  flex-wrap: wrap; /* Enable wrapping of cardacads to the next line */
   justify-content: center; /* Center content horizontally */
-  gap: 21px; /* Gap between cardstyles */
+  gap: 21px; /* Gap between cardacads */
   margin: 0 auto; /* Center the container itself */
   margin-top: 50px;
   margin-bottom: 50px;
 }
 /* Media query for tablet and phone view */
 @media (max-width: 768px) {
-  .internalbuttoncontain{
+  .bottonconatiner {
     position: absolute;
     top: 5%;
     width: 95%;
   }
   .containeripi {
-    width: 50%; /* Adjusted width to fit four cardstyles per row */
+    width: 50%; /* Adjusted width to fit four cardacads per row */
     gap: 10px;
   }
-  .cardstyle {
+  .cardacad {
     position: relative;
     width: 70px; /* Adjusted width */
     height: 70px; /* Adjusted height */
@@ -126,14 +126,14 @@
 }
 /* Media query for tablet and phone view */
 @media (max-width: 550px) {
-  .internalbuttoncontain{
+  .bottonconatiner {
     position: absolute;
     top: 5%;
   }
   .containeripi {
-    width: 90%; /* Adjusted width to fit four cardstyles per row */
+    width: 90%; /* Adjusted width to fit four cardacads per row */
   }
-  .cardstyle {
+  .cardacad {
     position: relative;
     width: 50px; /* Adjusted width */
     height: 50px; /* Adjusted height */
@@ -154,14 +154,14 @@
   }
 }
 @media (min-width: 320px) and (max-width: 420px) {
-  .internalbuttoncontain{
+  .bottonconatiner {
     position: absolute;
     top: 4%;
   }
   .containeripi {
-    width: 80%; /* Adjusted width to fit four cardstyles per row */
+    width: 80%; /* Adjusted width to fit four cardacads per row */
   }
-  .cardstyle {
+  .cardacad {
     position: relative;
     width: 60px; /* Adjusted width */
     height: 60px; /* Adjusted height */
@@ -182,14 +182,14 @@
   }
 }
 @media (min-width: 420px) and (max-width: 480px) {
-  .internalbuttoncontain{
+  .bottonconatiner {
     position: absolute;
     top: 3%;
   }
   .containeripi {
-    width: 80%; /* Adjusted width to fit four cardstyles per row */
+    width: 80%; /* Adjusted width to fit four cardacads per row */
   }
-  .cardstyle {
+  .cardacad {
     position: relative;
     width: 70px; /* Adjusted width */
     height: 70px; /* Adjusted height */
