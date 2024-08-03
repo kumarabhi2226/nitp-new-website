@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Webcard.css";
 import 'remixicon/fonts/remixicon.css';
-import Image from "next/image";
 
 // name={member.name}
 //              email={member.email}
@@ -35,7 +34,7 @@ const Webcard = ({ name, email, extn, desg, image, url, interests}) => {
     <div className="card">
       <div className="card__border">
         <div className="card__perfil">
-          <Image src={pimage} alt="card image" className="card__img" />
+          <img src={pimage} alt="card image" className="card__img" />
         </div>
       </div>
 
@@ -52,7 +51,7 @@ const Webcard = ({ name, email, extn, desg, image, url, interests}) => {
 
         <div className="info__border">
           <div className="info__perfil">
-            <Image src={pimage} alt="card image" className="info__img" />
+            <img src={pimage} alt="card image" className="info__img" />
           </div>
         </div>
 

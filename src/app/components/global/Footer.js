@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import "./styles/Footer.css";
 import logo from "../../assets/images/logo.png"
-import Image from "next/image"
 const Footer = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [pollutionData, setPollutionData] = useState(null);
@@ -66,7 +65,7 @@ const Footer = () => {
   <footer className="fsdiv bg-[#421010] text-white py-8">
       <div className="container3 mx-auto px-4 flex justify-between items-start flex-wrap">
         <div className="flex flex-col ndivf ">
-          <Image
+          <img
             src="https://i.postimg.cc/k5CYZwwS/logo.png"
             alt="NIT Patna Logo"
             className="w-24 h-24 mb-2"

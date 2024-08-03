@@ -147,10 +147,10 @@ const page = () => {
       </div>
 
       <h2 className="text-2xl font-bold mb-4 text-center text-red-800">Associate Institutes</h2>
-      <Image src="https://i.postimg.cc/1tXfJVwg/Associated-Institue.png" alt="Associate Institutes" className="w-4/5 md:w-3/5 mb-4 rounded-md mx-auto" />
+      <img src="https://i.postimg.cc/1tXfJVwg/Associated-Institue.png" alt="Associate Institutes" className="w-4/5 md:w-3/5 mb-4 rounded-md mx-auto" />
 
       <h2 className="text-2xl font-bold mb-4 text-center text-red-800">Gallery</h2>
-      <Image
+      <img
         src="https://i.postimg.cc/QtzVPNJf/racisro.png"
         alt="ISRO Page"
         className="w-4/5 md:w-3/5 mb-4 rounded-md mx-auto"

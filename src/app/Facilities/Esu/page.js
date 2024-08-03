@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 
 export default function Home() {
   const places = [
@@ -37,7 +36,7 @@ export default function Home() {
                     dangerouslySetInnerHTML={{ __html: place.text }}
                   />
                 </div>
-                <Image
+                <img
                   src={place.image}
                   alt={place.subheading}
                   className="w-3/4 md:w-2/5 rounded-md"
@@ -45,7 +44,7 @@ export default function Home() {
               </>
             ) : (
               <>
-                <Image
+                <img
                   src={place.image}
                   alt={place.subheading}
                   className="w-full md:w-1/2 rounded-md"

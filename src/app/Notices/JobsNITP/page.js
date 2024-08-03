@@ -3,7 +3,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import "../../components/Home/styles/Details.css";
-import Image from "next/image";
 
 const Noticecard = ({ detail, time, attachments, imp, link }) => (
   <div className={`notice ${imp ? "important" : ""}`}>
@@ -19,7 +18,7 @@ const Noticecard = ({ detail, time, attachments, imp, link }) => (
               </a>
             ) : (
               <a href={attachment.url} download className=" text-xs text-red-800">
-                <Image src={Downloadicon} alt="Download" className="download-icon" />
+                <img src={Downloadicon} alt="Download" className="download-icon" />
                 {attachment.caption}
               </a>
             )}

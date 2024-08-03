@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import Image from "next/image";
 
 const President = () => {
   return (
@@ -11,7 +10,7 @@ const President = () => {
           <div className="wave"></div>
           <div className="wave"></div>
           <div className="infotop pt-10">
-            <Image
+            <img
               className="icon"
               src="https://i.postimg.cc/G2Nx8Fnc/Screenshot-2024-07-01-172617.png"
               alt="President"

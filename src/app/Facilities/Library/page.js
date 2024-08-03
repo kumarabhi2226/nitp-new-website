@@ -1,6 +1,5 @@
 
 import Head from "next/head";
-import Image from "next/image";
 
 export default function Home() {
   const places = [
@@ -58,7 +57,7 @@ Library is the member of INDEST and DELNET.`,
                     {place.text}{" "}
                   </p>
                 </div>
-                <Image
+                <img
                   src={place.image}
                   alt=""
                   className="w-3/4 md:w-2/5 rounded-md"
@@ -66,7 +65,7 @@ Library is the member of INDEST and DELNET.`,
               </>
             ) : (
               <>
-                <Image
+                <img
                   src={place.image}
                   alt=""
                   className="w-full md:w-1/2 rounded-md"

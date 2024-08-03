@@ -6,7 +6,6 @@ import './styles/Gallery.css';
 import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Image from 'next/image';
 
 const images = [
   'https://i.postimg.cc/bwy2BtkJ/nit-patna-001.jpg',
@@ -77,7 +76,7 @@ export function Gallery() {
         <div className="image-grid grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-4 md:p-6">
           {images.map((image, index) => (
             <div key={index}className={` relative overflow-hidden rounded-lg group aspect-[4/3] image-item ${index >= 4 ? 'hidden-on-mobile' : ''}`} data-aos="zoom-out-up">
-              <Image
+              <img
                 src={image}
                 alt={`Gallery Image ${index + 1}`}
                 
@@ -111,7 +110,7 @@ export function Gallery() {
           <div className="overlay-background" onClick={closePopup}></div>
           <div className="popup">
             <button className="close-button" onClick={closePopup}>✖</button>
-            <Image src={popupImage} alt="Popup Image" />
+            <img src={popupImage} alt="Popup Image" />
             <div className="navigation-buttons">
               <button className="prev-button" onClick={showPreviousImage}>←</button>
               <button className="next-button" onClick={showNextImage}>→</button>

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 
 export default function Home() {
   const places = [
@@ -34,7 +33,7 @@ export default function Home() {
                   </p>
                   </a>
                 </div>
-                <Image
+                <img
                   src={place.image}
                   alt={places.subheading}
                   className="w-3/4 md:w-2/5 rounded-md"
