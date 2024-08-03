@@ -7,10 +7,9 @@ import "./wpage.css"
 
 const years = [20241]
 
-
 const Webteam = () => {
- const [webteam, setWebteam] = useState()
- const [filteredteam, setFilteredteam] = useState()
+ const [webteam, setWebteam] = useState([])
+ const [filteredteam, setFilteredteam] = useState([])
  const [view, setView] = useState("maintainers")
  const [year, setYear] = useState(20241)
  let webteamUrl = `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/webteam`
@@ -29,7 +28,7 @@ const Webteam = () => {
    .catch(e => {
     console.log(e)
    })
- }, [year])
+ }, [year, webteamUrl])
 
  return (
   <>
@@ -37,7 +36,7 @@ const Webteam = () => {
       <div className="layoutrow layoutrowmain">
        <div className="col-6" style={{ width: `100%` }}>
         <div className="row rowmarl3 text-center pt-5 pb-4">
-         <h1 data-aos="zoom-in-right " className="text-4xl text-red-800 font-extrabold">Web Team</h1>
+         <h1 data-aos="zoom-in-right" className="text-4xl text-red-800 font-extrabold">Web Team</h1>
         </div>
         <div className="row rowmarl3 text-center">
          <h2 data-aos="zoom-in-right" className="text-2xl font-semibold">
@@ -45,50 +44,8 @@ const Webteam = () => {
          </h2>
         </div>
        </div>
-       <div
-        className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-5 gap-5 md:gap-6 items-center justify-center grid-flow-dense	 mx-auto"
-        
-       >
-        {/* <div className="probutton">
-         <button
-          onClick={() => {
-           setView("maintainers")
-          }}
-          className={view === "maintainers" ? "btnactive" : ""}
-         >
-          Maintainers
-         </button>
-         <button
-          onClick={() => {
-           setView("developers")
-
-           setYear(2024)
-          }}
-          className={view === "developers" ? "btnactive" : ""}
-         >
-          Developers
-         </button>
-        </div> */}
+       <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-5 gap-5 md:gap-6 items-center justify-center grid-flow-dense mx-auto">
        </div>
-       {/* {view === "maintainers" && (
-        <div className="row rowmarl3">
-         <div
-          className="probutton "
-          style={{ margin: "10px 0px", width: "100%" }}
-         >
-          {years.map(item => (
-           <button
-            onClick={() => {
-             setYear(item)
-            }}
-            className={year === item ? "btnactive" : ""}
-           >
-            {item}
-           </button>
-          ))}
-         </div>
-        </div>
-       )} */}
 
        <>
         <div className="">
@@ -97,15 +54,7 @@ const Webteam = () => {
            Student Volunteers
           </h2>
 
-          {view === "maintainers" && (
-           <a
-            to="/volunteers"
-            style={{
-             textDecorationLine: `none`,
-             color: `tomato`,
-            }}
-           >
-            <h3
+          <h3
              style={{
               padding: `0.25rem 0`,
               borderBottom: `2px red dotted`,
@@ -115,8 +64,6 @@ const Webteam = () => {
             >
              Previous Student Volunteers
             </h3>
-           </a>
-          )}
          </div>
          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 items-center justify-evenly grid-flow-dense mx-auto pt-5 mb-16">
          {filteredteam &&
@@ -124,6 +71,7 @@ const Webteam = () => {
            .filter(member => member.role === "volunteer")
            .map(member => (
             <Webcard
+             key={member.email}  // Adding key prop
              name={member.name}
              email={member.email}
              extn={member.ext_no}
@@ -135,11 +83,10 @@ const Webteam = () => {
             />
            ))}
          </div>
-         
         </div>
        </>
       </div>
-      {view === "maintainers" && (
+
        <>
         <div className="row rowmarl3">
          <h2 data-aos="zoom-in-right">Faculties/Officers Involved</h2>
@@ -155,6 +102,7 @@ const Webteam = () => {
              .filter(member => member.role === "pi")
              .map(member => (
               <Webcard
+               key={member.email}  // Adding key prop
                name={member.name}
                email={member.email}
                extn={member.ext_no}
@@ -174,23 +122,23 @@ const Webteam = () => {
            <h2 data-aos="zoom-in-right">PI IT Services</h2>
           </div>
           <div className="row grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 md:gap-6 items-center justify-center grid-flow-dense mx-auto pt-5 mb-16">
-
-          {filteredteam &&
-           filteredteam
-            .filter(member => member.role === "pi-it")
-            .map(member => (
-             <Webcard
-              name={member.name}
-              email={member.email}
-              extn={member.ext_no}
-              id={member.email}
-              interests={member.interests}
-              image={member.image}
-              desg={member.desg}
-              url={member.url}
-             />
-            ))}
-            </div>
+           {filteredteam &&
+            filteredteam
+             .filter(member => member.role === "pi-it")
+             .map(member => (
+              <Webcard
+               key={member.email}  // Adding key prop
+               name={member.name}
+               email={member.email}
+               extn={member.ext_no}
+               id={member.email}
+               interests={member.interests}
+               image={member.image}
+               desg={member.desg}
+               url={member.url}
+              />
+             ))}
+          </div>
          </div>
         )}
 
@@ -200,29 +148,27 @@ const Webteam = () => {
            <h2 data-aos="zoom-in-right">Scientific Officer</h2>
           </div>
           <div className="row grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 md:gap-6 items-center justify-center grid-flow-dense mx-auto pt-5 mb-16">
-
-          {filteredteam &&
-           filteredteam
-            .filter(member => member.role === "scientificofficer")
-            .map(member => (
-             <Webcard
-              name={member.name}
-              email={member.email}
-              extn={member.ext_no}
-              id={member.email}
-              interests={member.interests}
-              image={member.image}
-              desg={member.desg}
-              url={member.url}
-             />
-            ))}
-            </div>
+           {filteredteam &&
+            filteredteam
+             .filter(member => member.role === "scientificofficer")
+             .map(member => (
+              <Webcard
+               key={member.email}  // Adding key prop
+               name={member.name}
+               email={member.email}
+               extn={member.ext_no}
+               id={member.email}
+               interests={member.interests}
+               image={member.image}
+               desg={member.desg}
+               url={member.url}
+              />
+             ))}
+          </div>
          </div>
         )}
        </>
-      )}
      </div>
-    
   </>
  )
 }

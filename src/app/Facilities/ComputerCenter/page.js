@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 
 export default function Home() {
@@ -38,7 +39,7 @@ Head, Centre for Computing and Information Services (CCIS)
                       </span>
                     ))}</p>
                 </div>
-                <img
+                <Image
                   src={place.image}
                   alt={place.subheading}
                   className="w-3/4 md:w-2/5 rounded-md"
@@ -48,7 +49,7 @@ Head, Centre for Computing and Information Services (CCIS)
             ) : (
               <>
                 
-                <img
+                <Image
                   src={place.image}
                   alt={place.subheading}
                   className="w-3/4 md:w-1/4 rounded-md "

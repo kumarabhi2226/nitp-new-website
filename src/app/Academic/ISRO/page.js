@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const page = () => {
@@ -21,10 +22,10 @@ const page = () => {
       </p>
 
       <h2 className="text-2xl font-bold mb-4 text-center text-red-800">Management Committee</h2>
-      <img src="https://i.postimg.cc/y8hgdH7N/administation-Com.png" alt="Management Committee" className="w-4/5 md:w-3/5 mb-4 rounded-md mx-auto" />
+      <Image src="https://i.postimg.cc/y8hgdH7N/administation-Com.png" alt="Management Committee" className="w-4/5 md:w-3/5 mb-4 rounded-md mx-auto" />
 
       <h2 className="text-2xl font-bold mb-4 text-center text-red-800">Regional Coordination Council</h2>
-      <img src="https://i.postimg.cc/PqtLvRqQ/RCC.png" alt="Regional Coordination Council" className="w-4/5 md:w-3/5 mb-4 rounded-md mx-auto" />
+      <Image src="https://i.postimg.cc/PqtLvRqQ/RCC.png" alt="Regional Coordination Council" className="w-4/5 md:w-3/5 mb-4 rounded-md mx-auto" />
 
       <h2 className="text-2xl font-bold mb-4 text-center text-red-800">Call for Project Proposal RAC-S ISRO NIT Patna</h2>
       <div className="bg-gradient-to-r from-blue-200 to-cyan-200 p-4 rounded-md mb-4">
@@ -146,10 +147,10 @@ const page = () => {
       </div>
 
       <h2 className="text-2xl font-bold mb-4 text-center text-red-800">Associate Institutes</h2>
-      <img src="https://i.postimg.cc/1tXfJVwg/Associated-Institue.png" alt="Associate Institutes" className="w-4/5 md:w-3/5 mb-4 rounded-md mx-auto" />
+      <Image src="https://i.postimg.cc/1tXfJVwg/Associated-Institue.png" alt="Associate Institutes" className="w-4/5 md:w-3/5 mb-4 rounded-md mx-auto" />
 
       <h2 className="text-2xl font-bold mb-4 text-center text-red-800">Gallery</h2>
-      <img
+      <Image
         src="https://i.postimg.cc/QtzVPNJf/racisro.png"
         alt="ISRO Page"
         className="w-4/5 md:w-3/5 mb-4 rounded-md mx-auto"

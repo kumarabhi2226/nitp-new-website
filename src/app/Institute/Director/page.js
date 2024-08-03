@@ -1,12 +1,13 @@
+import Image from 'next/image'
 import React from 'react'
 
 const page = () => {
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-6 pt-12 md:py-16 text-black">
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-6 pt-12 md:py-16 text-black text-justify">
           <div className="grid md:grid-cols-[200px_1fr] gap-8 md:gap-12">
             <div className="flex flex-col items-center md:items-start gap-4">
               <div className="w-40 h-40 rounded-full overflow-hidden">
-                <img src="https://i.postimg.cc/6pWBW8Dg/PKJ-Desk-Photo-1.jpg" width={200} height={200} alt="Profile" className="object-cover" />
+                <Image src="https://i.postimg.cc/6pWBW8Dg/PKJ-Desk-Photo-1.jpg" width={200} height={200} alt="Profile" className="object-cover" />
               </div>
               <div className="space-y-1 text-center md:text-left">
                 <h1 className="text-xl font-bold text-[#a01d0c]">Prof. Pradip K. Jain</h1>

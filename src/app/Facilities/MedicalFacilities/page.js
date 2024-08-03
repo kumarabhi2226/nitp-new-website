@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
   const places = [
@@ -49,7 +50,7 @@ The institute also maintains a 24x7 ambulance which is used for transferring pat
                     {place.text}{" "}
                   </p>
                 </div>
-                <img
+                <Image
                   src={place.image}
                   alt={places.subheading}
                   className="w-3/4 md:w-2/5 rounded-md"
@@ -57,7 +58,7 @@ The institute also maintains a 24x7 ambulance which is used for transferring pat
               </>
             ) : (
               <>
-                <img
+                <Image
                   src={place.image}
                   alt=""
                   className="w-full md:w-1/2 rounded-md"

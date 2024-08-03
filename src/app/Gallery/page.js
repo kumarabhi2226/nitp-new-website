@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import './Gpage.css';
+import Image from "next/image";
 
 const images = [
   'https://i.postimg.cc/bwy2BtkJ/nit-patna-001.jpg',
@@ -74,7 +75,7 @@ const Gallery = () => {
               key={index}
               className="relative overflow-hidden rounded-lg group aspect-[4/3] image-item"
             >
-              <img
+              <Image
                 src={image}
                 alt={`Gallery Image ${index + 1}`}
                 className="object-cover w-full h-full transition-all duration-300 group-hover:scale-105"
@@ -96,7 +97,7 @@ const Gallery = () => {
             <button className="close-button text-black"  onClick={closePopup}>
               ✖
             </button>
-            <img src={popupImage} alt="Popup Image" />
+            <Image src={popupImage} alt="Popup Image" />
             <div className="navigation-buttons text-black">
               <button className="prev-button" onClick={showPreviousImage}>
                 ←

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
   const places = [
@@ -35,7 +36,7 @@ For any type of Electrical Complaint kindly fill the form.`,
                     {place.text}
                   </p>
                 </div>
-                <img
+                <Image
                   src={place.image}
                   alt={place.subheading}
                   className="w-3/4 md:w-2/5 rounded-md"
@@ -43,7 +44,7 @@ For any type of Electrical Complaint kindly fill the form.`,
               </>
             ) : (
               <>
-                <img
+                <Image
                   src={place.image}
                   alt={place.subheading}
                   className="w-full md:w-1/2 rounded-md"
