@@ -178,7 +178,7 @@ export default function InstitutePage() {
                   <strong>{item.para.split(' : ')[0]}: </strong>
                   {item.para.split(' : ')[1]}
                   {item.link && (
-                    <a href={item.link} target="_blank" className="text-gray-800"> [View Notice]</a>
+                    <a href={item.link} target="_blank" className="bg-blue-400 text-white font-bold px-4 py-2 rounded-md hover:bg-gradient-to-r from-cyan-500 to-blue-500 md:text-xs text-xs"> View Notice</a>
                   )}
                 </p>
               </div>

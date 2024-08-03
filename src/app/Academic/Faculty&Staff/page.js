@@ -28,7 +28,7 @@ const StaffResources = [
     },
     {
       "title": "Staff Claim Form",
-      link: "/Institute/Forms-",
+      link: "/Academic/Faculty&Staff/forms",
       "image":"https://i.postimg.cc/76PTnqzs/form64.png",
     },
     {
