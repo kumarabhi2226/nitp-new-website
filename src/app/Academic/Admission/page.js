@@ -36,12 +36,12 @@ export default function InstitutePage() {
   };
 
   return (
-    <div className="flex flex-col maincont1 bg-white bg-opacity-50">
+    <div className="flex flex-col bg-white bg-opacity-50 maincont11">
       <header className="bg-primary text-primary-foreground px-4 lg:px-5 h-14 flex items-center justify-between">
-        <div className="maindivii">
-          <div className="containeripi">
+        <div className="buttoncontain">
+          <div className="internalbuttoncontain">
             <div
-              className={`cardacad cardacad1 ${activeSection === 'SII' ? 'active' : ''}`}
+              className={`cardstyle cardstyle1 ${activeSection === 'SII' ? 'active' : ''}`}
               onClick={() => handleNavigation('SII')}
               style={{ backgroundColor: activeSection === 'SII' ? 'white' : 'initial' }}
             ><FontAwesomeIcon  icon={faGlobe} size="2x" color='#d62a39' />
@@ -49,7 +49,7 @@ export default function InstitutePage() {
               <p className="heading">SII</p>
             </div>
             <div
-              className={`cardacad cardacad1 ${activeSection === 'JoSAA' ? 'active' : ''}`}
+              className={`cardstyle cardstyle1 ${activeSection === 'JoSAA' ? 'active' : ''}`}
               onClick={() => handleNavigation('JoSAA')}
               style={{ backgroundColor: activeSection === 'JoSAA' ? 'white' : 'initial' }}
             >
@@ -57,7 +57,7 @@ export default function InstitutePage() {
               <p className="heading">Admission</p>
             </div>
             <div
-              className={`cardacad cardacad1 ${activeSection === 'Relaxation' ? 'active' : ''}`}
+              className={`cardstyle cardstyle1 ${activeSection === 'Relaxation' ? 'active' : ''}`}
               onClick={() => handleNavigation('Relaxation')}
               style={{ backgroundColor: activeSection === 'Relaxation' ? 'white' : 'initial' }}
             >
@@ -65,7 +65,7 @@ export default function InstitutePage() {
               <p className="heading">Relaxation</p>
             </div>
             <div
-              className={`cardacad cardacad1 ${activeSection === 'Archieve' ? 'active' : ''}`}
+              className={`cardstyle cardstyle1 ${activeSection === 'Archieve' ? 'active' : ''}`}
               onClick={() => handleNavigation('Archieve')}
               style={{ backgroundColor: activeSection === 'Archieve' ? 'white' : 'initial' }}
             >
