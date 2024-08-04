@@ -3,7 +3,7 @@ import React from 'react';
 
 const page = () => {
   return (
-    <div className="container mx-auto sm:px-4 py-8 text-black w-11/12 md:w-4/5 bg-white bg-opacity-50">
+    <div className=" mx-auto sm:px-4 py-8 text-black w-11/12 md:w-4/5 bg-white bg-opacity-50">
       <h1 className="text-4xl font-bold mb-8 text-center text-red-800">Centre Of Excellence</h1>
       
 

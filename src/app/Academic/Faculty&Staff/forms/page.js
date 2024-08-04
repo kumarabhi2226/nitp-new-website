@@ -124,7 +124,7 @@ const content = [
 
 const DownloadsPage = () => {
   return (
-    <div className="container mx-auto p-4 text-neutral-600 bg-white/70">
+    <div className="mx-auto p-4 text-neutral-600 bg-white/70">
       <h1 className="text-3xl font-bold mb-6 text-red-900 text-center">Staffs Claim Form</h1>
       <table className="table-auto border-collapse border border-gray-300 mx-0 md:mx-80">
         <thead>

@@ -16,7 +16,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="mx-auto md:pl-32 md:pr-32 pt-8 bg-white bg-opacity-50">
+    <div className="mx-auto pl-4 pr-4 md:pl-32 md:pr-32 pt-8 bg-white bg-opacity-50">
       <Head>
         <title>Laboratories</title>
       </Head>
